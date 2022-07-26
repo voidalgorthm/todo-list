@@ -1,0 +1,73 @@
+:root {
+    font-size: 62.5%;
+
+    --todo-darkest: #14532d;
+    --todo-dark: #15803d;
+    --todo-light: #22c55e;
+    --todo-lighter: #4ade80;
+
+    --fades: #f5f5f5;
+    --fader: #e5e5e5;
+    /* --fade: #cbd5e1; */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: #333;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header {
+    background-color: var(--todo-darkest);
+    height: 10vh;
+    width: 100%
+}
+
+section {
+    width: 100%;
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr 3fr;
+}
+
+nav {
+    background-color: var(--todo-dark);
+    width: 100%;
+}
+
+main {
+    background-color: var(--fades);
+    width: 100%;
+    flex: 1;
+
+}
+
+.flex-center,
+.flex-column,
+.flex-row {
+    display: flex;
+    align-items: center;
+
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-column {
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.flex-row {
+    justify-content: space-between;
+}
