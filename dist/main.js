@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/todo-list.css":
@@ -8,6 +7,7 @@
   \************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-dark);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    justify-content: space-evenly;\n    flex-direction: column;\n}\n\n.flex-row {\n    justify-content: space-between;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ;AACJ;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,kCAAkC;IAClC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,OAAO;;AAEX;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;;AAEvB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,6BAA6B;IAC7B,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-dark);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    justify-content: space-evenly;\n    flex-direction: column;\n}\n\n.flex-row {\n    justify-content: space-between;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ;AACJ;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,OAAO;;AAEX;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34,6 +34,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -145,6 +146,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -176,6 +178,7 @@ module.exports = function (item) {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -230,6 +233,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -343,6 +347,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -391,6 +396,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -411,6 +417,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -432,6 +439,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -511,6 +519,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -527,6 +536,202 @@ function styleTagTransform(css, styleElement) {
 }
 
 module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ "./src/assets/icons sync \\.(png%7Cjpe?g%7Csvg)$":
+/*!********************************************************************!*\
+  !*** ./src/assets/icons/ sync nonrecursive \.(png%7Cjpe?g%7Csvg)$ ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = () => ([]);
+webpackEmptyContext.resolve = webpackEmptyContext;
+webpackEmptyContext.id = "./src/assets/icons sync \\.(png%7Cjpe?g%7Csvg)$";
+module.exports = webpackEmptyContext;
+
+/***/ }),
+
+/***/ "./src/modules/page.js":
+/*!*****************************!*\
+  !*** ./src/modules/page.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function importIcons(r) {
+  let icons = {};
+  r.keys().map((item, index) => { icons[item.replace('../assets/icons/', '')] = r(item); });
+  return icons;
+}
+
+const icons = importIcons(__webpack_require__("./src/assets/icons sync \\.(png%7Cjpe?g%7Csvg)$"));
+
+const initializePage = (() => {
+
+  const _createParagraph = (text) => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    return p;
+  }
+
+  const _createHeading = (text, num = 4) => {
+    const heading = document.createElement(`h${num}`);
+    heading.textContent = text;
+    return heading;
+  }
+
+  const _createLink = (lnk, text) => {
+    const link = document.createElement('a');
+    link.href = lnk;
+    const txt = document.createTextNode(text);
+    link.appendChild(txt);
+    return link;
+  }
+
+  const _createIcon = (source) => {
+    const icon = document.createElement('img');
+    icon.alt = `an icon of ${source}`;
+    icon.src = icons[`./${source}`];
+    return icon;
+  }
+
+  const _createBtn = (label, type = 'btn') => {
+    const btn = document.createElement('button');
+    btn.setAttribute('id', label);
+    const content = capitalize(label);
+    btn.textContent = content;
+    btn.classList.add(`${type}`);
+    return btn;
+  }
+
+  const _createContainer = (...elements) => {
+    const container = document.createElement('div');
+    container.classList.add('flex-center');
+    // container.classList.add('padd');
+    elements.forEach(item => container.appendChild(item));
+    return container;
+  }
+
+/*   const _createContent = (...content) => {
+    const container = document.createElement('div');
+    console.log(content);
+    content.forEach(item => container.append(item));
+    container.classList.add('flex-center');
+    container.classList.add('padd');
+    container.classList.add('gap');
+    return container;
+  } */
+
+  const _initializeHeader = (text) => {
+    const header = document.querySelector('header');
+    header.setAttribute('id', 'header');
+
+    const appTitle = _createHeading(text, '1');
+    const primaryIcon = _createIcon('1.png');
+    const logoContainer = _createContainer(primaryIcon, appTitle);
+
+    const searchIcon = _createIcon('2.png');
+    const input = document.createElement('input');
+    setAttributes(input, { type: 'search', id: 'search' , name: 'search' });
+    const searchContainer = _createContainer(searchIcon, input);
+
+    const account = _createBtn('account', 'btn');
+    const signout = _createBtn('signout', 'special');
+    const acctContainer = _createContainer(account, signout);
+
+    header.appendChild(logoContainer);
+    header.appendChild(searchContainer);
+    header.appendChild(acctContainer);
+    header.classList.add('flex-row');
+    return header;
+  }
+
+  const _initializeNav = (text) => {
+    const nav = document.querySelector('section').querySelector('nav');
+    nav.setAttribute('id', 'nav');
+
+    const control = document.createElement('div');
+    control.setAttribute('id', 'nav-control');
+    const collapseControl = _createIcon('3.png');
+    control.append(collapseControl);
+
+    const normal = document.createElement('div');
+    normal.setAttribute('id', 'tasks-list');
+    const today = _createBtn('today', 'menu');
+    today.classList.add('active');
+    const tomorrow = _createBtn('tomorrow', 'menu');
+    const upcoming = _createBtn('upcoming', 'menu');
+
+    normal.appendChild(today);
+    normal.appendChild(tomorrow);
+    normal.appendChild(upcoming);
+    normal.classList.add('flex-column');
+
+    const projectsTitle = _createHeading(text, '2');
+    
+    const projects = document.createElement('div');
+    projects.setAttribute('id', 'projects-list');
+    projects.textContent = 'GIT GUD';
+
+    const addProject = _createBtn('project-add', 'btn');
+
+    nav.append(control, normal, projectsTitle, projects, addProject);
+
+    nav.classList.add('flex-column');
+    // nav.classList.add('evenly');
+    return nav;
+  }
+
+  const _initializeMain = () => {
+    const main = document.querySelector('section').querySelector('main');
+    main.setAttribute('id', 'main');
+    return main;
+  }
+
+  _initializeHeader('Todo-List');
+  _initializeNav('Projects');
+  _initializeMain();
+})();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initializePage);
+
+function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
+function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+
+/***/ }),
+
+/***/ "./src/modules/test.js":
+/*!*****************************!*\
+  !*** ./src/modules/test.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "testThat": () => (/* binding */ testThat),
+/* harmony export */   "testThis": () => (/* binding */ testThis)
+/* harmony export */ });
+const testThis = () => {
+  return 'this?!?!?';
+}
+
+const testThat = () => {
+  return 'that?!?!?';
+}
+
+
+
 
 /***/ })
 
@@ -604,18 +809,27 @@ module.exports = styleTagTransform;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_list_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/todo-list.css */ "./src/styles/todo-list.css");
+/* harmony import */ var _modules_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/page */ "./src/modules/page.js");
+/* harmony import */ var _modules_test__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/test */ "./src/modules/test.js");
+
+
 
 
 document.body.classList.add('flex-column');
-document.querySelector('main').classList.add('flex-column')
-console.log('git gud');
+document.querySelector('main').classList.add('flex-column');
+
+_modules_page__WEBPACK_IMPORTED_MODULE_1__["default"];
+
+console.log((0,_modules_test__WEBPACK_IMPORTED_MODULE_2__.testThat)());
+console.log((0,_modules_test__WEBPACK_IMPORTED_MODULE_2__.testThis)());
 })();
 
 /******/ })()
