@@ -710,28 +710,82 @@ function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value
 
 /***/ }),
 
-/***/ "./src/modules/test.js":
+/***/ "./src/modules/task.js":
 /*!*****************************!*\
-  !*** ./src/modules/test.js ***!
+  !*** ./src/modules/task.js ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "testThat": () => (/* binding */ testThat),
-/* harmony export */   "testThis": () => (/* binding */ testThis)
+/* harmony export */   "default": () => (/* binding */ Task)
 /* harmony export */ });
-const testThis = () => {
-  return 'this?!?!?';
+class Task {
+  constructor({title, description, priority = 3, dueDate = 'No date', affiliation = 'none', notes = 'none'} = {}) {
+    this.title = title;
+    this.description = description;
+    this.priority = priority;
+    this.dueDate = dueDate;
+    this.affiliation = affiliation;
+    this.notes = notes;
+  }
+
+  setTitle(title) {
+    this.title = title;
+  }
+
+  getTitle() {
+    return this.title;
+  }
+
+  setDescription(description) {
+    this.description = description;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+
+  setPriority(priority) {
+    this.priority = priority;
+  }
+
+  getPriority() {
+    return this.priority;
+  }
+
+  setDate(dueDate) {
+    this.dueDate = dueDate;
+  }
+
+  getDate() {
+    return this.dueDate;
+  }
+
+  getDateFormatted() {
+    const day = this.dueDate.split('/')[0]
+    const month = this.dueDate.split('/')[1]
+    const year = this.dueDate.split('/')[2]
+    return `${month}/${day}/${year}`
+  }
+
+  setAffiliation(affiliation) {
+    this.affiliation = affiliation;
+  }
+
+  getAffiliation() {
+    return this.affiliation;
+  }
+
+  setNotes(notes) {
+    this.notes = notes;
+  }
+
+  getNotes() {
+    return this.notes;
+  }
 }
-
-const testThat = () => {
-  return 'that?!?!?';
-}
-
-
-
 
 /***/ })
 
@@ -818,7 +872,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_list_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/todo-list.css */ "./src/styles/todo-list.css");
 /* harmony import */ var _modules_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/page */ "./src/modules/page.js");
-/* harmony import */ var _modules_test__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/test */ "./src/modules/test.js");
+/* harmony import */ var _modules_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/task */ "./src/modules/task.js");
 
 
 
@@ -828,8 +882,20 @@ document.querySelector('main').classList.add('flex-column');
 
 _modules_page__WEBPACK_IMPORTED_MODULE_1__["default"];
 
-console.log((0,_modules_test__WEBPACK_IMPORTED_MODULE_2__.testThat)());
-console.log((0,_modules_test__WEBPACK_IMPORTED_MODULE_2__.testThis)());
+const taskus = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]('taskete', 'yamete', '', '03/03/2022', '', '');
+const tasker = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]('tasketer', 'yameter', '06/06/2022', 'Coding', 'Sample notes');
+const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'tasketit', description: 'yametit', dueDate: '06/06/2022', affiliation: 'Coding'});
+const taskya = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]();
+
+console.log(taskus);
+console.log(typeof taskus);
+console.log(tasker);
+console.log(typeof tasker);
+console.log(taskit);
+console.log(typeof taskit);
+console.log(taskya);
+console.log(typeof taskya);
+
 })();
 
 /******/ })()
