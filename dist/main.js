@@ -557,6 +557,61 @@ module.exports = webpackEmptyContext;
 
 /***/ }),
 
+/***/ "./src/modules/list.js":
+/*!*****************************!*\
+  !*** ./src/modules/list.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ TodoList)
+/* harmony export */ });
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+
+
+
+
+class TodoList {
+  constructor() {
+    this.projects = [];
+    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Today'));
+    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Week'));
+    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Upcoming'));
+  }
+
+  setProjects(projects) {
+    this.projects = projects;
+  }
+
+  getProjects() {
+    return this.projects;
+  }
+
+  getProject(projectName) {
+    return this.projects.find((project) => project.getName() === projectName)
+  }
+
+  containingProject(projectName) {
+    return this.projects.some((project) => project.getName() === projectName)
+  }
+
+  addProject(addedProject) {
+    if (this.projects.find((project) => project.name === addedProject.name)) return
+    this.projects.push(addedProject);
+  }
+
+  deleteProject(deletedProject) {
+    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject)
+    this.projects.splice(this.projects.indexOf(projectDeletion), 1)
+  }
+
+}
+
+/***/ }),
+
 /***/ "./src/modules/page.js":
 /*!*****************************!*\
   !*** ./src/modules/page.js ***!
@@ -928,6 +983,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/page */ "./src/modules/page.js");
 /* harmony import */ var _modules_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/task */ "./src/modules/task.js");
 /* harmony import */ var _modules_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/project */ "./src/modules/project.js");
+/* harmony import */ var _modules_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! .//modules/list */ "./src/modules/list.js");
+
 
 
 
@@ -938,28 +995,23 @@ document.querySelector('main').classList.add('flex-column');
 
 _modules_page__WEBPACK_IMPORTED_MODULE_1__["default"];
 
-const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'tasketit', description: 'tasketit', dueDate: '06/06/2022', affiliation: 'Yamete'});
+const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskit', description: 'tasketit', dueDate: '06/06/2022', affiliation: 'Yamete'});
 const taskya = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskya', description: 'taskya'});
-const taskdelete = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskdelete', description: 'delete'});
 
 const yamete = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Yamete');
 const kudasai = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Kudasai');
 
 yamete.addTask(taskit);
-yamete.addTask(taskdelete);
 kudasai.addTask(taskya);
 
-console.log(yamete.getTasks());
-console.log(kudasai.getTasks());
-
-yamete.deleteTask('taskdelete');
-console.log(yamete.getTasks());
+const list = new _modules_list__WEBPACK_IMPORTED_MODULE_4__["default"]();
+list.addProject(yamete);
+list.addProject(kudasai);
+console.log(list.containingProject('Yamete'));
 
 const main = document.querySelector('#main');
-
 const date = document.createElement('input');
 setAttributes(date, {type: 'date'});
-
 main.append(date);
 
 date.addEventListener('change', (event) => {
