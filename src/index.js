@@ -1,22 +1,39 @@
 import './styles/todo-list.css';
 import initializePage from './modules/page'
 import Task from './modules/task';
+import Project from './modules/project';
 
 document.body.classList.add('flex-column');
 document.querySelector('main').classList.add('flex-column');
 
 initializePage;
 
-const taskus = new Task('taskete', 'yamete', '', '03/03/2022', '', '');
-const tasker = new Task('tasketer', 'yameter', '06/06/2022', 'Coding', 'Sample notes');
-const taskit = new Task({title: 'tasketit', description: 'yametit', dueDate: '06/06/2022', affiliation: 'Coding'});
-const taskya = new Task();
+const taskit = new Task({title: 'tasketit', description: 'tasketit', dueDate: '06/06/2022', affiliation: 'Yamete'});
+const taskya = new Task({title: 'taskya', description: 'taskya'});
+const taskdelete = new Task({title: 'taskdelete', description: 'delete'});
 
-console.log(taskus);
-console.log(typeof taskus);
-console.log(tasker);
-console.log(typeof tasker);
-console.log(taskit);
-console.log(typeof taskit);
-console.log(taskya);
-console.log(typeof taskya);
+const yamete = new Project('Yamete');
+const kudasai = new Project('Kudasai');
+
+yamete.addTask(taskit);
+yamete.addTask(taskdelete);
+kudasai.addTask(taskya);
+
+console.log(yamete.getTasks());
+console.log(kudasai.getTasks());
+
+yamete.deleteTask('taskdelete');
+console.log(yamete.getTasks());
+
+const main = document.querySelector('#main');
+
+const date = document.createElement('input');
+setAttributes(date, {type: 'date'});
+
+main.append(date);
+
+date.addEventListener('change', (event) => {
+  console.log(event.target.value);
+})
+
+function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }

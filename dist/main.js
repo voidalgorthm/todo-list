@@ -710,6 +710,60 @@ function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value
 
 /***/ }),
 
+/***/ "./src/modules/project.js":
+/*!********************************!*\
+  !*** ./src/modules/project.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Project)
+/* harmony export */ });
+class Project {
+  constructor(name) {
+    this.name = name;
+    this.tasks = [];
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  setTasks(tasks) {
+    this.tasks = tasks;
+  }
+
+  getTasks() {
+    return this.tasks;
+  }
+
+  getTask(taskName) {
+    return this.tasks.find((task) => task.getTitle() === taskName);
+  }
+
+  containingTask(taskName) {
+    return this.tasks.some((task) => task.getTitle() === taskName);
+  }
+
+  addTask(newTask) {
+    if (this.tasks.find((task) => task.getTitle() === newTask.title)) return
+    this.tasks.push(newTask);
+  }
+
+  deleteTask(taskName) {
+    this.tasks = this.tasks.filter((task) => task.title !== taskName);
+  }
+
+}
+
+/***/ }),
+
 /***/ "./src/modules/task.js":
 /*!*****************************!*\
   !*** ./src/modules/task.js ***!
@@ -764,9 +818,9 @@ class Task {
   }
 
   getDateFormatted() {
-    const day = this.dueDate.split('/')[0]
-    const month = this.dueDate.split('/')[1]
-    const year = this.dueDate.split('/')[2]
+    const year = this.dueDate.split('/')[0];
+    const month = this.dueDate.split('/')[1];
+    const day = this.dueDate.split('/')[2];
     return `${month}/${day}/${year}`
   }
 
@@ -873,6 +927,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_list_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/todo-list.css */ "./src/styles/todo-list.css");
 /* harmony import */ var _modules_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/page */ "./src/modules/page.js");
 /* harmony import */ var _modules_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/task */ "./src/modules/task.js");
+/* harmony import */ var _modules_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/project */ "./src/modules/project.js");
+
 
 
 
@@ -882,20 +938,35 @@ document.querySelector('main').classList.add('flex-column');
 
 _modules_page__WEBPACK_IMPORTED_MODULE_1__["default"];
 
-const taskus = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]('taskete', 'yamete', '', '03/03/2022', '', '');
-const tasker = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]('tasketer', 'yameter', '06/06/2022', 'Coding', 'Sample notes');
-const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'tasketit', description: 'yametit', dueDate: '06/06/2022', affiliation: 'Coding'});
-const taskya = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'tasketit', description: 'tasketit', dueDate: '06/06/2022', affiliation: 'Yamete'});
+const taskya = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskya', description: 'taskya'});
+const taskdelete = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskdelete', description: 'delete'});
 
-console.log(taskus);
-console.log(typeof taskus);
-console.log(tasker);
-console.log(typeof tasker);
-console.log(taskit);
-console.log(typeof taskit);
-console.log(taskya);
-console.log(typeof taskya);
+const yamete = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Yamete');
+const kudasai = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Kudasai');
 
+yamete.addTask(taskit);
+yamete.addTask(taskdelete);
+kudasai.addTask(taskya);
+
+console.log(yamete.getTasks());
+console.log(kudasai.getTasks());
+
+yamete.deleteTask('taskdelete');
+console.log(yamete.getTasks());
+
+const main = document.querySelector('#main');
+
+const date = document.createElement('input');
+setAttributes(date, {type: 'date'});
+
+main.append(date);
+
+date.addEventListener('change', (event) => {
+  console.log(event.target.value);
+})
+
+function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 })();
 
 /******/ })()
