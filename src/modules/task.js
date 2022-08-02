@@ -1,10 +1,10 @@
 export default class Task {
-  constructor({title, description, priority = 3, dueDate = 'No date', affiliation = 'none', notes = 'none'} = {}) {
+  constructor({title, description = 'none', priority = 3, dueDate = 'No date', projectConnected = 'none', notes = 'none'} = {}) {
     this.title = title;
     this.description = description;
     this.priority = priority;
     this.dueDate = dueDate;
-    this.affiliation = affiliation;
+    this.projectConnected = projectConnected;
     this.notes = notes;
   }
 
@@ -47,12 +47,12 @@ export default class Task {
     return `${month}/${day}/${year}`
   }
 
-  setAffiliation(affiliation) {
-    this.affiliation = affiliation;
+  setProjectConnected(projectConnected) {
+    this.projectConnected = projectConnected;
   }
 
-  getAffiliation() {
-    return this.affiliation;
+  getProjectConnected() {
+    return this.projectConnected;
   }
 
   setNotes(notes) {

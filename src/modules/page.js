@@ -47,26 +47,15 @@ const initializePage = (() => {
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
     container.classList.add('flex-center');
-    // container.classList.add('padd');
     elements.forEach(item => container.appendChild(item));
     return container;
   }
 
-/*   const _createContent = (...content) => {
-    const container = document.createElement('div');
-    console.log(content);
-    content.forEach(item => container.append(item));
-    container.classList.add('flex-center');
-    container.classList.add('padd');
-    container.classList.add('gap');
-    return container;
-  } */
-
-  const _initializeHeader = (text) => {
+  const _initializeHeader = () => {
     const header = document.querySelector('header');
     header.setAttribute('id', 'header');
 
-    const appTitle = _createHeading(text, '1');
+    const appTitle = _createHeading('Todo-List', '1');
     const primaryIcon = _createIcon('1.png');
     const logoContainer = _createContainer(primaryIcon, appTitle);
 
@@ -79,14 +68,15 @@ const initializePage = (() => {
     const signout = _createBtn('signout', 'special');
     const acctContainer = _createContainer(account, signout);
 
-    header.appendChild(logoContainer);
-    header.appendChild(searchContainer);
-    header.appendChild(acctContainer);
+    logoContainer.classList.add('gap');
+    searchContainer.classList.add('gap');
+    acctContainer.classList.add('gap');
+    header.append(logoContainer, searchContainer, acctContainer);
     header.classList.add('flex-row');
     return header;
   }
 
-  const _initializeNav = (text) => {
+  const _initializeNav = () => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
 
@@ -95,29 +85,26 @@ const initializePage = (() => {
     const collapseControl = _createIcon('3.png');
     control.append(collapseControl);
 
-    const normal = document.createElement('div');
-    normal.setAttribute('id', 'tasks-list');
+    const defaultProjects = document.createElement('div');
+    defaultProjects.setAttribute('id', 'projects-default');
     const today = _createBtn('today', 'menu');
     today.classList.add('active');
     const tomorrow = _createBtn('tomorrow', 'menu');
     const upcoming = _createBtn('upcoming', 'menu');
 
-    normal.appendChild(today);
-    normal.appendChild(tomorrow);
-    normal.appendChild(upcoming);
-    normal.classList.add('flex-column');
+    defaultProjects.append(today, tomorrow, upcoming);
+    defaultProjects.classList.add('flex-column');
 
-    const projectsTitle = _createHeading(text, '2');
+    const userProjectsTitle = _createHeading('Projects', '2');
     
-    const projects = document.createElement('div');
-    projects.setAttribute('id', 'projects-list');
-    projects.textContent = 'GIT GUD';
-
+    const userProjects = document.createElement('div');
+    userProjects.setAttribute('id', 'projects-user');
+    userProjects.textContent = 'GIT GUD';
     const addProject = _createBtn('project-add', 'btn');
 
-    nav.append(control, normal, projectsTitle, projects, addProject);
+    nav.append(control, defaultProjects, userProjectsTitle, userProjects, addProject);
 
-    nav.classList.add('flex-column');
+    // nav.classList.add('flex-column');
     // nav.classList.add('evenly');
     return nav;
   }
@@ -125,11 +112,20 @@ const initializePage = (() => {
   const _initializeMain = () => {
     const main = document.querySelector('section').querySelector('main');
     main.setAttribute('id', 'main');
+    const contentTitle = document.createElement('h3');
+    contentTitle.textContent = 'title';
+    setAttributes(contentTitle, {id: 'content-title'});
+    const contentItems = document.createElement('div');
+    contentItems.textContent = 'projects';
+    setAttributes(contentItems, {id: 'content-items'});
+    main.append(contentTitle, contentItems);
+    main.classList.add('gap');
     return main;
   }
 
-  _initializeHeader('Todo-List');
-  _initializeNav('Projects');
+  document.body.classList.add('flex-column');
+  _initializeHeader();
+  _initializeNav();
   _initializeMain();
 })();
 

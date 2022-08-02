@@ -1,10 +1,9 @@
-import { compareAsc, toDate } from 'date-fns';
 import Project from './project';
-import Task from './task';
 
 export default class TodoList {
   constructor() {
     this.projects = [];
+    this.projects.push(new Project('AllTasks'));
     this.projects.push(new Project('Today'));
     this.projects.push(new Project('Week'));
     this.projects.push(new Project('Upcoming'));
@@ -19,21 +18,21 @@ export default class TodoList {
   }
 
   getProject(projectName) {
-    return this.projects.find((project) => project.getName() === projectName)
+    return this.projects.find((project) => project.getName() === projectName);
   }
 
   containingProject(projectName) {
-    return this.projects.some((project) => project.getName() === projectName)
+    return this.projects.some((project) => project.getName() === projectName);
   }
 
   addProject(addedProject) {
-    if (this.projects.find((project) => project.name === addedProject.name)) return
+    if (this.projects.find((project) => project.name === addedProject.name)) return;
     this.projects.push(addedProject);
   }
 
   deleteProject(deletedProject) {
-    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject)
-    this.projects.splice(this.projects.indexOf(projectDeletion), 1)
+    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject);
+    this.projects.splice(this.projects.indexOf(projectDeletion), 1);
   }
 
 }
