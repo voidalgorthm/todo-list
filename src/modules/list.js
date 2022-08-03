@@ -3,7 +3,8 @@ import Project from './project';
 export default class TodoList {
   constructor() {
     this.projects = [];
-    this.projects.push(new Project('AllTasks'));
+    this.tasks = [];
+    this.projects.push(new Project(''));
     this.projects.push(new Project('Today'));
     this.projects.push(new Project('Week'));
     this.projects.push(new Project('Upcoming'));

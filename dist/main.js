@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ;AACJ;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,OAAO;;AAEX;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    flex: 1;\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh5 {\n    font-size: 1.2rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;IAKI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,4BAA4B;IAC5B,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,SAAS;AACb","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh5 {\n    font-size: 1.2rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -557,6 +557,203 @@ module.exports = webpackEmptyContext;
 
 /***/ }),
 
+/***/ "./src/modules/forms.js":
+/*!******************************!*\
+  !*** ./src/modules/forms.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Forms)
+/* harmony export */ });
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+
+
+class Forms {
+  constructor(title, description, priority, dueDate, projectConnected) {
+    this.title = title;
+    this.description = description;
+    this.priority = priority;
+    this.dueDate = dueDate;
+    this.projectConnected = projectConnected;
+  }
+
+  static createForm({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
+    const formContainer = document.createElement("form");
+    formContainer.setAttribute('id', 'formContainer');
+
+    const topTaskContainer = document.createElement('div');
+    topTaskContainer.setAttribute('id', 'topTaskContainer');
+
+    const taskTitle = document.createElement('textarea');
+    setKeyValue(taskTitle, { id: 'taskTitle', name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    if (title) taskTitle.value = title;
+
+    const taskDescription = document.createElement('textarea');
+    setKeyValue(taskDescription, { id: 'taskDescription', name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
+    if (description) taskDescription.value = description;
+
+    const taskDate = document.createElement('input');
+    setKeyValue(taskDate, { id: 'taskDate', name: 'date', type: 'date' });
+    if (dueDate) taskDate.value = dueDate;
+
+    const taskPriority = document.createElement('select');
+    setKeyValue(taskPriority, { id: 'taskPriority', name: 'priority' });
+    const priorityLevels = [...Array(5).keys()].map(i => i + 1);
+    priorityLevels.forEach(prio => {
+      const option = document.createElement('option');
+      option.setAttribute('value', `${prio}`);
+      if (prio === 3) option.setAttribute('selected', 'true');
+      option.textContent = `${prio}`;
+      taskPriority.append(option);
+    })
+    if (priority) taskPriority.value = priority;
+
+    const taskProjectConnected = document.createElement('select');
+    setKeyValue(taskProjectConnected, { id: 'taskProjectConnected', name: 'taskProjectConnected' });
+    _storage__WEBPACK_IMPORTED_MODULE_0__["default"].getList().getProjects().forEach(project => {
+      const option = document.createElement('option');
+      option.setAttribute('value', `${project.name}`);
+      option.textContent = `${project.name}`;
+      taskProjectConnected.append(option);
+    });
+    if (taskProjectConnected) taskProjectConnected.value = projectConnected;
+
+    topTaskContainer.append(taskPriority, taskTitle, taskDescription, taskDate, taskProjectConnected);
+
+    const botTaskContainer = document.createElement('div');
+    botTaskContainer.setAttribute('id', 'botTaskContainer');
+
+    const accept = document.createElement('button');
+    accept.textContent = "Accept";
+    const cancel = document.createElement('button');
+    cancel.textContent = "Cancel";
+
+    botTaskContainer.append(accept, cancel);
+
+    formContainer.append(topTaskContainer, botTaskContainer);
+
+    return formContainer;
+  }
+
+}
+
+
+function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+
+/***/ }),
+
+/***/ "./src/modules/interface.js":
+/*!**********************************!*\
+  !*** ./src/modules/interface.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Interface)
+/* harmony export */ });
+/* harmony import */ var _page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page */ "./src/modules/page.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./list */ "./src/modules/list.js");
+/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+
+
+
+
+
+
+
+class Interface {
+
+  static loadAll() {
+    _page__WEBPACK_IMPORTED_MODULE_0__["default"];
+    Interface.loadAllTasks();
+  }
+
+  static loadAllTasks() {
+    Interface.test();
+    Interface.createTaskContainer();
+
+  }
+
+  static createTaskContainer() {
+    const contentItems = document.querySelector('#content-items');
+    const userTask = document.createElement('div');
+    const checkBox = document.createElement('img');
+
+    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '06/06/2022', projectConnected: 'Today' });
+    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1'});
+    const three  = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Three', projectConnected: 'Week'});
+
+    console.log(one);
+    console.log(two);
+    console.log(three);
+
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('Today', one);
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('', two);
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('Week', three);
+
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getProjects());
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
+
+
+    /* 
+    const once = new Project('One');
+    const twice = new Project('Two');
+
+    once.addTask(one);
+    twice.addTask(two);
+ */
+    
+ /*    
+    tasksList.innerHTML += `
+      <button class="button-task" data-task-button>
+        <div class="left-task-panel">
+          <i class="far fa-circle"></i>
+          <p class="task-content">${name}</p>
+          <input type="text" class="input-task-name" data-input-task-name>
+        </div>
+        <div class="right-task-panel">
+          <p class="due-date" id="due-date">${dueDate}</p>
+          <input type="date" class="input-due-date" data-input-due-date>
+          <i class="fas fa-times"></i>
+        </div>
+      </button>`
+ */
+  }
+
+  static test() {
+    
+    /* const testArray = [];
+    testArray.push(one, two);
+    const testObject = { 'one': 1, 'two': 2, 'three': 3 };
+
+    // Put the object into storage
+    localStorage.setItem('testObject', JSON.stringify(testObject));
+    localStorage.setItem('testArray', JSON.stringify(testArray));
+
+    // Retrieve the object from storage
+    const retrieved1 = localStorage.getItem('testObject');
+    const retrieved2 = localStorage.getItem('testArray');
+
+    console.log('retrieved: ', JSON.parse(retrieved1));
+    console.log('retrieved: ', JSON.parse(retrieved2)); */
+
+  }
+
+}
+
+
+function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+
+/***/ }),
+
 /***/ "./src/modules/list.js":
 /*!*****************************!*\
   !*** ./src/modules/list.js ***!
@@ -569,14 +766,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ TodoList)
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
-
-
 
 
 class TodoList {
   constructor() {
     this.projects = [];
+    this.tasks = [];
+    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"](''));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Today'));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Week'));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Upcoming'));
@@ -591,21 +787,21 @@ class TodoList {
   }
 
   getProject(projectName) {
-    return this.projects.find((project) => project.getName() === projectName)
+    return this.projects.find((project) => project.getName() === projectName);
   }
 
   containingProject(projectName) {
-    return this.projects.some((project) => project.getName() === projectName)
+    return this.projects.some((project) => project.getName() === projectName);
   }
 
   addProject(addedProject) {
-    if (this.projects.find((project) => project.name === addedProject.name)) return
+    if (this.projects.find((project) => project.name === addedProject.name)) return;
     this.projects.push(addedProject);
   }
 
   deleteProject(deletedProject) {
-    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject)
-    this.projects.splice(this.projects.indexOf(projectDeletion), 1)
+    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject);
+    this.projects.splice(this.projects.indexOf(projectDeletion), 1);
   }
 
 }
@@ -672,46 +868,36 @@ const initializePage = (() => {
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
     container.classList.add('flex-center');
-    // container.classList.add('padd');
-    elements.forEach(item => container.appendChild(item));
+    container.append(...elements);
     return container;
   }
 
-/*   const _createContent = (...content) => {
-    const container = document.createElement('div');
-    console.log(content);
-    content.forEach(item => container.append(item));
-    container.classList.add('flex-center');
-    container.classList.add('padd');
-    container.classList.add('gap');
-    return container;
-  } */
-
-  const _initializeHeader = (text) => {
+  const _initializeHeader = () => {
     const header = document.querySelector('header');
     header.setAttribute('id', 'header');
 
-    const appTitle = _createHeading(text, '1');
+    const appTitle = _createHeading('Todo-List', '1');
     const primaryIcon = _createIcon('1.png');
     const logoContainer = _createContainer(primaryIcon, appTitle);
 
     const searchIcon = _createIcon('2.png');
     const input = document.createElement('input');
-    setAttributes(input, { type: 'search', id: 'search' , name: 'search' });
+    setKeyValue(input, { type: 'search', id: 'search' , name: 'search' });
     const searchContainer = _createContainer(searchIcon, input);
 
     const account = _createBtn('account', 'btn');
     const signout = _createBtn('signout', 'special');
     const acctContainer = _createContainer(account, signout);
 
-    header.appendChild(logoContainer);
-    header.appendChild(searchContainer);
-    header.appendChild(acctContainer);
+    logoContainer.classList.add('gap');
+    searchContainer.classList.add('gap');
+    acctContainer.classList.add('gap');
+    header.append(logoContainer, searchContainer, acctContainer);
     header.classList.add('flex-row');
     return header;
   }
 
-  const _initializeNav = (text) => {
+  const _initializeNav = () => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
 
@@ -720,29 +906,26 @@ const initializePage = (() => {
     const collapseControl = _createIcon('3.png');
     control.append(collapseControl);
 
-    const normal = document.createElement('div');
-    normal.setAttribute('id', 'tasks-list');
+    const defaultProjects = document.createElement('div');
+    defaultProjects.setAttribute('id', 'projects-default');
     const today = _createBtn('today', 'menu');
     today.classList.add('active');
     const tomorrow = _createBtn('tomorrow', 'menu');
     const upcoming = _createBtn('upcoming', 'menu');
 
-    normal.appendChild(today);
-    normal.appendChild(tomorrow);
-    normal.appendChild(upcoming);
-    normal.classList.add('flex-column');
+    defaultProjects.append(today, tomorrow, upcoming);
+    defaultProjects.classList.add('flex-column');
 
-    const projectsTitle = _createHeading(text, '2');
+    const userProjectsTitle = _createHeading('Projects', '2');
     
-    const projects = document.createElement('div');
-    projects.setAttribute('id', 'projects-list');
-    projects.textContent = 'GIT GUD';
-
+    const userProjects = document.createElement('div');
+    userProjects.setAttribute('id', 'projects-user');
+    userProjects.textContent = 'GIT GUD';
     const addProject = _createBtn('project-add', 'btn');
 
-    nav.append(control, normal, projectsTitle, projects, addProject);
+    nav.append(control, defaultProjects, userProjectsTitle, userProjects, addProject);
 
-    nav.classList.add('flex-column');
+    // nav.classList.add('flex-column');
     // nav.classList.add('evenly');
     return nav;
   }
@@ -750,18 +933,27 @@ const initializePage = (() => {
   const _initializeMain = () => {
     const main = document.querySelector('section').querySelector('main');
     main.setAttribute('id', 'main');
+    const contentTitle = document.createElement('h3');
+    contentTitle.textContent = 'title';
+    setKeyValue(contentTitle, {id: 'content-title'});
+    const contentHeader = _createContainer(contentTitle);
+    const contentItems = document.createElement('div');
+    setKeyValue(contentItems, {id: 'content-items'});
+    main.append(contentHeader, contentItems);
+    main.classList.add('gap');
     return main;
   }
 
-  _initializeHeader('Todo-List');
-  _initializeNav('Projects');
+  document.body.classList.add('flex-column');
+  _initializeHeader();
+  _initializeNav();
   _initializeMain();
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initializePage);
 
 function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
-function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
 /***/ }),
 
@@ -819,6 +1011,78 @@ class Project {
 
 /***/ }),
 
+/***/ "./src/modules/storage.js":
+/*!********************************!*\
+  !*** ./src/modules/storage.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Storage)
+/* harmony export */ });
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./list */ "./src/modules/list.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+
+
+
+
+class Storage {
+
+  static saveTodoList(data) {
+    localStorage.setItem('todoList', JSON.stringify(data));
+  }
+
+  static getList() {
+    const todoList = Object.assign(new _list__WEBPACK_IMPORTED_MODULE_1__["default"](), JSON.parse(localStorage.getItem('todoList')));
+
+    todoList.setProjects(
+      todoList.getProjects().map((project) => Object.assign(new _project__WEBPACK_IMPORTED_MODULE_0__["default"](), project))
+    )
+
+    todoList.getProjects().forEach((project) =>
+        project.setTasks(
+          project.getTasks().map((task) => Object.assign(new _task__WEBPACK_IMPORTED_MODULE_2__["default"](), task))
+        )
+      )
+
+    return todoList;
+  }
+
+  static clearStorage() {
+    localStorage.clear();
+  }
+
+  static addProject(project) {
+    const todoList = Storage.getList();
+    todoList.addProject(project);
+    Storage.saveTodoList(todoList);
+  }
+
+  static deleteProject(projectName) {
+    const todoList = Storage.getList();
+    todoList.deleteProject(projectName);
+    Storage.saveTodoList(todoList);
+  }
+
+  static addTask(projectName, task) {
+    const todoList = Storage.getList();
+    todoList.getProject(projectName).addTask(task);
+    Storage.saveTodoList(todoList);
+  }
+
+  static deleteTask(projectName, taskName) {
+    const todoList = Storage.getList();
+    todoList.getProject(projectName).deleteTask(taskName);
+    Storage.saveTodoList(todoList);
+  }
+
+}
+
+/***/ }),
+
 /***/ "./src/modules/task.js":
 /*!*****************************!*\
   !*** ./src/modules/task.js ***!
@@ -831,13 +1095,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Task)
 /* harmony export */ });
 class Task {
-  constructor({title, description, priority = 3, dueDate = 'No date', affiliation = 'none', notes = 'none'} = {}) {
+  constructor({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
     this.title = title;
     this.description = description;
     this.priority = priority;
     this.dueDate = dueDate;
-    this.affiliation = affiliation;
-    this.notes = notes;
+    this.projectConnected = projectConnected;
   }
 
   setTitle(title) {
@@ -879,20 +1142,12 @@ class Task {
     return `${month}/${day}/${year}`
   }
 
-  setAffiliation(affiliation) {
-    this.affiliation = affiliation;
+  setProjectConnected(projectConnected) {
+    this.projectConnected = projectConnected;
   }
 
-  getAffiliation() {
-    return this.affiliation;
-  }
-
-  setNotes(notes) {
-    this.notes = notes;
-  }
-
-  getNotes() {
-    return this.notes;
+  getProjectConnected() {
+    return this.projectConnected;
   }
 }
 
@@ -980,45 +1235,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_list_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/todo-list.css */ "./src/styles/todo-list.css");
-/* harmony import */ var _modules_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/page */ "./src/modules/page.js");
-/* harmony import */ var _modules_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/task */ "./src/modules/task.js");
-/* harmony import */ var _modules_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/project */ "./src/modules/project.js");
-/* harmony import */ var _modules_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! .//modules/list */ "./src/modules/list.js");
+/* harmony import */ var _modules_interface__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/interface */ "./src/modules/interface.js");
 
 
 
-
-
-
-document.body.classList.add('flex-column');
-document.querySelector('main').classList.add('flex-column');
-
-_modules_page__WEBPACK_IMPORTED_MODULE_1__["default"];
-
-const taskit = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskit', description: 'tasketit', dueDate: '06/06/2022', affiliation: 'Yamete'});
-const taskya = new _modules_task__WEBPACK_IMPORTED_MODULE_2__["default"]({title: 'taskya', description: 'taskya'});
-
-const yamete = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Yamete');
-const kudasai = new _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"]('Kudasai');
-
-yamete.addTask(taskit);
-kudasai.addTask(taskya);
-
-const list = new _modules_list__WEBPACK_IMPORTED_MODULE_4__["default"]();
-list.addProject(yamete);
-list.addProject(kudasai);
-console.log(list.containingProject('Yamete'));
-
-const main = document.querySelector('#main');
-const date = document.createElement('input');
-setAttributes(date, {type: 'date'});
-main.append(date);
-
-date.addEventListener('change', (event) => {
-  console.log(event.target.value);
-})
-
-function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+document.addEventListener('DOMContentLoaded', _modules_interface__WEBPACK_IMPORTED_MODULE_1__["default"].loadAll);
 })();
 
 /******/ })()

@@ -1,11 +1,10 @@
 export default class Task {
-  constructor({title, description = 'none', priority = 3, dueDate = 'No date', projectConnected = 'none', notes = 'none'} = {}) {
+  constructor({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
     this.title = title;
     this.description = description;
     this.priority = priority;
     this.dueDate = dueDate;
     this.projectConnected = projectConnected;
-    this.notes = notes;
   }
 
   setTitle(title) {
@@ -53,13 +52,5 @@ export default class Task {
 
   getProjectConnected() {
     return this.projectConnected;
-  }
-
-  setNotes(notes) {
-    this.notes = notes;
-  }
-
-  getNotes() {
-    return this.notes;
   }
 }

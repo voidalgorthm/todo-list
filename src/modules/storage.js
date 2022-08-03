@@ -24,6 +24,10 @@ export default class Storage {
     return todoList;
   }
 
+  static clearStorage() {
+    localStorage.clear();
+  }
+
   static addProject(project) {
     const todoList = Storage.getList();
     todoList.addProject(project);

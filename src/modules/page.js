@@ -47,7 +47,7 @@ const initializePage = (() => {
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
     container.classList.add('flex-center');
-    elements.forEach(item => container.appendChild(item));
+    container.append(...elements);
     return container;
   }
 
@@ -61,7 +61,7 @@ const initializePage = (() => {
 
     const searchIcon = _createIcon('2.png');
     const input = document.createElement('input');
-    setAttributes(input, { type: 'search', id: 'search' , name: 'search' });
+    setKeyValue(input, { type: 'search', id: 'search' , name: 'search' });
     const searchContainer = _createContainer(searchIcon, input);
 
     const account = _createBtn('account', 'btn');
@@ -114,11 +114,11 @@ const initializePage = (() => {
     main.setAttribute('id', 'main');
     const contentTitle = document.createElement('h3');
     contentTitle.textContent = 'title';
-    setAttributes(contentTitle, {id: 'content-title'});
+    setKeyValue(contentTitle, {id: 'content-title'});
+    const contentHeader = _createContainer(contentTitle);
     const contentItems = document.createElement('div');
-    contentItems.textContent = 'projects';
-    setAttributes(contentItems, {id: 'content-items'});
-    main.append(contentTitle, contentItems);
+    setKeyValue(contentItems, {id: 'content-items'});
+    main.append(contentHeader, contentItems);
     main.classList.add('gap');
     return main;
   }
@@ -132,4 +132,4 @@ const initializePage = (() => {
 export default initializePage;
 
 function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
-function setAttributes(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
