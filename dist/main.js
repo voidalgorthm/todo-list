@@ -687,30 +687,6 @@ class Interface {
     const userTask = document.createElement('div');
     const checkBox = document.createElement('img');
 
-    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '06/06/2022', projectConnected: 'Today' });
-    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1'});
-    const three  = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Three', projectConnected: 'Week'});
-
-    console.log(one);
-    console.log(two);
-    console.log(three);
-
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('Today', one);
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('', two);
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask('Week', three);
-
-    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getProjects());
-    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
-
-
-    /* 
-    const once = new Project('One');
-    const twice = new Project('Two');
-
-    once.addTask(one);
-    twice.addTask(two);
- */
-    
  /*    
     tasksList.innerHTML += `
       <button class="button-task" data-task-button>
@@ -729,21 +705,26 @@ class Interface {
   }
 
   static test() {
-    
-    /* const testArray = [];
-    testArray.push(one, two);
-    const testObject = { 'one': 1, 'two': 2, 'three': 3 };
+    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '06/06/2022', projectConnected: 'Today' });
+    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1'});
+    const three  = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Three', projectConnected: 'Week'});
 
-    // Put the object into storage
-    localStorage.setItem('testObject', JSON.stringify(testObject));
-    localStorage.setItem('testArray', JSON.stringify(testArray));
+    console.log(one);
+    console.log(two);
+    console.log(three);
 
-    // Retrieve the object from storage
-    const retrieved1 = localStorage.getItem('testObject');
-    const retrieved2 = localStorage.getItem('testArray');
+    // Storage.addTask(one);
+    // Storage.addTask(two);
+    // Storage.addTask(three);
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask(new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Four', projectConnected: 'Upcoming'}));
+    // Storage.deleteTask('Four');
+    // Storage.clearStorage();
 
-    console.log('retrieved: ', JSON.parse(retrieved1));
-    console.log('retrieved: ', JSON.parse(retrieved2)); */
+    // Storage.addProject(new Project('GIT'));
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].deleteProject('ZeroOne');
+
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
+
 
   }
 
@@ -770,12 +751,34 @@ __webpack_require__.r(__webpack_exports__);
 
 class TodoList {
   constructor() {
-    this.projects = [];
     this.tasks = [];
+    this.projects = [];
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"](''));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Today'));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Week'));
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Upcoming'));
+  }
+
+  addTask(addedTaskOrig) {
+    if (this.tasks.find((task) => task.title === addedTaskOrig.title)) return;
+    this.tasks.push(addedTaskOrig);
+  }
+
+  getTask(taskTitle) {
+    return this.tasks.find((task) => task.title === taskTitle);
+  }
+
+  containingTask(taskTitle) {
+    return this.tasks.some((task) => task.title === taskTitle);
+  }
+
+  deleteTask(deletedTaskOrig) {
+      const taskIndex = this.tasks.findIndex((task) => task.title === deletedTaskOrig);
+      this.tasks.splice(taskIndex, 1);
+  }
+
+  getAllTasks() {
+    return this.tasks;
   }
 
   setProjects(projects) {
@@ -787,21 +790,21 @@ class TodoList {
   }
 
   getProject(projectName) {
-    return this.projects.find((project) => project.getName() === projectName);
+    return this.projects.find((project) => project.getProjectName() === projectName);
   }
 
   containingProject(projectName) {
-    return this.projects.some((project) => project.getName() === projectName);
+    return this.projects.some((project) => project.getProjectName() === projectName);
   }
 
   addProject(addedProject) {
-    if (this.projects.find((project) => project.name === addedProject.name)) return;
+    if (this.projects.find((project) => project.getProjectName() === addedProject.name)) return;
     this.projects.push(addedProject);
   }
 
   deleteProject(deletedProject) {
-    const projectDeletion = this.projects.find((project) => project.getName() === deletedProject);
-    this.projects.splice(this.projects.indexOf(projectDeletion), 1);
+    const projectIndex = this.projects.findIndex((project) => project.getProjectName() === deletedProject);
+    this.projects.splice(projectIndex, 1);
   }
 
 }
@@ -971,40 +974,45 @@ __webpack_require__.r(__webpack_exports__);
 class Project {
   constructor(name) {
     this.name = name;
-    this.tasks = [];
+    this.projectTasks = [];
   }
 
-  setName(name) {
+  setProjectName(name) {
     this.name = name;
   }
 
-  getName() {
+  getProjectName() {
     return this.name;
   }
 
-  setTasks(tasks) {
-    this.tasks = tasks;
+  setProjectTasks(tasks) {
+    this.projectTasks = tasks;
   }
 
-  getTasks() {
-    return this.tasks;
+  getProjectTasks() {
+    return this.projectTasks;
   }
 
-  getTask(taskName) {
-    return this.tasks.find((task) => task.getTitle() === taskName);
+  getProjectTask(taskName) {
+    return this.projectTasks.find((task) => task.getTitle() === taskName);
   }
 
-  containingTask(taskName) {
-    return this.tasks.some((task) => task.getTitle() === taskName);
+  extractProjectTask(taskName) {
+    const index = this.projectTasks.findIndex((task) => task.getName() === taskName);
+    return this.projectTasks.splice(index, 1);
   }
 
-  addTask(newTask) {
-    if (this.tasks.find((task) => task.getTitle() === newTask.title)) return
-    this.tasks.push(newTask);
+  containingProjectTask(taskName) {
+    return this.projectTasks.some((task) => task.getTitle() === taskName);
   }
 
-  deleteTask(taskName) {
-    this.tasks = this.tasks.filter((task) => task.title !== taskName);
+  addProjectTask(addedTaskCopy) {
+    if (this.projectTasks.find((task) => task.getTitle() === addedTaskCopy.title)) return;
+    this.projectTasks.push(addedTaskCopy);
+  }
+
+  deleteProjectTask(deletedTaskCopy) {
+    this.projectTasks = this.projectTasks.filter((task) => task.title !== deletedTaskCopy.title);
   }
 
 }
@@ -1031,7 +1039,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class Storage {
 
-  static saveTodoList(data) {
+  static saveList(data) {
     localStorage.setItem('todoList', JSON.stringify(data));
   }
 
@@ -1043,10 +1051,10 @@ class Storage {
     )
 
     todoList.getProjects().forEach((project) =>
-        project.setTasks(
-          project.getTasks().map((task) => Object.assign(new _task__WEBPACK_IMPORTED_MODULE_2__["default"](), task))
-        )
+      project.setProjectTasks(
+        project.getProjectTasks().map((task) => Object.assign(new _task__WEBPACK_IMPORTED_MODULE_2__["default"](), task))
       )
+    )
 
     return todoList;
   }
@@ -1055,28 +1063,36 @@ class Storage {
     localStorage.clear();
   }
 
+  static addTask(task) {
+    const todoList = Storage.getList();
+    todoList.addTask(task);
+    // if(todoList.containingProject(task.getProjectConnected()) === false) Storage.addProject(new Project(`${task.getProjectConnected()}`))
+    todoList.getProject(task.getProjectConnected()).addProjectTask(task);
+    Storage.saveList(todoList);
+  }
+
+  static deleteTask(taskTitle) {
+    const todoList = Storage.getList();
+    if (todoList.containingTask(taskTitle)) {
+      const task = todoList.getTask(taskTitle);
+      todoList.deleteTask(task);
+      todoList.getProject(task.projectConnected).deleteProjectTask(task);
+    }
+    Storage.saveList(todoList);
+  }
+
   static addProject(project) {
     const todoList = Storage.getList();
     todoList.addProject(project);
-    Storage.saveTodoList(todoList);
+    Storage.saveList(todoList);
   }
 
   static deleteProject(projectName) {
     const todoList = Storage.getList();
+    if (todoList.containingProject(projectName)) {
     todoList.deleteProject(projectName);
-    Storage.saveTodoList(todoList);
-  }
-
-  static addTask(projectName, task) {
-    const todoList = Storage.getList();
-    todoList.getProject(projectName).addTask(task);
-    Storage.saveTodoList(todoList);
-  }
-
-  static deleteTask(projectName, taskName) {
-    const todoList = Storage.getList();
-    todoList.getProject(projectName).deleteTask(taskName);
-    Storage.saveTodoList(todoList);
+    }
+    Storage.saveList(todoList);
   }
 
 }
