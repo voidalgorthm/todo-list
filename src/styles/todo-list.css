@@ -9,6 +9,9 @@
     --fades: #f5f5f5;
     --fader: #e5e5e5;
     /* --fade: #cbd5e1; */
+
+    --border: 1px solid black;
+    --border-radius: 2rem;
 }
 
 *,
@@ -23,6 +26,7 @@
 h1,
 h2,
 h3,
+h4,
 h5,
 p {
     cursor: default;
@@ -40,9 +44,15 @@ h3 {
     font-size: 2rem;
 }
 
-h5 {
-    font-size: 1.2rem;
+h4 {
+    font-size: 1.8rem;
 }
+
+h5 {
+    font-size: 1.6rem;
+}
+
+
 
 p {
     font-size: 1.8rem;
@@ -77,7 +87,7 @@ main {
     background-color: var(--fades);
     width: 100%;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
     padding: 2rem 2rem 0 2rem;
 }
 
@@ -86,7 +96,7 @@ main {
 .flex-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 }
 
 .flex-center {
@@ -95,6 +105,10 @@ main {
 
 .flex-column {
     flex-direction: column;
+}
+
+.between {
+    justify-content: space-between;
 }
 
 .evenly {
@@ -107,4 +121,91 @@ main {
 
 .gap {
     gap: 1rem;
+}
+
+#content-attributes {
+    width: 100%;
+    height: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;
+}
+
+.taskPreview {
+    width: 100%;
+    /* height: 2rem; */
+}
+
+.taskDisplay {
+    width: 100%;
+    height: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;
+}
+
+.taskTitle {
+    height: inherit;
+    border: 0;
+}
+
+.editForm {
+    width: 100%;
+}
+
+.editTask {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3rem 1fr 3rem 3rem;
+    grid-template-areas: 
+    "priority title title title"
+    "description description description description"
+    "date date project project"
+    "accept accept cancel cancel";
+    border: var(--border);
+    outline: var(--border);
+    border-radius: var(--border-radius);
+}
+.editTaskPriority,
+.editTaskTitle,
+.editTaskDescription,
+.editTaskDate,
+.editTaskProject,
+.accept,
+.cancel {
+    padding: .5rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.editTaskPriority {
+    grid-area: priority;
+}
+
+.editTaskTitle {
+    grid-area: title;
+}
+
+.editTaskDescription {
+    grid-area: description;
+}
+
+.editTaskDate {
+    grid-area: date;
+}
+
+.editTaskProject {
+    grid-area: project;
+}
+
+.accept {
+    border-top: var(--border);
+    border-right: var(--border);
+    grid-area: accept;
+}
+
+.cancel {
+    border-top: var(--border);
+    grid-area: cancel;
 }

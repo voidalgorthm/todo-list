@@ -1,10 +1,10 @@
 export default class Task {
-  constructor({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
+  constructor({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date'} = {}) {
     this.title = title;
+    this.projectConnected = projectConnected;
     this.description = description;
     this.priority = priority;
     this.dueDate = dueDate;
-    this.projectConnected = projectConnected;
   }
 
   setTitle(title) {
@@ -13,6 +13,14 @@ export default class Task {
 
   getTitle() {
     return this.title;
+  }
+
+  setProjectConnected(projectConnected) {
+    this.projectConnected = projectConnected;
+  }
+
+  getProjectConnected() {
+    return this.projectConnected;
   }
 
   setDescription(description) {
@@ -46,11 +54,4 @@ export default class Task {
     return `${month}/${day}/${year}`
   }
 
-  setProjectConnected(projectConnected) {
-    this.projectConnected = projectConnected;
-  }
-
-  getProjectConnected() {
-    return this.projectConnected;
-  }
 }

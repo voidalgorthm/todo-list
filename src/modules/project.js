@@ -39,7 +39,7 @@ export default class Project {
   }
 
   deleteProjectTask(deletedTaskCopy) {
-    this.projectTasks = this.projectTasks.filter((task) => task.title !== deletedTaskCopy.title);
+    this.projectTasks = this.projectTasks.filter((task) => task.getTitle() !== deletedTaskCopy.title);
   }
 
 }

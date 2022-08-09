@@ -24,7 +24,7 @@ export default class TodoList {
   }
 
   deleteTask(deletedTaskOrig) {
-      const taskIndex = this.tasks.findIndex((task) => task.title === deletedTaskOrig);
+      const taskIndex = this.tasks.findIndex((task) => task.title === deletedTaskOrig.title);
       this.tasks.splice(taskIndex, 1);
   }
 

@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh5 {\n    font-size: 1.2rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;IAKI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,4BAA4B;IAC5B,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,SAAS;AACb","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh5 {\n    font-size: 1.2rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\n\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n#content-attributes {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n.taskPreview {\n    width: 100%;\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editForm {\n    width: 100%;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"accept accept cancel cancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n}\n\n.editTaskTitle {\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.accept {\n    border-top: var(--border);\n    border-right: var(--border);\n    grid-area: accept;\n}\n\n.cancel {\n    border-top: var(--border);\n    grid-area: cancel;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;;;AAIA;IACI,iBAAiB;AACrB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,iCAAiC;IACjC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6CAA6C;AACjD;;AAEA;IACI,WAAW;IACX,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;iCAI6B;IAC7B,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;AACA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,yBAAyB;IACzB,2BAA2B;IAC3B,iBAAiB;AACrB;;AAEA;IACI,yBAAyB;IACzB,iBAAiB;AACrB","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\n\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n#content-attributes {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n.taskPreview {\n    width: 100%;\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editForm {\n    width: 100%;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"accept accept cancel cancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n}\n\n.editTaskTitle {\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.accept {\n    border-top: var(--border);\n    border-right: var(--border);\n    grid-area: accept;\n}\n\n.cancel {\n    border-top: var(--border);\n    grid-area: cancel;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -568,74 +568,141 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Forms)
 /* harmony export */ });
-/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+
+
 
 
 class Forms {
-  constructor(title, description, priority, dueDate, projectConnected) {
-    this.title = title;
-    this.description = description;
-    this.priority = priority;
-    this.dueDate = dueDate;
-    this.projectConnected = projectConnected;
+  static createContainer({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date'} = {}) {
+    const taskPreview = document.createElement('div');
+    taskPreview.classList.add('taskPreview');
+
+    taskPreview.append(this.createTask({ title, projectConnected, description, priority, dueDate}));
+    // { title, projectConnected, description, priority, dueDate}
+    return taskPreview;
   }
 
-  static createForm({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
-    const formContainer = document.createElement("form");
-    formContainer.setAttribute('id', 'formContainer');
-
-    const topTaskContainer = document.createElement('div');
-    topTaskContainer.setAttribute('id', 'topTaskContainer');
-
-    const taskTitle = document.createElement('textarea');
-    setKeyValue(taskTitle, { id: 'taskTitle', name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+  static createTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date'} = {}) {
+    const taskDisplay = document.createElement('div');
+    taskDisplay.classList.add('taskDisplay');
+    taskDisplay.classList.add('gap');
+    
+    const taskCheck = document.createElement('input');
+    setKeyValue(taskCheck, { type: 'checkbox' });
+    taskCheck.classList.add('taskCheck');
+    const taskTitle = document.createElement('input');
+    setKeyValue(taskTitle, { type: 'text', name: 'title' });
+    taskTitle.classList.add('taskTitle');
     if (title) taskTitle.value = title;
-
-    const taskDescription = document.createElement('textarea');
-    setKeyValue(taskDescription, { id: 'taskDescription', name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
-    if (description) taskDescription.value = description;
-
     const taskDate = document.createElement('input');
-    setKeyValue(taskDate, { id: 'taskDate', name: 'date', type: 'date' });
+    setKeyValue(taskDate, { type: 'date', name: 'date' });
+    taskDate.classList.add('taskDate');
     if (dueDate) taskDate.value = dueDate;
+    const taskEdit = document.createElement('img');
+    taskEdit.classList.add('taskEdit');
+    setKeyValue(taskEdit, { src: 'edit.svg', name: 'edit', class: '' });
+    taskEdit.addEventListener('click', (event) => {
+      const container = event.target.parentNode.parentNode;
+      container.replaceChildren();
+      container.append(this.editTask(title, projectConnected, description, priority, dueDate));
+    })
+    const taskDelete = document.createElement('img');
+    setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
+    taskDelete.classList.add('taskDelete');
+    taskDelete.addEventListener('click', () => {
+      _storage__WEBPACK_IMPORTED_MODULE_1__["default"].deleteTask(taskTitle.value);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+    })
 
-    const taskPriority = document.createElement('select');
-    setKeyValue(taskPriority, { id: 'taskPriority', name: 'priority' });
+    taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
+    return taskDisplay;
+  }
+
+  static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date'} = {}) {
+    const editForm = document.createElement("form");
+    editForm.setAttribute('id', 'editForm');
+    editForm.classList.add('editForm');
+
+    const editTask = document.createElement('div');
+    editTask.setAttribute('id', 'editTask');
+    editTask.classList.add('editTask');
+    // const topTaskContainer = document.createElement('div');
+    // topTaskContainer.setAttribute('id', 'topTaskContainer');
+
+    const editTaskTitle = document.createElement('textarea');
+    setKeyValue(editTaskTitle, { id: 'editTaskTitle', name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    editTaskTitle.classList.add('editTaskTitle');
+    if (title) editTaskTitle.value = title;
+
+    const editTaskDescription = document.createElement('textarea');
+    setKeyValue(editTaskDescription, { id: 'editTaskDescription', name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
+    editTaskDescription.classList.add('editTaskDescription');
+    if (description) editTaskDescription.value = description;
+
+    const editTaskDate = document.createElement('input');
+    setKeyValue(editTaskDate, { id: 'editTaskDate', name: 'date', type: 'date' });
+    editTaskDate.classList.add('editTaskDate');
+    if (dueDate) editTaskDate.value = dueDate;
+
+    const editTaskPriority = document.createElement('select');
+    setKeyValue(editTaskPriority, { id: 'editTaskPriority', name: 'priority' });
     const priorityLevels = [...Array(5).keys()].map(i => i + 1);
     priorityLevels.forEach(prio => {
       const option = document.createElement('option');
       option.setAttribute('value', `${prio}`);
       if (prio === 3) option.setAttribute('selected', 'true');
       option.textContent = `${prio}`;
-      taskPriority.append(option);
+      editTaskPriority.append(option);
     })
-    if (priority) taskPriority.value = priority;
+    editTaskPriority.classList.add('editTaskPriority');
+    if (priority) editTaskPriority.value = priority;
 
-    const taskProjectConnected = document.createElement('select');
-    setKeyValue(taskProjectConnected, { id: 'taskProjectConnected', name: 'taskProjectConnected' });
-    _storage__WEBPACK_IMPORTED_MODULE_0__["default"].getList().getProjects().forEach(project => {
+    const editTaskProject = document.createElement('select');
+    setKeyValue(editTaskProject, { id: 'editTaskProject', name: 'editTaskProject' });
+    _storage__WEBPACK_IMPORTED_MODULE_1__["default"].getList().getProjects().forEach(project => {
       const option = document.createElement('option');
       option.setAttribute('value', `${project.name}`);
       option.textContent = `${project.name}`;
-      taskProjectConnected.append(option);
+      editTaskProject.append(option);
     });
-    if (taskProjectConnected) taskProjectConnected.value = projectConnected;
+    editTaskProject.classList.add('editTaskProject');
+    if (editTaskProject) editTaskProject.value = projectConnected;
 
-    topTaskContainer.append(taskPriority, taskTitle, taskDescription, taskDate, taskProjectConnected);
+  /*   const topArea = document.createElement('div');
+    topArea.append(editTaskPriority, editTaskTitle);
+    topArea.classList.add('flex-row');
+    topArea.classList.add('evenly');
+    const midArea = document.createElement('div');
+    midArea.append(editTaskDescription);
+    const botArea = document.createElement('div');
+    botArea.append(editTaskDate, editTaskProject);
+    botArea.classList.add('flex-row');
+    botArea.classList.add('evenly');
+
+    topTaskContainer.append(topArea, midArea, botArea);
+    topTaskContainer.classList.add('flex-column');
+    topTaskContainer.classList.add('evenly');
 
     const botTaskContainer = document.createElement('div');
-    botTaskContainer.setAttribute('id', 'botTaskContainer');
+    botTaskContainer.setAttribute('id', 'botTaskContainer'); */
 
     const accept = document.createElement('button');
     accept.textContent = "Accept";
+    accept.classList.add('accept');
     const cancel = document.createElement('button');
     cancel.textContent = "Cancel";
+    cancel.classList.add('cancel');
 
-    botTaskContainer.append(accept, cancel);
+    editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, accept, cancel);
 
-    formContainer.append(topTaskContainer, botTaskContainer);
+    /* botTaskContainer.append(accept, cancel);
 
-    return formContainer;
+    editForm.append(topTaskContainer, botTaskContainer); */
+    editForm.append(editTask);
+
+    return editForm;
   }
 
 }
@@ -673,55 +740,47 @@ class Interface {
 
   static loadAll() {
     _page__WEBPACK_IMPORTED_MODULE_0__["default"];
+    Interface.test();
     Interface.loadAllTasks();
   }
 
   static loadAllTasks() {
-    Interface.test();
-    Interface.createTaskContainer();
-
-  }
-
-  static createTaskContainer() {
     const contentItems = document.querySelector('#content-items');
-    const userTask = document.createElement('div');
-    const checkBox = document.createElement('img');
-
- /*    
-    tasksList.innerHTML += `
-      <button class="button-task" data-task-button>
-        <div class="left-task-panel">
-          <i class="far fa-circle"></i>
-          <p class="task-content">${name}</p>
-          <input type="text" class="input-task-name" data-input-task-name>
-        </div>
-        <div class="right-task-panel">
-          <p class="due-date" id="due-date">${dueDate}</p>
-          <input type="date" class="input-due-date" data-input-due-date>
-          <i class="fas fa-times"></i>
-        </div>
-      </button>`
- */
+    contentItems.replaceChildren();
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllTasks().forEach(task => {
+      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createContainer(task));
+    })
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
   }
 
   static test() {
-    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '06/06/2022', projectConnected: 'Today' });
-    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1'});
-    const three  = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Three', projectConnected: 'Week'});
-
-    console.log(one);
-    console.log(two);
-    console.log(three);
+    const contentItems = document.querySelector('#content-items');
+    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '2022-06-23', projectConnected: 'Today' });
+    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1' });
+    const three = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Three', projectConnected: 'Week' });
+    // console.log(one);
+    // console.log(two);
+    // console.log(three);
 
     // Storage.addTask(one);
     // Storage.addTask(two);
-    // Storage.addTask(three);
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask(three);
     _storage__WEBPACK_IMPORTED_MODULE_5__["default"].addTask(new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: 'Four', projectConnected: 'Upcoming'}));
-    // Storage.deleteTask('Four');
+    // Storage.deleteTask('Three');
     // Storage.clearStorage();
 
     // Storage.addProject(new Project('GIT'));
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].deleteProject('ZeroOne');
+    // Storage.deleteProject('ZeroOne');
+
+    // contentItems.append(Forms.createTask());
+    // contentItems.append(Forms.createContainer(Storage.getList().getTask('One')));
+    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Two')));
+    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Three')));
+    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Four')));
+    // contentItems.append(Forms.editTask(Storage.getList().getTask('One')));
+    // contentItems.append(Forms.editTask(Storage.getList().getTask('Two')));
+    // contentItems.append(Forms.editTask(Storage.getList().getTask('Three')));
+    // contentItems.append(Forms.editTask(Storage.getList().getTask('Four')));
 
     console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
 
@@ -729,7 +788,6 @@ class Interface {
   }
 
 }
-
 
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
@@ -773,7 +831,7 @@ class TodoList {
   }
 
   deleteTask(deletedTaskOrig) {
-      const taskIndex = this.tasks.findIndex((task) => task.title === deletedTaskOrig);
+      const taskIndex = this.tasks.findIndex((task) => task.title === deletedTaskOrig.title);
       this.tasks.splice(taskIndex, 1);
   }
 
@@ -832,24 +890,10 @@ const icons = importIcons(__webpack_require__("./src/assets/icons sync \\.(png%7
 
 const initializePage = (() => {
 
-  const _createParagraph = (text) => {
-    const p = document.createElement('p');
-    p.textContent = text;
-    return p;
-  }
-
   const _createHeading = (text, num = 4) => {
     const heading = document.createElement(`h${num}`);
     heading.textContent = text;
     return heading;
-  }
-
-  const _createLink = (lnk, text) => {
-    const link = document.createElement('a');
-    link.href = lnk;
-    const txt = document.createTextNode(text);
-    link.appendChild(txt);
-    return link;
   }
 
   const _createIcon = (source) => {
@@ -936,13 +980,21 @@ const initializePage = (() => {
   const _initializeMain = () => {
     const main = document.querySelector('section').querySelector('main');
     main.setAttribute('id', 'main');
-    const contentTitle = document.createElement('h3');
-    contentTitle.textContent = 'title';
+    const contentTitle = _createHeading('TITLE', 3);
     setKeyValue(contentTitle, {id: 'content-title'});
     const contentHeader = _createContainer(contentTitle);
+    const sortEmpty1 = _createHeading('', 4);
+    const sortTitle = _createHeading('title', 4);
+    const sortDate = _createHeading('date', 4);
+    const sortEmpty2 = _createHeading('', 4);
+    const sortEmpty3 = _createHeading('', 4);
+    const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
+    setKeyValue(contentAttributes, {id: 'content-attributes'});
     const contentItems = document.createElement('div');
     setKeyValue(contentItems, {id: 'content-items'});
-    main.append(contentHeader, contentItems);
+    contentItems.classList.add('flex-column');
+    contentItems.classList.add('gap');
+    main.append(contentHeader, contentAttributes, contentItems);
     main.classList.add('gap');
     return main;
   }
@@ -1012,7 +1064,7 @@ class Project {
   }
 
   deleteProjectTask(deletedTaskCopy) {
-    this.projectTasks = this.projectTasks.filter((task) => task.title !== deletedTaskCopy.title);
+    this.projectTasks = this.projectTasks.filter((task) => task.getTitle() !== deletedTaskCopy.title);
   }
 
 }
@@ -1111,12 +1163,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Task)
 /* harmony export */ });
 class Task {
-  constructor({ title, description = '', priority = 5, dueDate = 'No date', projectConnected = '' } = {}) {
+  constructor({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date'} = {}) {
     this.title = title;
+    this.projectConnected = projectConnected;
     this.description = description;
     this.priority = priority;
     this.dueDate = dueDate;
-    this.projectConnected = projectConnected;
   }
 
   setTitle(title) {
@@ -1125,6 +1177,14 @@ class Task {
 
   getTitle() {
     return this.title;
+  }
+
+  setProjectConnected(projectConnected) {
+    this.projectConnected = projectConnected;
+  }
+
+  getProjectConnected() {
+    return this.projectConnected;
   }
 
   setDescription(description) {
@@ -1158,13 +1218,6 @@ class Task {
     return `${month}/${day}/${year}`
   }
 
-  setProjectConnected(projectConnected) {
-    this.projectConnected = projectConnected;
-  }
-
-  getProjectConnected() {
-    return this.projectConnected;
-  }
 }
 
 /***/ })

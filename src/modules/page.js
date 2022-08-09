@@ -8,24 +8,10 @@ const icons = importIcons(require.context('../assets/icons/', false, /\.(png|jpe
 
 const initializePage = (() => {
 
-  const _createParagraph = (text) => {
-    const p = document.createElement('p');
-    p.textContent = text;
-    return p;
-  }
-
   const _createHeading = (text, num = 4) => {
     const heading = document.createElement(`h${num}`);
     heading.textContent = text;
     return heading;
-  }
-
-  const _createLink = (lnk, text) => {
-    const link = document.createElement('a');
-    link.href = lnk;
-    const txt = document.createTextNode(text);
-    link.appendChild(txt);
-    return link;
   }
 
   const _createIcon = (source) => {
@@ -112,13 +98,21 @@ const initializePage = (() => {
   const _initializeMain = () => {
     const main = document.querySelector('section').querySelector('main');
     main.setAttribute('id', 'main');
-    const contentTitle = document.createElement('h3');
-    contentTitle.textContent = 'title';
+    const contentTitle = _createHeading('TITLE', 3);
     setKeyValue(contentTitle, {id: 'content-title'});
     const contentHeader = _createContainer(contentTitle);
+    const sortEmpty1 = _createHeading('', 4);
+    const sortTitle = _createHeading('title', 4);
+    const sortDate = _createHeading('date', 4);
+    const sortEmpty2 = _createHeading('', 4);
+    const sortEmpty3 = _createHeading('', 4);
+    const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
+    setKeyValue(contentAttributes, {id: 'content-attributes'});
     const contentItems = document.createElement('div');
     setKeyValue(contentItems, {id: 'content-items'});
-    main.append(contentHeader, contentItems);
+    contentItems.classList.add('flex-column');
+    contentItems.classList.add('gap');
+    main.append(contentHeader, contentAttributes, contentItems);
     main.classList.add('gap');
     return main;
   }
