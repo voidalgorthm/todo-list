@@ -9,7 +9,7 @@ export default class Interface {
 
   static loadAll() {
     initializePage;
-    Interface.test();
+    // Interface.test();
     Interface.loadAllTasks();
   }
 
@@ -31,11 +31,11 @@ export default class Interface {
     // console.log(two);
     // console.log(three);
 
-    // Storage.addTask(one);
-    // Storage.addTask(two);
-    Storage.addTask(three);
-    Storage.addTask(new Task({title: 'Four', projectConnected: 'Upcoming'}));
-    // Storage.deleteTask('Three');
+    // Storage.addTaskSave(one);
+    // Storage.addTaskSave(two);
+    // Storage.addTaskSave(three);
+    // Storage.addTaskSave(new Task({title: 'Four', projectConnected: 'Upcoming'}));
+    // Storage.deleteTaskSave('Two');
     // Storage.clearStorage();
 
     // Storage.addProject(new Project('GIT'));
@@ -51,8 +51,7 @@ export default class Interface {
     // contentItems.append(Forms.editTask(Storage.getList().getTask('Three')));
     // contentItems.append(Forms.editTask(Storage.getList().getTask('Four')));
 
-    console.log(Storage.getList());
-
+    // console.log(Storage.getList());
 
   }
 

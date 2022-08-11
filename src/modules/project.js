@@ -12,8 +12,14 @@ export default class Project {
     return this.name;
   }
 
-  setProjectTasks(tasks) {
-    this.projectTasks = tasks;
+  addProjectTask(addedTaskCopy) {
+    if (this.projectTasks.find((task) => task.getTitle() === addedTaskCopy.title)) return;
+    this.projectTasks.push(addedTaskCopy);
+  }
+  
+  deleteProjectTask(deletedTaskCopy) {
+    if ((this.projectTasks.some((task) => task.getTitle() === deletedTaskCopy.title) === false)) return;
+    this.projectTasks = this.projectTasks.filter((task) => task.getTitle() !== deletedTaskCopy.title);
   }
 
   getProjectTasks() {
@@ -24,22 +30,21 @@ export default class Project {
     return this.projectTasks.find((task) => task.getTitle() === taskName);
   }
 
+  containingProjectTask(taskName) {
+    return this.projectTasks.some((task) => task.getTitle() === taskName);
+  }
+
+  getProjectTaskIndex(taskTitle) {
+    return this.projectTasks.findIndex((task) => task.title === taskTitle);
+  }
+
   extractProjectTask(taskName) {
     const index = this.projectTasks.findIndex((task) => task.getName() === taskName);
     return this.projectTasks.splice(index, 1);
   }
 
-  containingProjectTask(taskName) {
-    return this.projectTasks.some((task) => task.getTitle() === taskName);
-  }
-
-  addProjectTask(addedTaskCopy) {
-    if (this.projectTasks.find((task) => task.getTitle() === addedTaskCopy.title)) return;
-    this.projectTasks.push(addedTaskCopy);
-  }
-
-  deleteProjectTask(deletedTaskCopy) {
-    this.projectTasks = this.projectTasks.filter((task) => task.getTitle() !== deletedTaskCopy.title);
+  setProjectTasks(tasks) {
+    this.projectTasks = tasks;
   }
 
 }

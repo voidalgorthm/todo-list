@@ -11,15 +11,13 @@ export default class Storage {
   static getList() {
     const todoList = Object.assign(new TodoList(), JSON.parse(localStorage.getItem('todoList')));
 
-    todoList.setProjects(
-      todoList.getProjects().map((project) => Object.assign(new Project(), project))
-    )
+    todoList.setTasks(todoList.getAllTasks().map((task) => Object.assign(new Task(), task)));
 
-    todoList.getProjects().forEach((project) =>
-      project.setProjectTasks(
-        project.getProjectTasks().map((task) => Object.assign(new Task(), task))
-      )
-    )
+    todoList.setProjects(todoList.getAllProjects().map((project) => Object.assign(new Project(), project)));
+
+    todoList.getAllProjects().forEach((project) => project.setProjectTasks(
+      project.getProjectTasks().map((task) => Object.assign(new Task(), task))
+    ));
 
     return todoList;
   }
@@ -28,21 +26,21 @@ export default class Storage {
     localStorage.clear();
   }
 
-  static addTask(task) {
+  static addTaskSave(task) {
     const todoList = Storage.getList();
     todoList.addTask(task);
-    // if(todoList.containingProject(task.getProjectConnected()) === false) Storage.addProject(new Project(`${task.getProjectConnected()}`))
-    todoList.getProject(task.getProjectConnected()).addProjectTask(task);
     Storage.saveList(todoList);
   }
 
-  static deleteTask(taskTitle) {
+  static deleteTaskSave(taskTitle) {
     const todoList = Storage.getList();
-    if (todoList.containingTask(taskTitle)) {
-      const task = todoList.getTask(taskTitle);
-      todoList.deleteTask(task);
-      todoList.getProject(task.projectConnected).deleteProjectTask(task);
-    }
+    todoList.deleteTask(taskTitle);
+    Storage.saveList(todoList);
+  }
+
+  static replaceTaskSave(task) {
+    const todoList = Storage.getList();
+    todoList.replaceTask(task);
     Storage.saveList(todoList);
   }
 
@@ -55,7 +53,7 @@ export default class Storage {
   static deleteProject(projectName) {
     const todoList = Storage.getList();
     if (todoList.containingProject(projectName)) {
-    todoList.deleteProject(projectName);
+      todoList.deleteProject(projectName);
     }
     Storage.saveList(todoList);
   }

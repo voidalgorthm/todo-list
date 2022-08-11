@@ -1,3 +1,6 @@
+import Task from './task';
+import Forms from './forms';
+
 function importIcons(r) {
   let icons = {};
   r.keys().map((item, index) => { icons[item.replace('../assets/icons/', '')] = r(item); });
@@ -21,13 +24,13 @@ const initializePage = (() => {
     return icon;
   }
 
-  const _createBtn = (label, type = 'btn') => {
-    const btn = document.createElement('button');
-    btn.setAttribute('id', label);
+  const _createBtn = (label, type = 'button') => {
+    const button = document.createElement('button');
+    button.setAttribute('id', label);
     const content = capitalize(label);
-    btn.textContent = content;
-    btn.classList.add(`${type}`);
-    return btn;
+    button.textContent = content;
+    button.classList.add(`${type}`);
+    return button;
   }
 
   const _createContainer = (...elements) => {
@@ -50,7 +53,7 @@ const initializePage = (() => {
     setKeyValue(input, { type: 'search', id: 'search' , name: 'search' });
     const searchContainer = _createContainer(searchIcon, input);
 
-    const account = _createBtn('account', 'btn');
+    const account = _createBtn('account', 'button');
     const signout = _createBtn('signout', 'special');
     const acctContainer = _createContainer(account, signout);
 
@@ -86,7 +89,7 @@ const initializePage = (() => {
     const userProjects = document.createElement('div');
     userProjects.setAttribute('id', 'projects-user');
     userProjects.textContent = 'GIT GUD';
-    const addProject = _createBtn('project-add', 'btn');
+    const addProject = _createBtn('project-add', 'button');
 
     nav.append(control, defaultProjects, userProjectsTitle, userProjects, addProject);
 
@@ -112,7 +115,13 @@ const initializePage = (() => {
     setKeyValue(contentItems, {id: 'content-items'});
     contentItems.classList.add('flex-column');
     contentItems.classList.add('gap');
-    main.append(contentHeader, contentAttributes, contentItems);
+    const addTaskButton = _createBtn('task-add', 'button');
+    addTaskButton.addEventListener('click', () => {
+      const blankTask = new Task();
+      contentItems.append(Forms.editTask(blankTask));
+    });
+    
+    main.append(contentHeader, contentAttributes, contentItems, addTaskButton);
     main.classList.add('gap');
     return main;
   }

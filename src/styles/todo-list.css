@@ -87,7 +87,7 @@ main {
     background-color: var(--fades);
     width: 100%;
     display: grid;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto 1fr auto;
     padding: 2rem 2rem 0 2rem;
 }
 
@@ -181,9 +181,11 @@ main {
 
 .editTaskPriority {
     grid-area: priority;
+    border-top-left-radius: var(--border-radius);
 }
 
 .editTaskTitle {
+    border-top-right-radius: var(--border-radius);
     grid-area: title;
 }
 
@@ -199,13 +201,17 @@ main {
     grid-area: project;
 }
 
-.accept {
+.editAccept {
+    grid-area: accept;
+    border: 0;
     border-top: var(--border);
     border-right: var(--border);
-    grid-area: accept;
+    border-bottom-left-radius: var(--border-radius);
 }
 
-.cancel {
-    border-top: var(--border);
+.editCancel {
     grid-area: cancel;
+    border: 0;
+    border-top: var(--border);
+    border-bottom-right-radius: var(--border-radius);
 }
