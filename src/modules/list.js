@@ -6,14 +6,9 @@ export default class TodoList {
     this.tasks = [];
     this.projects = [];
     this.projects.push(new Project(''));
-    this.projects.push(new Project('Today'));
-    this.projects.push(new Project('Week'));
-    this.projects.push(new Project('Upcoming'));
   }
 
   addTask(taskAdded) {
-    // console.log(this.getTask(taskAdded.title) === 'undefined');
-    // if (!(this.containingTask(taskAdded.title))) return;
     if (this.tasks.find((task) => task.title === taskAdded.title)) return;
     this.tasks.push(taskAdded);
     this.addTaskProject(taskAdded);
@@ -37,25 +32,26 @@ export default class TodoList {
     this.getProject(taskDeletedProject.projectConnected).deleteProjectTask(taskDeletedProject);
   }
 
-  replaceTask(taskReplacement) {
-    if ((this.containingTask(taskReplacement.title)) === false) return;
-    
-    const taskReplaced = this.tasks.find((task) => task.title === taskReplacement.title)
-    console.log(taskReplaced);
-    const projectReplaced = this.getProject(taskReplaced.projectConnected)
-    console.log(projectReplaced);
-    projectReplaced.deleteProjectTask(taskReplaced);
+  replaceTask(taskReplacement, taskNameReplaced) {
+    if ((this.containingTask(taskReplacement.title) && 
+    (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
+    const taskReplaced = this.tasks.find((task) => task.title === taskNameReplaced);
+    const taskReplacedIndex = this.getTaskIndex(taskNameReplaced);
 
-    const taskReplacedIndex = this.getTaskIndex(taskReplacement.title);
+    this.replaceTaskProject(taskReplaced, taskReplacement);
     this.tasks.splice(taskReplacedIndex, 1, taskReplacement);
-    this.replaceTaskProject(taskReplacement);
   }
 
-  replaceTaskProject(taskReplaceProject) {
-    if (this.containingProject(taskReplaceProject.projectConnected) === false) return;
-    const project = this.getProject(taskReplaceProject.projectConnected);
-    const taskProjectIndex = project.getProjectTaskIndex(taskReplaceProject.title);
-    project.getProjectTasks().splice(taskProjectIndex, 1, taskReplaceProject);
+  replaceTaskProject(taskReplaced, taskReplacement) {
+    const projectReplaced = this.getProject(taskReplaced.projectConnected);
+    const projectReplacement = this.getProject(taskReplacement.projectConnected);
+    if (projectReplaced === projectReplacement) {
+      const taskProjectIndex = projectReplaced.getProjectTaskIndex(taskReplaced.title);
+      projectReplaced.getProjectTasks().splice(taskProjectIndex, 1, taskReplacement);
+    } else {
+      projectReplaced.deleteProjectTask(taskReplaced);
+      projectReplacement.addProjectTask(taskReplacement);
+    }
   }
 
   getTask(taskTitle) {
@@ -74,16 +70,8 @@ export default class TodoList {
     return this.tasks;
   }
 
-  getAllProjects() {
-    return this.projects;
-  }
-
-  getProject(projectName) {
-    return this.projects.find((project) => project.getProjectName() === projectName);
-  }
-
-  containingProject(projectName) {
-    return this.projects.some((project) => project.getProjectName() === projectName);
+  setTasks(tasks) {
+    this.tasks = tasks;
   }
 
   addProject(addedProject) {
@@ -96,8 +84,38 @@ export default class TodoList {
     this.projects.splice(projectIndex, 1);
   }
 
-  setTasks(tasks) {
-    this.tasks = tasks;
+  replaceProject(projectReplacement, projectNameReplaced) {
+    if (this.containingProject(projectReplacement.title)) return;
+    const projectReplaced = this.projects.find((project) => project.name === projectNameReplaced);
+    const projectReplacedIndex = this.getProjectIndex(projectNameReplaced);
+
+    this.projects.splice(projectReplacedIndex, 1, projectReplacement);
+    this.updateProjectTasks(projectReplacement, projectReplaced);
+
+  }
+
+  updateProjectTasks(projectReplacement, projectReplaced) {
+    projectReplaced.getProjectTasks().forEach(task => {
+      task.setProjectConnected(projectReplacement.name);
+      this.tasks.splice(this.getTaskIndex(task), 1, task);
+    });
+    this.getProject(projectReplacement.name).setProjectTasks(projectReplaced.getProjectTasks());
+  }
+
+  getProject(projectName) {
+    return this.projects.find((project) => project.getProjectName() === projectName);
+  }
+
+  containingProject(projectName) {
+    return this.projects.some((project) => project.getProjectName() === projectName);
+  }
+
+  getProjectIndex(projectName) {
+    return this.projects.findIndex((project) => project.name === projectName);
+  }
+
+  getAllProjects() {
+    return this.projects;
   }
 
   setProjects(projects) {

@@ -11,45 +11,36 @@ export default class Interface {
     initializePage;
     // Interface.test();
     Interface.loadAllTasks();
+    Interface.loadALlProjects();
   }
 
   static loadAllTasks() {
     const contentItems = document.querySelector('#content-items');
     contentItems.replaceChildren();
     Storage.getList().getAllTasks().forEach(task => {
-      contentItems.append(Forms.createContainer(task));
+      contentItems.append(Forms.createTaskContainer(task));
     })
     console.log(Storage.getList());
   }
 
+  static loadALlProjects() {
+    const userProjects = document.querySelector('#projects-user');
+    userProjects.replaceChildren();
+    Storage.getList().getAllProjects().forEach(project => {
+      if(project.name === '') return;
+      userProjects.append(Forms.createProjectContainer(project));
+    });
+
+    // console.log(Storage.getList().getAllProjects());
+  }
+
   static test() {
-    const contentItems = document.querySelector('#content-items');
-    const one = new Task({ title: 'One', description: 'one', dueDate: '2022-06-23', projectConnected: 'Today' });
-    const two = new Task({ title: 'Two', description: 'two', priority: '1' });
-    const three = new Task({ title: 'Three', projectConnected: 'Week' });
-    // console.log(one);
-    // console.log(two);
-    // console.log(three);
+    const userProjects = document.querySelector('#projects-user');
+    Storage.getList().getAllProjects().forEach(project => {
+      console.log(project.getProjectTasksLength());
+    });
 
-    // Storage.addTaskSave(one);
-    // Storage.addTaskSave(two);
-    // Storage.addTaskSave(three);
-    // Storage.addTaskSave(new Task({title: 'Four', projectConnected: 'Upcoming'}));
-    // Storage.deleteTaskSave('Two');
-    // Storage.clearStorage();
-
-    // Storage.addProject(new Project('GIT'));
-    // Storage.deleteProject('ZeroOne');
-
-    // contentItems.append(Forms.createTask());
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('One')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Two')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Three')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Four')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('One')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Two')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Three')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Four')));
+    console.log(Storage.getList().getAllProjects());
 
     // console.log(Storage.getList());
 

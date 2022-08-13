@@ -1,28 +1,31 @@
 import { format } from 'date-fns';
 import Interface from './interface';
+import Project from './project';
 import Storage from './storage';
 import Task from './task';
 
 export default class Forms {
-  static createContainer({ title, projectConnected, description, priority, dueDate } = {}) {
+  static createTaskContainer(task) {
     const taskPreview = document.createElement('div');
     taskPreview.classList.add('taskPreview');
+    taskPreview.classList.add('width-100');
 
-    taskPreview.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
-    // { title, projectConnected, description, priority, dueDate}
+    taskPreview.append(this.createTask(task));
     return taskPreview;
   }
 
   static createTask({ title, projectConnected, description, priority, dueDate } = {}) {
     const taskDisplay = document.createElement('div');
     taskDisplay.classList.add('taskDisplay');
+    taskDisplay.classList.add('grid');
+    taskDisplay.classList.add('width-100');
     taskDisplay.classList.add('gap');
 
     const taskCheck = document.createElement('input');
     setKeyValue(taskCheck, { type: 'checkbox' });
     taskCheck.classList.add('taskCheck');
     const taskTitle = document.createElement('input');
-    setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly"});
+    setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly" });
     taskTitle.classList.add('taskTitle');
     if (title) taskTitle.value = title;
     const taskDate = document.createElement('input');
@@ -35,7 +38,7 @@ export default class Forms {
     taskEdit.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
-      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }));
+      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }, true));
     });
     const taskDelete = document.createElement('img');
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
@@ -43,38 +46,40 @@ export default class Forms {
     taskDelete.addEventListener('click', () => {
       Storage.deleteTaskSave(taskTitle.value);
       Interface.loadAllTasks();
+      Interface.loadALlProjects();
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
     return taskDisplay;
   }
 
-  static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date' } = {}) {
-    const editForm = document.createElement("form");
-    setKeyValue(editForm, { method: 'post', id: 'editForm' });
-    editForm.classList.add('editForm');
+  static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date' } = {}, editing = false) {
+    const taskForm = document.createElement("form");
+    setKeyValue(taskForm, { method: 'post', id: 'taskForm' });
+    taskForm.classList.add('width-100');
 
     const editTask = document.createElement('div');
     editTask.setAttribute('id', 'editTask');
     editTask.classList.add('editTask');
 
     const editTaskTitle = document.createElement('textarea');
-    setKeyValue(editTaskTitle, { id: 'editTaskTitle', name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
     editTaskTitle.classList.add('editTaskTitle');
     if (title) editTaskTitle.value = title;
+    const taskNameReplaced = title;
 
     const editTaskDescription = document.createElement('textarea');
-    setKeyValue(editTaskDescription, { id: 'editTaskDescription', name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
+    setKeyValue(editTaskDescription, { name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
     editTaskDescription.classList.add('editTaskDescription');
     if (description) editTaskDescription.value = description;
 
     const editTaskDate = document.createElement('input');
-    setKeyValue(editTaskDate, { id: 'editTaskDate', name: 'dueDate', type: 'date' });
+    setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
     if (dueDate) editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
-    setKeyValue(editTaskPriority, { id: 'editTaskPriority', name: 'priority' });
+    setKeyValue(editTaskPriority, { name: 'priority' });
     const priorityLevels = [...Array(5).keys()].map(i => i + 1);
     priorityLevels.forEach(prio => {
       const option = document.createElement('option');
@@ -87,7 +92,7 @@ export default class Forms {
     if (priority) editTaskPriority.value = priority;
 
     const editTaskProject = document.createElement('select');
-    setKeyValue(editTaskProject, { id: 'editTaskProject', name: 'projectConnected' });
+    setKeyValue(editTaskProject, { name: 'projectConnected' });
     Storage.getList().getAllProjects().forEach(project => {
       const option = document.createElement('option');
       option.setAttribute('value', `${project.name}`);
@@ -97,65 +102,124 @@ export default class Forms {
     editTaskProject.classList.add('editTaskProject');
     if (editTaskProject) editTaskProject.value = projectConnected;
 
-    const editAccept = document.createElement('button');
-    editAccept.textContent = "Accept";
-    setKeyValue(editAccept, { type: 'submit', form: 'editForm', formaction: 'post' });
-    editAccept.classList.add('editAccept');
-    const editCancel = document.createElement('button');
-    editCancel.textContent = "Cancel";
-    editCancel.classList.add('editCancel');
-    editCancel.addEventListener('click', (event) => {
+    const taskAccept = document.createElement('button');
+    taskAccept.textContent = "Accept";
+    setKeyValue(taskAccept, { type: 'submit', form: 'taskForm', formaction: 'post' });
+    taskAccept.classList.add('taskAccept');
+    const taskCancel = document.createElement('button');
+    taskCancel.textContent = "Cancel";
+    taskCancel.classList.add('taskCancel');
+    taskCancel.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode.parentNode;
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
       Interface.loadAllTasks();
+      Interface.loadALlProjects();
     });
 
-    editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, editAccept, editCancel);
-    editForm.append(editTask);
+    editTaskPriority.focus();
+    editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, taskAccept, taskCancel);
+    taskForm.append(editTask);
 
-    editForm.addEventListener('submit', (event) => {
+    taskForm.addEventListener('submit', (event) => {
       event.preventDefault();
-
-      /*console.log(...data.entries());
-      const newTask = [...new FormData(event.target)].reduce((obj, [key, val]) => {
-        obj[key] = val;
-        return obj;
-      }) */
       const data = new FormData(event.target);
       const newTask = new Task(Object.fromEntries(data));
 
-      if (Storage.getList().containingTask(newTask.title)) {
-        Storage.replaceTaskSave(newTask);
-      } else {
-        Storage.addTaskSave(newTask);
-      }
-      // let validTitle = checkTitle(), validAuthor = checkAuthor(), validPages = checkPages();
-      // let validForm = validTitle && validAuthor && validPages;
+      if (editing) Storage.replaceTaskSave(newTask, taskNameReplaced);
+      else Storage.addTaskSave(newTask);
 
-      // if (!validForm) form.querySelector('input.error').focus();
-
-      // if (validForm) {
-      // const rawData = getFormData(editForm);
-      // console.log(rawData);
-      // const newTask = new Task(...rawData);
-      // console.log(newTask);
-
-      const index = Storage.getList().getTaskIndex(title);
-      // Storage.getList().getAllTasks().splice(index, 1, newTask);
-      // Storage.saveList();
       Interface.loadAllTasks();
-      // }
+      Interface.loadALlProjects();
     });
 
+    return taskForm;
+  }
 
-    // console.log(index);
-    // this.editTask(container.splice(index, 1, {title, projectConnected, description, priority, dueDate}));
-    // Storage.getList().getAllTasks().splice(index, 1, {title, projectConnected, description, priority, dueDate});
-    // container.append(this.editTask({title, projectConnected, description, priority, dueDate}));
+  static createProjectContainer(project) {
+    const projectPreview = document.createElement('div');
+    projectPreview.classList.add('projectPreview');
+    projectPreview.classList.add('width-100');
 
-    return editForm;
+    projectPreview.append(this.createProjects(project));
+    return projectPreview;
+  }
+
+  static createProjects(project) {
+    const projectDisplay = document.createElement('div');
+    projectDisplay.classList.add('projectDisplay');
+    projectDisplay.classList.add('grid');
+    projectDisplay.classList.add('gap');
+
+    const projectNumbers = document.createElement('label');
+    projectNumbers.textContent = `${project.projectTasks.length}`;
+
+    const projectSelect = document.createElement('button');
+    projectSelect.textContent = `${project.name}`;
+
+    projectDisplay.append(projectNumbers, projectSelect);
+    projectDisplay.addEventListener('dblclick', (event) => {
+      const container = event.target.parentNode.parentNode;
+      container.replaceChildren();
+      container.append(this.editProject(project, true));
+    })
+    return projectDisplay;
+  }
+
+  static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
+    console.table(name, projectTasks);
+
+    const projectForm = document.createElement("form");
+    setKeyValue(projectForm, { method: 'post', id: 'projectForm' });
+    projectForm.classList.add('width-100');
+
+    const editProject = document.createElement('div');
+    editProject.setAttribute('id', 'editProject');
+    editProject.classList.add('editProject');
+
+    const editProjectName = document.createElement('input');
+    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '35', required: 'true' });
+    editProjectName.classList.add('width-100');
+    editProjectName.classList.add('editProjectName');
+    if (name) editProjectName.value = name;
+    const projectNameReplaced = name;
+
+    const projectAccept = document.createElement('button');
+    projectAccept.textContent = "Accept";
+    setKeyValue(projectAccept, { type: 'submit', form: 'projectForm', formaction: 'post' });
+    projectAccept.classList.add('projectAccept');
+    const projectCancel = document.createElement('button');
+    projectCancel.textContent = "Cancel";
+    projectCancel.classList.add('projectCancel');
+    projectCancel.addEventListener('click', (event) => {
+      const container = event.target.parentNode.parentNode;
+      container.replaceChildren();
+      container.append(this.createProjects({ name, projectTasks }));
+
+      Interface.loadAllTasks();
+      Interface.loadALlProjects();
+    });
+
+    editProject.append(editProjectName, projectAccept, projectCancel);
+    projectForm.append(editProject);
+
+    projectForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const newName = data.get('name');
+      const newProject = new Project(newName, projectTasks);
+
+      if (editing) Storage.replaceProjectSave(newProject, projectNameReplaced);
+      else Storage.addProjectSave(newProject);
+
+      Interface.loadAllTasks();
+      Interface.loadALlProjects();
+    });
+
+    return projectForm;
+
+
   }
 
 }

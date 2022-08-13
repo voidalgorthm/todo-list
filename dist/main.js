@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\n\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr auto;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n#content-attributes {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n.taskPreview {\n    width: 100%;\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editForm {\n    width: 100%;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"accept accept cancel cancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.editAccept {\n    grid-area: accept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.editCancel {\n    grid-area: cancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;;;AAIA;IACI,iBAAiB;AACrB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;AACf;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,sCAAsC;IACtC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6CAA6C;AACjD;;AAEA;IACI,WAAW;IACX,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;iCAI6B;IAC7B,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;AACA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;AAChD;;AAEA;IACI,6CAA6C;IAC7C,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,iBAAiB;IACjB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\n\n\np {\n    font-size: 1.8rem;\n}\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr auto;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n#content-attributes {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n.taskPreview {\n    width: 100%;\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    width: 100%;\n    height: 2rem;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editForm {\n    width: 100%;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"accept accept cancel cancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.editAccept {\n    grid-area: accept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.editCancel {\n    grid-area: cancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n}\n\n.projectAccept {\n    grid-area: paccept;\n}\n\n.projectCancel {\n    grid-area: pcancel;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;;GAEG;;AAEH;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;IACX,yBAAyB;AAC7B;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,iCAAiC;IACjC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;qCAIiC;IACjC,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;AAChD;;AAEA;IACI,6CAA6C;IAC7C,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;;AAEA;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,4BAA4B;IAC5B;;qBAEiB;IACjB,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;IAGI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;AACtB","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n}\n\n.projectAccept {\n    grid-area: paccept;\n}\n\n.projectCancel {\n    grid-area: pcancel;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -569,33 +569,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Forms)
 /* harmony export */ });
 /* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
-/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+
 
 
 
 
 
 class Forms {
-  static createContainer({ title, projectConnected, description, priority, dueDate } = {}) {
+  static createTaskContainer(task) {
     const taskPreview = document.createElement('div');
     taskPreview.classList.add('taskPreview');
+    taskPreview.classList.add('width-100');
 
-    taskPreview.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
-    // { title, projectConnected, description, priority, dueDate}
+    taskPreview.append(this.createTask(task));
     return taskPreview;
   }
 
   static createTask({ title, projectConnected, description, priority, dueDate } = {}) {
     const taskDisplay = document.createElement('div');
     taskDisplay.classList.add('taskDisplay');
+    taskDisplay.classList.add('grid');
+    taskDisplay.classList.add('width-100');
     taskDisplay.classList.add('gap');
 
     const taskCheck = document.createElement('input');
     setKeyValue(taskCheck, { type: 'checkbox' });
     taskCheck.classList.add('taskCheck');
     const taskTitle = document.createElement('input');
-    setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly"});
+    setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly" });
     taskTitle.classList.add('taskTitle');
     if (title) taskTitle.value = title;
     const taskDate = document.createElement('input');
@@ -608,46 +612,48 @@ class Forms {
     taskEdit.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
-      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }));
+      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }, true));
     });
     const taskDelete = document.createElement('img');
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
     taskDelete.classList.add('taskDelete');
     taskDelete.addEventListener('click', () => {
-      _storage__WEBPACK_IMPORTED_MODULE_1__["default"].deleteTaskSave(taskTitle.value);
+      _storage__WEBPACK_IMPORTED_MODULE_2__["default"].deleteTaskSave(taskTitle.value);
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
     return taskDisplay;
   }
 
-  static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date' } = {}) {
-    const editForm = document.createElement("form");
-    setKeyValue(editForm, { method: 'post', id: 'editForm' });
-    editForm.classList.add('editForm');
+  static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date' } = {}, editing = false) {
+    const taskForm = document.createElement("form");
+    setKeyValue(taskForm, { method: 'post', id: 'taskForm' });
+    taskForm.classList.add('width-100');
 
     const editTask = document.createElement('div');
     editTask.setAttribute('id', 'editTask');
     editTask.classList.add('editTask');
 
     const editTaskTitle = document.createElement('textarea');
-    setKeyValue(editTaskTitle, { id: 'editTaskTitle', name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
     editTaskTitle.classList.add('editTaskTitle');
     if (title) editTaskTitle.value = title;
+    const taskNameReplaced = title;
 
     const editTaskDescription = document.createElement('textarea');
-    setKeyValue(editTaskDescription, { id: 'editTaskDescription', name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
+    setKeyValue(editTaskDescription, { name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
     editTaskDescription.classList.add('editTaskDescription');
     if (description) editTaskDescription.value = description;
 
     const editTaskDate = document.createElement('input');
-    setKeyValue(editTaskDate, { id: 'editTaskDate', name: 'dueDate', type: 'date' });
+    setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
     if (dueDate) editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
-    setKeyValue(editTaskPriority, { id: 'editTaskPriority', name: 'priority' });
+    setKeyValue(editTaskPriority, { name: 'priority' });
     const priorityLevels = [...Array(5).keys()].map(i => i + 1);
     priorityLevels.forEach(prio => {
       const option = document.createElement('option');
@@ -660,8 +666,8 @@ class Forms {
     if (priority) editTaskPriority.value = priority;
 
     const editTaskProject = document.createElement('select');
-    setKeyValue(editTaskProject, { id: 'editTaskProject', name: 'projectConnected' });
-    _storage__WEBPACK_IMPORTED_MODULE_1__["default"].getList().getAllProjects().forEach(project => {
+    setKeyValue(editTaskProject, { name: 'projectConnected' });
+    _storage__WEBPACK_IMPORTED_MODULE_2__["default"].getList().getAllProjects().forEach(project => {
       const option = document.createElement('option');
       option.setAttribute('value', `${project.name}`);
       option.textContent = `${project.name}`;
@@ -670,65 +676,124 @@ class Forms {
     editTaskProject.classList.add('editTaskProject');
     if (editTaskProject) editTaskProject.value = projectConnected;
 
-    const editAccept = document.createElement('button');
-    editAccept.textContent = "Accept";
-    setKeyValue(editAccept, { type: 'submit', form: 'editForm', formaction: 'post' });
-    editAccept.classList.add('editAccept');
-    const editCancel = document.createElement('button');
-    editCancel.textContent = "Cancel";
-    editCancel.classList.add('editCancel');
-    editCancel.addEventListener('click', (event) => {
+    const taskAccept = document.createElement('button');
+    taskAccept.textContent = "Accept";
+    setKeyValue(taskAccept, { type: 'submit', form: 'taskForm', formaction: 'post' });
+    taskAccept.classList.add('taskAccept');
+    const taskCancel = document.createElement('button');
+    taskCancel.textContent = "Cancel";
+    taskCancel.classList.add('taskCancel');
+    taskCancel.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode.parentNode;
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
     });
 
-    editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, editAccept, editCancel);
-    editForm.append(editTask);
+    editTaskPriority.focus();
+    editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, taskAccept, taskCancel);
+    taskForm.append(editTask);
 
-    editForm.addEventListener('submit', (event) => {
+    taskForm.addEventListener('submit', (event) => {
       event.preventDefault();
-
-      /*console.log(...data.entries());
-      const newTask = [...new FormData(event.target)].reduce((obj, [key, val]) => {
-        obj[key] = val;
-        return obj;
-      }) */
       const data = new FormData(event.target);
-      const newTask = new _task__WEBPACK_IMPORTED_MODULE_2__["default"](Object.fromEntries(data));
+      const newTask = new _task__WEBPACK_IMPORTED_MODULE_3__["default"](Object.fromEntries(data));
 
-      if (_storage__WEBPACK_IMPORTED_MODULE_1__["default"].getList().containingTask(newTask.title)) {
-        _storage__WEBPACK_IMPORTED_MODULE_1__["default"].replaceTaskSave(newTask);
-      } else {
-        _storage__WEBPACK_IMPORTED_MODULE_1__["default"].addTaskSave(newTask);
-      }
-      // let validTitle = checkTitle(), validAuthor = checkAuthor(), validPages = checkPages();
-      // let validForm = validTitle && validAuthor && validPages;
+      if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceTaskSave(newTask, taskNameReplaced);
+      else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addTaskSave(newTask);
 
-      // if (!validForm) form.querySelector('input.error').focus();
-
-      // if (validForm) {
-      // const rawData = getFormData(editForm);
-      // console.log(rawData);
-      // const newTask = new Task(...rawData);
-      // console.log(newTask);
-
-      const index = _storage__WEBPACK_IMPORTED_MODULE_1__["default"].getList().getTaskIndex(title);
-      // Storage.getList().getAllTasks().splice(index, 1, newTask);
-      // Storage.saveList();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
-      // }
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
     });
 
+    return taskForm;
+  }
 
-    // console.log(index);
-    // this.editTask(container.splice(index, 1, {title, projectConnected, description, priority, dueDate}));
-    // Storage.getList().getAllTasks().splice(index, 1, {title, projectConnected, description, priority, dueDate});
-    // container.append(this.editTask({title, projectConnected, description, priority, dueDate}));
+  static createProjectContainer(project) {
+    const projectPreview = document.createElement('div');
+    projectPreview.classList.add('projectPreview');
+    projectPreview.classList.add('width-100');
 
-    return editForm;
+    projectPreview.append(this.createProjects(project));
+    return projectPreview;
+  }
+
+  static createProjects(project) {
+    const projectDisplay = document.createElement('div');
+    projectDisplay.classList.add('projectDisplay');
+    projectDisplay.classList.add('grid');
+    projectDisplay.classList.add('gap');
+
+    const projectNumbers = document.createElement('label');
+    projectNumbers.textContent = `${project.projectTasks.length}`;
+
+    const projectSelect = document.createElement('button');
+    projectSelect.textContent = `${project.name}`;
+
+    projectDisplay.append(projectNumbers, projectSelect);
+    projectDisplay.addEventListener('dblclick', (event) => {
+      const container = event.target.parentNode.parentNode;
+      container.replaceChildren();
+      container.append(this.editProject(project, true));
+    })
+    return projectDisplay;
+  }
+
+  static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
+    console.table(name, projectTasks);
+
+    const projectForm = document.createElement("form");
+    setKeyValue(projectForm, { method: 'post', id: 'projectForm' });
+    projectForm.classList.add('width-100');
+
+    const editProject = document.createElement('div');
+    editProject.setAttribute('id', 'editProject');
+    editProject.classList.add('editProject');
+
+    const editProjectName = document.createElement('input');
+    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '35', required: 'true' });
+    editProjectName.classList.add('width-100');
+    editProjectName.classList.add('editProjectName');
+    if (name) editProjectName.value = name;
+    const projectNameReplaced = name;
+
+    const projectAccept = document.createElement('button');
+    projectAccept.textContent = "Accept";
+    setKeyValue(projectAccept, { type: 'submit', form: 'projectForm', formaction: 'post' });
+    projectAccept.classList.add('projectAccept');
+    const projectCancel = document.createElement('button');
+    projectCancel.textContent = "Cancel";
+    projectCancel.classList.add('projectCancel');
+    projectCancel.addEventListener('click', (event) => {
+      const container = event.target.parentNode.parentNode;
+      container.replaceChildren();
+      container.append(this.createProjects({ name, projectTasks }));
+
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+    });
+
+    editProject.append(editProjectName, projectAccept, projectCancel);
+    projectForm.append(editProject);
+
+    projectForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const newName = data.get('name');
+      const newProject = new _project__WEBPACK_IMPORTED_MODULE_1__["default"](newName, projectTasks);
+
+      if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceProjectSave(newProject, projectNameReplaced);
+      else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addProjectSave(newProject);
+
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+    });
+
+    return projectForm;
+
+
   }
 
 }
@@ -767,45 +832,36 @@ class Interface {
     _page__WEBPACK_IMPORTED_MODULE_0__["default"];
     // Interface.test();
     Interface.loadAllTasks();
+    Interface.loadALlProjects();
   }
 
   static loadAllTasks() {
     const contentItems = document.querySelector('#content-items');
     contentItems.replaceChildren();
     _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllTasks().forEach(task => {
-      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createContainer(task));
+      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createTaskContainer(task));
     })
     console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
   }
 
+  static loadALlProjects() {
+    const userProjects = document.querySelector('#projects-user');
+    userProjects.replaceChildren();
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects().forEach(project => {
+      if(project.name === '') return;
+      userProjects.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createProjectContainer(project));
+    });
+
+    // console.log(Storage.getList().getAllProjects());
+  }
+
   static test() {
-    const contentItems = document.querySelector('#content-items');
-    const one = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'One', description: 'one', dueDate: '2022-06-23', projectConnected: 'Today' });
-    const two = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Two', description: 'two', priority: '1' });
-    const three = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({ title: 'Three', projectConnected: 'Week' });
-    // console.log(one);
-    // console.log(two);
-    // console.log(three);
+    const userProjects = document.querySelector('#projects-user');
+    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects().forEach(project => {
+      console.log(project.getProjectTasksLength());
+    });
 
-    // Storage.addTaskSave(one);
-    // Storage.addTaskSave(two);
-    // Storage.addTaskSave(three);
-    // Storage.addTaskSave(new Task({title: 'Four', projectConnected: 'Upcoming'}));
-    // Storage.deleteTaskSave('Two');
-    // Storage.clearStorage();
-
-    // Storage.addProject(new Project('GIT'));
-    // Storage.deleteProject('ZeroOne');
-
-    // contentItems.append(Forms.createTask());
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('One')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Two')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Three')));
-    // contentItems.append(Forms.createContainer(Storage.getList().getTask('Four')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('One')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Two')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Three')));
-    // contentItems.append(Forms.editTask(Storage.getList().getTask('Four')));
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects());
 
     // console.log(Storage.getList());
 
@@ -838,14 +894,9 @@ class TodoList {
     this.tasks = [];
     this.projects = [];
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"](''));
-    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Today'));
-    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Week'));
-    this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"]('Upcoming'));
   }
 
   addTask(taskAdded) {
-    // console.log(this.getTask(taskAdded.title) === 'undefined');
-    // if (!(this.containingTask(taskAdded.title))) return;
     if (this.tasks.find((task) => task.title === taskAdded.title)) return;
     this.tasks.push(taskAdded);
     this.addTaskProject(taskAdded);
@@ -869,25 +920,26 @@ class TodoList {
     this.getProject(taskDeletedProject.projectConnected).deleteProjectTask(taskDeletedProject);
   }
 
-  replaceTask(taskReplacement) {
-    if ((this.containingTask(taskReplacement.title)) === false) return;
-    
-    const taskReplaced = this.tasks.find((task) => task.title === taskReplacement.title)
-    console.log(taskReplaced);
-    const projectReplaced = this.getProject(taskReplaced.projectConnected)
-    console.log(projectReplaced);
-    projectReplaced.deleteProjectTask(taskReplaced);
+  replaceTask(taskReplacement, taskNameReplaced) {
+    if ((this.containingTask(taskReplacement.title) && 
+    (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
+    const taskReplaced = this.tasks.find((task) => task.title === taskNameReplaced);
+    const taskReplacedIndex = this.getTaskIndex(taskNameReplaced);
 
-    const taskReplacedIndex = this.getTaskIndex(taskReplacement.title);
+    this.replaceTaskProject(taskReplaced, taskReplacement);
     this.tasks.splice(taskReplacedIndex, 1, taskReplacement);
-    this.replaceTaskProject(taskReplacement);
   }
 
-  replaceTaskProject(taskReplaceProject) {
-    if (this.containingProject(taskReplaceProject.projectConnected) === false) return;
-    const project = this.getProject(taskReplaceProject.projectConnected);
-    const taskProjectIndex = project.getProjectTaskIndex(taskReplaceProject.title);
-    project.getProjectTasks().splice(taskProjectIndex, 1, taskReplaceProject);
+  replaceTaskProject(taskReplaced, taskReplacement) {
+    const projectReplaced = this.getProject(taskReplaced.projectConnected);
+    const projectReplacement = this.getProject(taskReplacement.projectConnected);
+    if (projectReplaced === projectReplacement) {
+      const taskProjectIndex = projectReplaced.getProjectTaskIndex(taskReplaced.title);
+      projectReplaced.getProjectTasks().splice(taskProjectIndex, 1, taskReplacement);
+    } else {
+      projectReplaced.deleteProjectTask(taskReplaced);
+      projectReplacement.addProjectTask(taskReplacement);
+    }
   }
 
   getTask(taskTitle) {
@@ -906,16 +958,8 @@ class TodoList {
     return this.tasks;
   }
 
-  getAllProjects() {
-    return this.projects;
-  }
-
-  getProject(projectName) {
-    return this.projects.find((project) => project.getProjectName() === projectName);
-  }
-
-  containingProject(projectName) {
-    return this.projects.some((project) => project.getProjectName() === projectName);
+  setTasks(tasks) {
+    this.tasks = tasks;
   }
 
   addProject(addedProject) {
@@ -928,8 +972,38 @@ class TodoList {
     this.projects.splice(projectIndex, 1);
   }
 
-  setTasks(tasks) {
-    this.tasks = tasks;
+  replaceProject(projectReplacement, projectNameReplaced) {
+    if (this.containingProject(projectReplacement.title)) return;
+    const projectReplaced = this.projects.find((project) => project.name === projectNameReplaced);
+    const projectReplacedIndex = this.getProjectIndex(projectNameReplaced);
+
+    this.projects.splice(projectReplacedIndex, 1, projectReplacement);
+    this.updateProjectTasks(projectReplacement, projectReplaced);
+
+  }
+
+  updateProjectTasks(projectReplacement, projectReplaced) {
+    projectReplaced.getProjectTasks().forEach(task => {
+      task.setProjectConnected(projectReplacement.name);
+      this.tasks.splice(this.getTaskIndex(task), 1, task);
+    });
+    this.getProject(projectReplacement.name).setProjectTasks(projectReplaced.getProjectTasks());
+  }
+
+  getProject(projectName) {
+    return this.projects.find((project) => project.getProjectName() === projectName);
+  }
+
+  containingProject(projectName) {
+    return this.projects.some((project) => project.getProjectName() === projectName);
+  }
+
+  getProjectIndex(projectName) {
+    return this.projects.findIndex((project) => project.name === projectName);
+  }
+
+  getAllProjects() {
+    return this.projects;
   }
 
   setProjects(projects) {
@@ -952,7 +1026,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
-/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
+
+
+
 
 
 
@@ -1008,9 +1088,17 @@ const initializePage = (() => {
     setKeyValue(input, { type: 'search', id: 'search' , name: 'search' });
     const searchContainer = _createContainer(searchIcon, input);
 
-    const account = _createBtn('account', 'button');
-    const signout = _createBtn('signout', 'special');
-    const acctContainer = _createContainer(account, signout);
+    const local = _createBtn('local', 'button');
+    local.addEventListener('click', () => {
+      console.log(_storage__WEBPACK_IMPORTED_MODULE_3__["default"].showStorage());
+    });
+    const clear = _createBtn('clear', 'special');
+    clear.addEventListener('click', () => {
+      _storage__WEBPACK_IMPORTED_MODULE_3__["default"].clearStorage();
+      _interface__WEBPACK_IMPORTED_MODULE_4__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_4__["default"].loadAllProjects();
+    });
+    const acctContainer = _createContainer(local, clear);
 
     logoContainer.classList.add('gap');
     searchContainer.classList.add('gap');
@@ -1023,33 +1111,45 @@ const initializePage = (() => {
   const _initializeNav = () => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
+    nav.classList.add('flex-column');
+    nav.classList.add('gap2');
 
     const control = document.createElement('div');
     control.setAttribute('id', 'nav-control');
     const collapseControl = _createIcon('3.png');
     control.append(collapseControl);
 
-    const defaultProjects = document.createElement('div');
-    defaultProjects.setAttribute('id', 'projects-default');
+    const filterProjects = document.createElement('div');
+    filterProjects.setAttribute('id', 'projects-filter');
+    const home = _createBtn('home', 'menu');
+    home.classList.add('active');
     const today = _createBtn('today', 'menu');
-    today.classList.add('active');
     const tomorrow = _createBtn('tomorrow', 'menu');
     const upcoming = _createBtn('upcoming', 'menu');
 
-    defaultProjects.append(today, tomorrow, upcoming);
-    defaultProjects.classList.add('flex-column');
-
-    const userProjectsTitle = _createHeading('Projects', '2');
+    filterProjects.append(home, today, tomorrow, upcoming);
+    filterProjects.classList.add('flex-column');
+    filterProjects.classList.add('gap2');
     
     const userProjects = document.createElement('div');
-    userProjects.setAttribute('id', 'projects-user');
-    userProjects.textContent = 'GIT GUD';
+    userProjects.setAttribute('id', 'projects');
+    userProjects.classList.add('grid');
+    userProjects.classList.add('gap');
+    
+    const userProjectsLabel = _createHeading('Projects', '2');
+    const userProjectsContents = document.createElement('div');
+    userProjectsContents.setAttribute('id', 'projects-user');
+    userProjectsContents.classList.add('grid');
+    userProjectsContents.classList.add('gap');
     const addProject = _createBtn('project-add', 'button');
+    addProject.addEventListener('click', () => {
+      const blankProject = new _project__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      userProjectsContents.append(_forms__WEBPACK_IMPORTED_MODULE_2__["default"].editProject(blankProject));
+    });
+    userProjects.append(userProjectsLabel, userProjectsContents, addProject);
 
-    nav.append(control, defaultProjects, userProjectsTitle, userProjects, addProject);
-
-    // nav.classList.add('flex-column');
-    // nav.classList.add('evenly');
+    nav.append(control, filterProjects, userProjects);
+    
     return nav;
   }
 
@@ -1066,22 +1166,30 @@ const initializePage = (() => {
     const sortEmpty3 = _createHeading('', 4);
     const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
     setKeyValue(contentAttributes, {id: 'content-attributes'});
+    contentAttributes.classList.add('grid');
+    contentAttributes.classList.add('width-100');
+    const content = document.createElement('div');
+    setKeyValue(content, {id: 'content'});
+    content.classList.add('flex-column');
+    content.classList.add('gap');
     const contentItems = document.createElement('div');
     setKeyValue(contentItems, {id: 'content-items'});
     contentItems.classList.add('flex-column');
     contentItems.classList.add('gap');
-    const addTaskButton = _createBtn('task-add', 'button');
-    addTaskButton.addEventListener('click', () => {
+    const addTask = _createBtn('task-add', 'button');
+    addTask.addEventListener('click', () => {
       const blankTask = new _task__WEBPACK_IMPORTED_MODULE_0__["default"]();
-      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_1__["default"].editTask(blankTask));
+      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_2__["default"].editTask(blankTask));
     });
+    content.append(contentItems, addTask);
     
-    main.append(contentHeader, contentAttributes, contentItems, addTaskButton);
+    main.append(contentHeader, contentAttributes, content);
     main.classList.add('gap');
     return main;
   }
 
   document.body.classList.add('flex-column');
+
   _initializeHeader();
   _initializeNav();
   _initializeMain();
@@ -1106,17 +1214,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Project)
 /* harmony export */ });
 class Project {
-  constructor(name) {
+  constructor(name, projectTasks = []) {
     this.name = name;
-    this.projectTasks = [];
-  }
-
-  setProjectName(name) {
-    this.name = name;
-  }
-
-  getProjectName() {
-    return this.name;
+    this.projectTasks = projectTasks;
   }
 
   addProjectTask(addedTaskCopy) {
@@ -1129,16 +1229,16 @@ class Project {
     this.projectTasks = this.projectTasks.filter((task) => task.getTitle() !== deletedTaskCopy.title);
   }
 
-  getProjectTasks() {
-    return this.projectTasks;
-  }
-
   getProjectTask(taskName) {
     return this.projectTasks.find((task) => task.getTitle() === taskName);
   }
 
   containingProjectTask(taskName) {
     return this.projectTasks.some((task) => task.getTitle() === taskName);
+  }
+
+  getProjectTasksLength() {
+    return this.projectTasks.length;
   }
 
   getProjectTaskIndex(taskTitle) {
@@ -1150,10 +1250,21 @@ class Project {
     return this.projectTasks.splice(index, 1);
   }
 
+  getProjectName() {
+    return this.name;
+  }
+
+  setProjectName(name) {
+    this.name = name;
+  }
+
+  getProjectTasks() {
+    return this.projectTasks;
+  }
+
   setProjectTasks(tasks) {
     this.projectTasks = tasks;
   }
-
 }
 
 /***/ }),
@@ -1196,7 +1307,12 @@ class Storage {
     return todoList;
   }
 
+  static showStorage() {
+    return localStorage;
+  }
+
   static clearStorage() {
+    if(localStorage.length === 0) return;
     localStorage.clear();
   }
 
@@ -1212,23 +1328,27 @@ class Storage {
     Storage.saveList(todoList);
   }
 
-  static replaceTaskSave(task) {
+  static replaceTaskSave(newTask, oldTaskName) {
     const todoList = Storage.getList();
-    todoList.replaceTask(task);
+    todoList.replaceTask(newTask, oldTaskName);
     Storage.saveList(todoList);
   }
 
-  static addProject(project) {
+  static addProjectSave(project) {
     const todoList = Storage.getList();
     todoList.addProject(project);
     Storage.saveList(todoList);
   }
 
-  static deleteProject(projectName) {
+  static deleteProjectSave(projectName) {
     const todoList = Storage.getList();
-    if (todoList.containingProject(projectName)) {
       todoList.deleteProject(projectName);
-    }
+    Storage.saveList(todoList);
+  }
+
+  static replaceProjectSave(newProject, oldProjectName) {
+    const todoList = Storage.getList();
+    todoList.replaceProject(newProject, oldProjectName);
     Storage.saveList(todoList);
   }
 

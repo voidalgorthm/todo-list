@@ -52,11 +52,13 @@ h5 {
     font-size: 1.6rem;
 }
 
-
-
 p {
     font-size: 1.8rem;
 }
+
+/* button {
+    width: 100%;
+} */
 
 body {
     background-color: #333;
@@ -81,13 +83,14 @@ section {
 nav {
     background-color: var(--todo-light);
     width: 100%;
+    padding: 1rem 2rem 0 2rem;
 }
 
 main {
     background-color: var(--fades);
     width: 100%;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto 1fr;
     padding: 2rem 2rem 0 2rem;
 }
 
@@ -119,38 +122,45 @@ main {
     justify-content: flex-end;
 }
 
+.grid {
+    display: grid;
+    align-items: center;
+    width: 100%;
+}
+
 .gap {
     gap: 1rem;
 }
 
-#content-attributes {
+.gap2 {
+    gap: 2rem;
+}
+
+.width-100 {
     width: 100%;
+}
+
+#content-attributes {
     height: 2rem;
-    display: grid;
-    align-items: center;
     grid-template-columns: 3rem 3fr 1fr 3rem 3rem;
 }
 
+#task-add {
+    /* width: 100%; */
+}
+
 .taskPreview {
-    width: 100%;
     /* height: 2rem; */
 }
 
 .taskDisplay {
-    width: 100%;
     height: 2rem;
-    display: grid;
-    align-items: center;
     grid-template-columns: 3rem 3fr 1fr 2rem 2rem;
 }
 
 .taskTitle {
     height: inherit;
     border: 0;
-}
-
-.editForm {
-    width: 100%;
 }
 
 .editTask {
@@ -161,11 +171,12 @@ main {
     "priority title title title"
     "description description description description"
     "date date project project"
-    "accept accept cancel cancel";
+    "taccept taccept tcancel tcancel";
     border: var(--border);
     outline: var(--border);
     border-radius: var(--border-radius);
 }
+
 .editTaskPriority,
 .editTaskTitle,
 .editTaskDescription,
@@ -201,17 +212,60 @@ main {
     grid-area: project;
 }
 
-.editAccept {
-    grid-area: accept;
+.taskAccept {
+    grid-area: taccept;
     border: 0;
     border-top: var(--border);
     border-right: var(--border);
     border-bottom-left-radius: var(--border-radius);
 }
 
-.editCancel {
-    grid-area: cancel;
+.taskCancel {
+    grid-area: tcancel;
     border: 0;
     border-top: var(--border);
     border-bottom-right-radius: var(--border-radius);
+}
+
+#projects-user {
+
+}
+
+.projectDisplay {
+    width: 100%;
+    height: 2rem;
+    grid-template-columns: 3rem 1fr;
+}
+
+.editProject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "name name"
+    "paccept pcancel";
+    border: var(--border);
+    outline: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.editProjectName,
+.projectAccept,
+.projectCancel {
+    padding: .5rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.editProjectName {
+    grid-area: name;
+}
+
+.projectAccept {
+    grid-area: paccept;
+}
+
+.projectCancel {
+    grid-area: pcancel;
 }

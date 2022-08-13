@@ -22,7 +22,12 @@ export default class Storage {
     return todoList;
   }
 
+  static showStorage() {
+    return localStorage;
+  }
+
   static clearStorage() {
+    if(localStorage.length === 0) return;
     localStorage.clear();
   }
 
@@ -38,23 +43,27 @@ export default class Storage {
     Storage.saveList(todoList);
   }
 
-  static replaceTaskSave(task) {
+  static replaceTaskSave(newTask, oldTaskName) {
     const todoList = Storage.getList();
-    todoList.replaceTask(task);
+    todoList.replaceTask(newTask, oldTaskName);
     Storage.saveList(todoList);
   }
 
-  static addProject(project) {
+  static addProjectSave(project) {
     const todoList = Storage.getList();
     todoList.addProject(project);
     Storage.saveList(todoList);
   }
 
-  static deleteProject(projectName) {
+  static deleteProjectSave(projectName) {
     const todoList = Storage.getList();
-    if (todoList.containingProject(projectName)) {
       todoList.deleteProject(projectName);
-    }
+    Storage.saveList(todoList);
+  }
+
+  static replaceProjectSave(newProject, oldProjectName) {
+    const todoList = Storage.getList();
+    todoList.replaceProject(newProject, oldProjectName);
     Storage.saveList(todoList);
   }
 
