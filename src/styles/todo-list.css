@@ -196,8 +196,8 @@ main {
 }
 
 .editTaskTitle {
-    border-top-right-radius: var(--border-radius);
     grid-area: title;
+    border-top-right-radius: var(--border-radius);
 }
 
 .editTaskDescription {
@@ -260,12 +260,21 @@ main {
 
 .editProjectName {
     grid-area: name;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 }
 
 .projectAccept {
     grid-area: paccept;
+    border: 0;
+    border-top: var(--border);
+    border-right: var(--border);
+    border-bottom-left-radius: var(--border-radius);
 }
 
 .projectCancel {
     grid-area: pcancel;
+    border: 0;
+    border-top: var(--border);
+    border-bottom-right-radius: var(--border-radius);
 }

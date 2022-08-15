@@ -44,9 +44,12 @@ export default class Forms {
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
     taskDelete.classList.add('taskDelete');
     taskDelete.addEventListener('click', () => {
+      const active = document.querySelector('.active');
       Storage.deleteTaskSave(taskTitle.value);
-      Interface.loadAllTasks();
       Interface.loadALlProjects();
+      Interface.setActiveButton(active.id);
+      Interface.addEventButtons();
+      Interface.loadAllTasks();
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
@@ -76,6 +79,8 @@ export default class Forms {
     const editTaskDate = document.createElement('input');
     setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
+    const today = new Date().toISOString().split('T')[0];
+    editTaskDate.setAttribute('min', today);
     if (dueDate) editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
@@ -111,11 +116,14 @@ export default class Forms {
     taskCancel.classList.add('taskCancel');
     taskCancel.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode.parentNode;
+      const active = document.querySelector('.active');
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
-      Interface.loadAllTasks();
       Interface.loadALlProjects();
+      Interface.setActiveButton(active.id);
+      Interface.addEventButtons();
+      Interface.loadAllTasks();
     });
 
     editTaskPriority.focus();
@@ -123,15 +131,18 @@ export default class Forms {
     taskForm.append(editTask);
 
     taskForm.addEventListener('submit', (event) => {
+      const active = document.querySelector('.active');
       event.preventDefault();
       const data = new FormData(event.target);
       const newTask = new Task(Object.fromEntries(data));
 
       if (editing) Storage.replaceTaskSave(newTask, taskNameReplaced);
       else Storage.addTaskSave(newTask);
-
-      Interface.loadAllTasks();
+      
       Interface.loadALlProjects();
+      Interface.setActiveButton(active.id);
+      Interface.addEventButtons();
+      Interface.loadAllTasks();
     });
 
     return taskForm;
@@ -154,8 +165,10 @@ export default class Forms {
 
     const projectNumbers = document.createElement('label');
     projectNumbers.textContent = `${project.projectTasks.length}`;
-
     const projectSelect = document.createElement('button');
+    projectSelect.setAttribute('id', `project-${project.name}`);
+    projectSelect.classList.add('projects');
+
     projectSelect.textContent = `${project.name}`;
 
     projectDisplay.append(projectNumbers, projectSelect);
@@ -168,8 +181,6 @@ export default class Forms {
   }
 
   static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
-    console.table(name, projectTasks);
-
     const projectForm = document.createElement("form");
     setKeyValue(projectForm, { method: 'post', id: 'projectForm' });
     projectForm.classList.add('width-100');
@@ -197,8 +208,12 @@ export default class Forms {
       container.replaceChildren();
       container.append(this.createProjects({ name, projectTasks }));
 
-      Interface.loadAllTasks();
+      const identification = `project-${editProjectName.value}`;
       Interface.loadALlProjects();
+      Interface.setActiveButton(identification);
+      Interface.addEventButtons();
+      Interface.setActiveButton(editProjectName.value);
+      Interface.loadAllTasks();
     });
 
     editProject.append(editProjectName, projectAccept, projectCancel);
@@ -206,6 +221,7 @@ export default class Forms {
 
     projectForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (editProjectName === '') return;
       const data = new FormData(event.target);
       const newName = data.get('name');
       const newProject = new Project(newName, projectTasks);
@@ -213,13 +229,15 @@ export default class Forms {
       if (editing) Storage.replaceProjectSave(newProject, projectNameReplaced);
       else Storage.addProjectSave(newProject);
 
-      Interface.loadAllTasks();
+      const identification = `project-${editProjectName.value}`;
       Interface.loadALlProjects();
+      Interface.setActiveButton(identification);
+      Interface.addEventButtons();
+      Interface.loadTitle(editProjectName.value);
+      Interface.loadAllTasks();
     });
 
     return projectForm;
-
-
   }
 
 }

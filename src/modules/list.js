@@ -1,5 +1,5 @@
+import { isToday, isWithinInterval, addWeeks, addMonths } from 'date-fns';
 import Project from './project';
-import Task from './task';
 
 export default class TodoList {
   constructor() {
@@ -33,8 +33,8 @@ export default class TodoList {
   }
 
   replaceTask(taskReplacement, taskNameReplaced) {
-    if ((this.containingTask(taskReplacement.title) && 
-    (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
+    if ((this.containingTask(taskReplacement.title) &&
+      (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
     const taskReplaced = this.tasks.find((task) => task.title === taskNameReplaced);
     const taskReplacedIndex = this.getTaskIndex(taskNameReplaced);
 
@@ -95,9 +95,12 @@ export default class TodoList {
   }
 
   updateProjectTasks(projectReplacement, projectReplaced) {
+    console.log(projectReplaced);
     projectReplaced.getProjectTasks().forEach(task => {
+      const index = this.getTaskIndex(task.title);
+      console.log(index);
       task.setProjectConnected(projectReplacement.name);
-      this.tasks.splice(this.getTaskIndex(task), 1, task);
+      this.tasks.splice(index, 1, task);
     });
     this.getProject(projectReplacement.name).setProjectTasks(projectReplaced.getProjectTasks());
   }
@@ -120,6 +123,31 @@ export default class TodoList {
 
   setProjects(projects) {
     this.projects = projects;
+  }
+
+  getTasksToday() {
+    return this.tasks.filter((task) => {
+      const taskDate = new Date(task.dueDate);
+      return isToday(taskDate);
+    })
+  }
+
+  getTasksWeek() {
+    return this.tasks.filter((task) => {
+      const today = new Date();
+      const week = addWeeks(new Date(today), 1);
+      const taskDate = new Date(task.dueDate);
+      return isWithinInterval(taskDate, {start: today, end: week});
+    })
+  }
+
+  getTasksMonth() {
+    return this.tasks.filter((task) => {
+      const today = new Date();
+      const month = addMonths(new Date(today), 1);
+      const taskDate = new Date(task.dueDate);
+      return isWithinInterval(taskDate, {start: today, end: month});
+    })
   }
 
 }

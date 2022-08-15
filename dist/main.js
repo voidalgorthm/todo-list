@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n}\n\n.projectAccept {\n    grid-area: paccept;\n}\n\n.projectCancel {\n    grid-area: pcancel;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;;GAEG;;AAEH;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;IACX,yBAAyB;AAC7B;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,iCAAiC;IACjC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;qCAIiC;IACjC,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;AAChD;;AAEA;IACI,6CAA6C;IAC7C,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;;AAEA;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,4BAA4B;IAC5B;;qBAEiB;IACjB,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;IAGI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;AACtB","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    border-top-right-radius: var(--border-radius);\n    grid-area: title;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n}\n\n.projectAccept {\n    grid-area: paccept;\n}\n\n.projectCancel {\n    grid-area: pcancel;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;;GAEG;;AAEH;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;IACX,yBAAyB;AAC7B;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,iCAAiC;IACjC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;qCAIiC;IACjC,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;AAChD;;AAEA;IACI,gBAAgB;IAChB,6CAA6C;AACjD;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;;AAEA;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,4BAA4B;IAC5B;;qBAEiB;IACjB,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;IAGI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,eAAe;IACf,4CAA4C;IAC5C,6CAA6C;AACjD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -169,6 +169,512 @@ module.exports = function (item) {
 
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/date-fns/esm/_lib/requiredArgs/index.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ requiredArgs)
+/* harmony export */ });
+function requiredArgs(required, args) {
+  if (args.length < required) {
+    throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/_lib/toInteger/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/date-fns/esm/_lib/toInteger/index.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ toInteger)
+/* harmony export */ });
+function toInteger(dirtyNumber) {
+  if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
+    return NaN;
+  }
+
+  var number = Number(dirtyNumber);
+
+  if (isNaN(number)) {
+    return number;
+  }
+
+  return number < 0 ? Math.ceil(number) : Math.floor(number);
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/addDays/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/date-fns/esm/addDays/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addDays)
+/* harmony export */ });
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_lib/toInteger/index.js */ "./node_modules/date-fns/esm/_lib/toInteger/index.js");
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+
+/**
+ * @name addDays
+ * @category Day Helpers
+ * @summary Add the specified number of days to the given date.
+ *
+ * @description
+ * Add the specified number of days to the given date.
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Number} amount - the amount of days to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ * @returns {Date} - the new date with the days added
+ * @throws {TypeError} - 2 arguments required
+ *
+ * @example
+ * // Add 10 days to 1 September 2014:
+ * const result = addDays(new Date(2014, 8, 1), 10)
+ * //=> Thu Sep 11 2014 00:00:00
+ */
+
+function addDays(dirtyDate, dirtyAmount) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var date = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate);
+  var amount = (0,_lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(dirtyAmount);
+
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+
+  if (!amount) {
+    // If 0 days, no-op to avoid changing times in the hour before end of DST
+    return date;
+  }
+
+  date.setDate(date.getDate() + amount);
+  return date;
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/addMonths/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/date-fns/esm/addMonths/index.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addMonths)
+/* harmony export */ });
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_lib/toInteger/index.js */ "./node_modules/date-fns/esm/_lib/toInteger/index.js");
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+
+/**
+ * @name addMonths
+ * @category Month Helpers
+ * @summary Add the specified number of months to the given date.
+ *
+ * @description
+ * Add the specified number of months to the given date.
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Number} amount - the amount of months to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ * @returns {Date} the new date with the months added
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Add 5 months to 1 September 2014:
+ * const result = addMonths(new Date(2014, 8, 1), 5)
+ * //=> Sun Feb 01 2015 00:00:00
+ */
+
+function addMonths(dirtyDate, dirtyAmount) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var date = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate);
+  var amount = (0,_lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(dirtyAmount);
+
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+
+  if (!amount) {
+    // If 0 months, no-op to avoid changing times in the hour before end of DST
+    return date;
+  }
+
+  var dayOfMonth = date.getDate(); // The JS Date object supports date math by accepting out-of-bounds values for
+  // month, day, etc. For example, new Date(2020, 0, 0) returns 31 Dec 2019 and
+  // new Date(2020, 13, 1) returns 1 Feb 2021.  This is *almost* the behavior we
+  // want except that dates will wrap around the end of a month, meaning that
+  // new Date(2020, 13, 31) will return 3 Mar 2021 not 28 Feb 2021 as desired. So
+  // we'll default to the end of the desired month by adding 1 to the desired
+  // month and using a date of 0 to back up one day to the end of the desired
+  // month.
+
+  var endOfDesiredMonth = new Date(date.getTime());
+  endOfDesiredMonth.setMonth(date.getMonth() + amount + 1, 0);
+  var daysInMonth = endOfDesiredMonth.getDate();
+
+  if (dayOfMonth >= daysInMonth) {
+    // If we're already at the end of the month, then this is the correct date
+    // and we're done.
+    return endOfDesiredMonth;
+  } else {
+    // Otherwise, we now know that setting the original day-of-month value won't
+    // cause an overflow, so set the desired day-of-month. Note that we can't
+    // just set the date of `endOfDesiredMonth` because that object may have had
+    // its time changed in the unusual case where where a DST transition was on
+    // the last day of the month and its local time was in the hour skipped or
+    // repeated next to a DST transition.  So we use `date` instead which is
+    // guaranteed to still have the original time.
+    date.setFullYear(endOfDesiredMonth.getFullYear(), endOfDesiredMonth.getMonth(), dayOfMonth);
+    return date;
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/addWeeks/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/date-fns/esm/addWeeks/index.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addWeeks)
+/* harmony export */ });
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_lib/toInteger/index.js */ "./node_modules/date-fns/esm/_lib/toInteger/index.js");
+/* harmony import */ var _addDays_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../addDays/index.js */ "./node_modules/date-fns/esm/addDays/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+
+/**
+ * @name addWeeks
+ * @category Week Helpers
+ * @summary Add the specified number of weeks to the given date.
+ *
+ * @description
+ * Add the specified number of week to the given date.
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Number} amount - the amount of weeks to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ * @returns {Date} the new date with the weeks added
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Add 4 weeks to 1 September 2014:
+ * const result = addWeeks(new Date(2014, 8, 1), 4)
+ * //=> Mon Sep 29 2014 00:00:00
+ */
+
+function addWeeks(dirtyDate, dirtyAmount) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var amount = (0,_lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyAmount);
+  var days = amount * 7;
+  return (0,_addDays_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(dirtyDate, days);
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/isSameDay/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/date-fns/esm/isSameDay/index.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ isSameDay)
+/* harmony export */ });
+/* harmony import */ var _startOfDay_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../startOfDay/index.js */ "./node_modules/date-fns/esm/startOfDay/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name isSameDay
+ * @category Day Helpers
+ * @summary Are the given dates in the same day (and year and month)?
+ *
+ * @description
+ * Are the given dates in the same day (and year and month)?
+ *
+ * @param {Date|Number} dateLeft - the first date to check
+ * @param {Date|Number} dateRight - the second date to check
+ * @returns {Boolean} the dates are in the same day (and year and month)
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Are 4 September 06:00:00 and 4 September 18:00:00 in the same day?
+ * const result = isSameDay(new Date(2014, 8, 4, 6, 0), new Date(2014, 8, 4, 18, 0))
+ * //=> true
+ *
+ * @example
+ * // Are 4 September and 4 October in the same day?
+ * const result = isSameDay(new Date(2014, 8, 4), new Date(2014, 9, 4))
+ * //=> false
+ *
+ * @example
+ * // Are 4 September, 2014 and 4 September, 2015 in the same day?
+ * const result = isSameDay(new Date(2014, 8, 4), new Date(2015, 8, 4))
+ * //=> false
+ */
+
+function isSameDay(dirtyDateLeft, dirtyDateRight) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var dateLeftStartOfDay = (0,_startOfDay_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDateLeft);
+  var dateRightStartOfDay = (0,_startOfDay_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDateRight);
+  return dateLeftStartOfDay.getTime() === dateRightStartOfDay.getTime();
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/isToday/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/date-fns/esm/isToday/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ isToday)
+/* harmony export */ });
+/* harmony import */ var _isSameDay_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../isSameDay/index.js */ "./node_modules/date-fns/esm/isSameDay/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name isToday
+ * @category Day Helpers
+ * @summary Is the given date today?
+ * @pure false
+ *
+ * @description
+ * Is the given date today?
+ *
+ * > ⚠️ Please note that this function is not present in the FP submodule as
+ * > it uses `Date.now()` internally hence impure and can't be safely curried.
+ *
+ * @param {Date|Number} date - the date to check
+ * @returns {Boolean} the date is today
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // If today is 6 October 2014, is 6 October 14:00:00 today?
+ * const result = isToday(new Date(2014, 9, 6, 14, 0))
+ * //=> true
+ */
+
+function isToday(dirtyDate) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(1, arguments);
+  return (0,_isSameDay_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate, Date.now());
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/isWithinInterval/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/date-fns/esm/isWithinInterval/index.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ isWithinInterval)
+/* harmony export */ });
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+
+/**
+ * @name isWithinInterval
+ * @category Interval Helpers
+ * @summary Is the given date within the interval?
+ *
+ * @description
+ * Is the given date within the interval? (Including start and end.)
+ *
+ * @param {Date|Number} date - the date to check
+ * @param {Interval} interval - the interval to check
+ * @returns {Boolean} the date is within the interval
+ * @throws {TypeError} 2 arguments required
+ * @throws {RangeError} The start of an interval cannot be after its end
+ * @throws {RangeError} Date in interval cannot be `Invalid Date`
+ *
+ * @example
+ * // For the date within the interval:
+ * isWithinInterval(new Date(2014, 0, 3), {
+ *   start: new Date(2014, 0, 1),
+ *   end: new Date(2014, 0, 7)
+ * })
+ * //=> true
+ *
+ * @example
+ * // For the date outside of the interval:
+ * isWithinInterval(new Date(2014, 0, 10), {
+ *   start: new Date(2014, 0, 1),
+ *   end: new Date(2014, 0, 7)
+ * })
+ * //=> false
+ *
+ * @example
+ * // For date equal to interval start:
+ * isWithinInterval(date, { start, end: date }) // => true
+ *
+ * @example
+ * // For date equal to interval end:
+ * isWithinInterval(date, { start: date, end }) // => true
+ */
+function isWithinInterval(dirtyDate, interval) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var time = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate).getTime();
+  var startTime = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(interval.start).getTime();
+  var endTime = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(interval.end).getTime(); // Throw an exception if start date is after end date or if any date is `Invalid Date`
+
+  if (!(startTime <= endTime)) {
+    throw new RangeError('Invalid interval');
+  }
+
+  return time >= startTime && time <= endTime;
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/startOfDay/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/date-fns/esm/startOfDay/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ startOfDay)
+/* harmony export */ });
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name startOfDay
+ * @category Day Helpers
+ * @summary Return the start of a day for the given date.
+ *
+ * @description
+ * Return the start of a day for the given date.
+ * The result will be in the local timezone.
+ *
+ * @param {Date|Number} date - the original date
+ * @returns {Date} the start of a day
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // The start of a day for 2 September 2014 11:55:00:
+ * const result = startOfDay(new Date(2014, 8, 2, 11, 55, 0))
+ * //=> Tue Sep 02 2014 00:00:00
+ */
+
+function startOfDay(dirtyDate) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(1, arguments);
+  var date = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/toDate/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/date-fns/esm/toDate/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ toDate)
+/* harmony export */ });
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+/**
+ * @name toDate
+ * @category Common Helpers
+ * @summary Convert the given argument to an instance of Date.
+ *
+ * @description
+ * Convert the given argument to an instance of Date.
+ *
+ * If the argument is an instance of Date, the function returns its clone.
+ *
+ * If the argument is a number, it is treated as a timestamp.
+ *
+ * If the argument is none of the above, the function returns Invalid Date.
+ *
+ * **Note**: *all* Date arguments passed to any *date-fns* function is processed by `toDate`.
+ *
+ * @param {Date|Number} argument - the value to convert
+ * @returns {Date} the parsed date in the local time zone
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // Clone the date:
+ * const result = toDate(new Date(2014, 1, 11, 11, 30, 30))
+ * //=> Tue Feb 11 2014 11:30:30
+ *
+ * @example
+ * // Convert the timestamp to date:
+ * const result = toDate(1392098430000)
+ * //=> Tue Feb 11 2014 11:30:30
+ */
+
+function toDate(argument) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(1, arguments);
+  var argStr = Object.prototype.toString.call(argument); // Clone the date
+
+  if (argument instanceof Date || typeof argument === 'object' && argStr === '[object Date]') {
+    // Prevent the date to lose the milliseconds when passed to new Date() in IE10
+    return new Date(argument.getTime());
+  } else if (typeof argument === 'number' || argStr === '[object Number]') {
+    return new Date(argument);
+  } else {
+    if ((typeof argument === 'string' || argStr === '[object String]') && typeof console !== 'undefined') {
+      // eslint-disable-next-line no-console
+      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments"); // eslint-disable-next-line no-console
+
+      console.warn(new Error().stack);
+    }
+
+    return new Date(NaN);
+  }
+}
 
 /***/ }),
 
@@ -618,9 +1124,12 @@ class Forms {
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
     taskDelete.classList.add('taskDelete');
     taskDelete.addEventListener('click', () => {
+      const active = document.querySelector('.active');
       _storage__WEBPACK_IMPORTED_MODULE_2__["default"].deleteTaskSave(taskTitle.value);
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
@@ -650,6 +1159,8 @@ class Forms {
     const editTaskDate = document.createElement('input');
     setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
+    const today = new Date().toISOString().split('T')[0];
+    editTaskDate.setAttribute('min', today);
     if (dueDate) editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
@@ -685,11 +1196,14 @@ class Forms {
     taskCancel.classList.add('taskCancel');
     taskCancel.addEventListener('click', (event) => {
       const container = event.target.parentNode.parentNode.parentNode;
+      const active = document.querySelector('.active');
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
     editTaskPriority.focus();
@@ -697,15 +1211,18 @@ class Forms {
     taskForm.append(editTask);
 
     taskForm.addEventListener('submit', (event) => {
+      const active = document.querySelector('.active');
       event.preventDefault();
       const data = new FormData(event.target);
       const newTask = new _task__WEBPACK_IMPORTED_MODULE_3__["default"](Object.fromEntries(data));
 
       if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceTaskSave(newTask, taskNameReplaced);
       else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addTaskSave(newTask);
-
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
     return taskForm;
@@ -728,8 +1245,10 @@ class Forms {
 
     const projectNumbers = document.createElement('label');
     projectNumbers.textContent = `${project.projectTasks.length}`;
-
     const projectSelect = document.createElement('button');
+    projectSelect.setAttribute('id', `project-${project.name}`);
+    projectSelect.classList.add('projects');
+
     projectSelect.textContent = `${project.name}`;
 
     projectDisplay.append(projectNumbers, projectSelect);
@@ -742,8 +1261,6 @@ class Forms {
   }
 
   static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
-    console.table(name, projectTasks);
-
     const projectForm = document.createElement("form");
     setKeyValue(projectForm, { method: 'post', id: 'projectForm' });
     projectForm.classList.add('width-100');
@@ -771,8 +1288,12 @@ class Forms {
       container.replaceChildren();
       container.append(this.createProjects({ name, projectTasks }));
 
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      const identification = `project-${editProjectName.value}`;
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(identification);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(editProjectName.value);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
     editProject.append(editProjectName, projectAccept, projectCancel);
@@ -780,6 +1301,7 @@ class Forms {
 
     projectForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (editProjectName === '') return;
       const data = new FormData(event.target);
       const newName = data.get('name');
       const newProject = new _project__WEBPACK_IMPORTED_MODULE_1__["default"](newName, projectTasks);
@@ -787,13 +1309,15 @@ class Forms {
       if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceProjectSave(newProject, projectNameReplaced);
       else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addProjectSave(newProject);
 
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      const identification = `project-${editProjectName.value}`;
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(identification);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadTitle(editProjectName.value);
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
     return projectForm;
-
-
   }
 
 }
@@ -816,10 +1340,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page */ "./src/modules/page.js");
 /* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
-/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./list */ "./src/modules/list.js");
-/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
-/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
-
+/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
 
 
 
@@ -830,45 +1352,90 @@ class Interface {
 
   static loadAll() {
     _page__WEBPACK_IMPORTED_MODULE_0__["default"];
-    // Interface.test();
-    Interface.loadAllTasks();
+    Interface.test();
     Interface.loadALlProjects();
+    Interface.setActiveButton('home');
+    Interface.loadAllTasks();
+    Interface.addEventButtons();
+    Interface.addEventOtherButtons();
   }
 
   static loadAllTasks() {
     const contentItems = document.querySelector('#content-items');
     contentItems.replaceChildren();
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllTasks().forEach(task => {
-      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createTaskContainer(task));
+
+    const active = document.querySelector('.active');
+    const tasksContainer = (active.id === 'home') ? _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getAllTasks() :
+      (active.id === 'today') ? _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getTasksToday() :
+        (active.id === 'week') ? _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getTasksWeek() :
+          (active.id === 'upcoming') ? _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getTasksMonth() :
+            _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getProject(`${active.id.split('-')[1]}`).getProjectTasks();
+
+    tasksContainer.forEach(task => {
+      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].createTaskContainer(task));
     })
-    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList());
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList());
+  }
+
+  static addEventButtons() {
+    const sideButtons = document.querySelectorAll('.menu, .projects');
+    sideButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const label = (button.id.includes('project-')) ? button.id.split('-')[1] : button.id;
+        Interface.loadTitle(label);
+        Interface.setActiveButton(button.id);
+        Interface.loadAllTasks();
+      })
+    });
+  }
+
+  static setActiveButton(id) {
+    const sideButtons = document.querySelectorAll('.menu, .projects');
+    sideButtons.forEach(button => {
+      if (button.id === id) button.classList.add('active');
+      else button.classList.remove('active');
+    });
+  }
+
+  static loadTitle(label) {
+    const title = document.querySelector('#content-title');
+
+    const capitalized = capitalize(label);
+    title.textContent = capitalized;
   }
 
   static loadALlProjects() {
     const userProjects = document.querySelector('#projects-user');
     userProjects.replaceChildren();
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects().forEach(project => {
-      if(project.name === '') return;
-      userProjects.append(_forms__WEBPACK_IMPORTED_MODULE_4__["default"].createProjectContainer(project));
+    _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getAllProjects().forEach(project => {
+      if (project.name === '') return;
+      userProjects.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].createProjectContainer(project));
     });
-
     // console.log(Storage.getList().getAllProjects());
   }
 
   static test() {
-    const userProjects = document.querySelector('#projects-user');
-    _storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects().forEach(project => {
-      console.log(project.getProjectTasksLength());
-    });
-
-    console.log(_storage__WEBPACK_IMPORTED_MODULE_5__["default"].getList().getAllProjects());
-
-    // console.log(Storage.getList());
-
   }
 
+  static addEventOtherButtons() {
+    const contentItems = document.querySelector('#content-items');
+    const userProjectsContents = document.querySelector('#projects-user');
+
+    const addTask = document.querySelector('#task-add');
+    addTask.addEventListener('click', () => {
+      const blankTask = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editTask(blankTask));
+    });
+
+    const addProject = document.querySelector('#project-add');
+    addProject.addEventListener('click', () => {
+      const blankProject = new _project__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      userProjectsContents.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editProject(blankProject));
+    });
+  }
 }
 
+function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
 /***/ }),
@@ -884,8 +1451,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ TodoList)
 /* harmony export */ });
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/isToday/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/addWeeks/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/isWithinInterval/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/addMonths/index.js");
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
 
 
 
@@ -921,8 +1491,8 @@ class TodoList {
   }
 
   replaceTask(taskReplacement, taskNameReplaced) {
-    if ((this.containingTask(taskReplacement.title) && 
-    (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
+    if ((this.containingTask(taskReplacement.title) &&
+      (this.getProject(taskNameReplaced) === taskReplacement.projectConnected))) return;
     const taskReplaced = this.tasks.find((task) => task.title === taskNameReplaced);
     const taskReplacedIndex = this.getTaskIndex(taskNameReplaced);
 
@@ -983,9 +1553,12 @@ class TodoList {
   }
 
   updateProjectTasks(projectReplacement, projectReplaced) {
+    console.log(projectReplaced);
     projectReplaced.getProjectTasks().forEach(task => {
+      const index = this.getTaskIndex(task.title);
+      console.log(index);
       task.setProjectConnected(projectReplacement.name);
-      this.tasks.splice(this.getTaskIndex(task), 1, task);
+      this.tasks.splice(index, 1, task);
     });
     this.getProject(projectReplacement.name).setProjectTasks(projectReplaced.getProjectTasks());
   }
@@ -1010,6 +1583,31 @@ class TodoList {
     this.projects = projects;
   }
 
+  getTasksToday() {
+    return this.tasks.filter((task) => {
+      const taskDate = new Date(task.dueDate);
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(taskDate);
+    })
+  }
+
+  getTasksWeek() {
+    return this.tasks.filter((task) => {
+      const today = new Date();
+      const week = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__["default"])(new Date(today), 1);
+      const taskDate = new Date(task.dueDate);
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, {start: today, end: week});
+    })
+  }
+
+  getTasksMonth() {
+    return this.tasks.filter((task) => {
+      const today = new Date();
+      const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(new Date(today), 1);
+      const taskDate = new Date(task.dueDate);
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, {start: today, end: month});
+    })
+  }
+
 }
 
 /***/ }),
@@ -1025,14 +1623,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
-/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./forms */ "./src/modules/forms.js");
-/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
-/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
-
-
-
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
 
 
 
@@ -1059,7 +1651,7 @@ const initializePage = (() => {
     return icon;
   }
 
-  const _createBtn = (label, type = 'button') => {
+  const _createBtn = (label, type = 'control') => {
     const button = document.createElement('button');
     button.setAttribute('id', label);
     const content = capitalize(label);
@@ -1085,18 +1677,18 @@ const initializePage = (() => {
 
     const searchIcon = _createIcon('2.png');
     const input = document.createElement('input');
-    setKeyValue(input, { type: 'search', id: 'search' , name: 'search' });
+    setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
     const searchContainer = _createContainer(searchIcon, input);
 
-    const local = _createBtn('local', 'button');
+    const local = _createBtn('local', 'control');
     local.addEventListener('click', () => {
-      console.log(_storage__WEBPACK_IMPORTED_MODULE_3__["default"].showStorage());
+      console.log(_storage__WEBPACK_IMPORTED_MODULE_0__["default"].showStorage());
     });
     const clear = _createBtn('clear', 'special');
     clear.addEventListener('click', () => {
-      _storage__WEBPACK_IMPORTED_MODULE_3__["default"].clearStorage();
-      _interface__WEBPACK_IMPORTED_MODULE_4__["default"].loadAllTasks();
-      _interface__WEBPACK_IMPORTED_MODULE_4__["default"].loadAllProjects();
+      _storage__WEBPACK_IMPORTED_MODULE_0__["default"].clearStorage();
+      _interface__WEBPACK_IMPORTED_MODULE_1__["default"].loadAllTasks();
+      _interface__WEBPACK_IMPORTED_MODULE_1__["default"].loadAllProjects();
     });
     const acctContainer = _createContainer(local, clear);
 
@@ -1122,42 +1714,37 @@ const initializePage = (() => {
     const filterProjects = document.createElement('div');
     filterProjects.setAttribute('id', 'projects-filter');
     const home = _createBtn('home', 'menu');
-    home.classList.add('active');
     const today = _createBtn('today', 'menu');
-    const tomorrow = _createBtn('tomorrow', 'menu');
+    const week = _createBtn('week', 'menu');
     const upcoming = _createBtn('upcoming', 'menu');
 
-    filterProjects.append(home, today, tomorrow, upcoming);
+    filterProjects.append(home, today, week, upcoming);
     filterProjects.classList.add('flex-column');
     filterProjects.classList.add('gap2');
-    
+
     const userProjects = document.createElement('div');
     userProjects.setAttribute('id', 'projects');
     userProjects.classList.add('grid');
     userProjects.classList.add('gap');
-    
+
     const userProjectsLabel = _createHeading('Projects', '2');
     const userProjectsContents = document.createElement('div');
     userProjectsContents.setAttribute('id', 'projects-user');
     userProjectsContents.classList.add('grid');
     userProjectsContents.classList.add('gap');
     const addProject = _createBtn('project-add', 'button');
-    addProject.addEventListener('click', () => {
-      const blankProject = new _project__WEBPACK_IMPORTED_MODULE_1__["default"]();
-      userProjectsContents.append(_forms__WEBPACK_IMPORTED_MODULE_2__["default"].editProject(blankProject));
-    });
     userProjects.append(userProjectsLabel, userProjectsContents, addProject);
 
     nav.append(control, filterProjects, userProjects);
-    
+
     return nav;
   }
 
   const _initializeMain = () => {
     const main = document.querySelector('section').querySelector('main');
     main.setAttribute('id', 'main');
-    const contentTitle = _createHeading('TITLE', 3);
-    setKeyValue(contentTitle, {id: 'content-title'});
+    const contentTitle = _createHeading('Home', 3);
+    setKeyValue(contentTitle, { id: 'content-title' });
     const contentHeader = _createContainer(contentTitle);
     const sortEmpty1 = _createHeading('', 4);
     const sortTitle = _createHeading('title', 4);
@@ -1165,24 +1752,20 @@ const initializePage = (() => {
     const sortEmpty2 = _createHeading('', 4);
     const sortEmpty3 = _createHeading('', 4);
     const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
-    setKeyValue(contentAttributes, {id: 'content-attributes'});
+    setKeyValue(contentAttributes, { id: 'content-attributes' });
     contentAttributes.classList.add('grid');
     contentAttributes.classList.add('width-100');
     const content = document.createElement('div');
-    setKeyValue(content, {id: 'content'});
+    setKeyValue(content, { id: 'content' });
     content.classList.add('flex-column');
     content.classList.add('gap');
     const contentItems = document.createElement('div');
-    setKeyValue(contentItems, {id: 'content-items'});
+    setKeyValue(contentItems, { id: 'content-items' });
     contentItems.classList.add('flex-column');
     contentItems.classList.add('gap');
-    const addTask = _createBtn('task-add', 'button');
-    addTask.addEventListener('click', () => {
-      const blankTask = new _task__WEBPACK_IMPORTED_MODULE_0__["default"]();
-      contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_2__["default"].editTask(blankTask));
-    });
+    const addTask = _createBtn('task-add', 'control');
     content.append(contentItems, addTask);
-    
+
     main.append(contentHeader, contentAttributes, content);
     main.classList.add('gap');
     return main;
@@ -1415,14 +1998,6 @@ class Task {
   getDate() {
     return this.dueDate;
   }
-
-  getDateFormatted() {
-    const year = this.dueDate.split('/')[0];
-    const month = this.dueDate.split('/')[1];
-    const day = this.dueDate.split('/')[2];
-    return `${month}/${day}/${year}`
-  }
-
 }
 
 /***/ })
