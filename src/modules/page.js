@@ -48,36 +48,32 @@ const initializePage = (() => {
     const primaryIcon = _createIcon('1.png');
     const logoContainer = _createContainer(primaryIcon, appTitle);
 
-    const searchIcon = _createIcon('2.png');
+    /* const searchIcon = _createIcon('2.png');
     const input = document.createElement('input');
     setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
-    const searchContainer = _createContainer(searchIcon, input);
+    const searchContainer = _createContainer(searchIcon, input); */
 
     const local = _createBtn('local', 'control');
     local.addEventListener('click', () => {
       console.log(Storage.showStorage());
     });
-    const clear = _createBtn('clear', 'special');
-    clear.addEventListener('click', () => {
-      Storage.clearStorage();
-      Interface.loadAllTasks();
-      Interface.loadAllProjects();
+    const toggle = _createBtn('toggle', 'special');
+    toggle.classList.add('navToggle');
+    toggle.addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('media');
     });
-    const acctContainer = _createContainer(local, clear);
+    const acctContainer = _createContainer(local, toggle);
 
     logoContainer.classList.add('gap');
-    searchContainer.classList.add('gap');
+    // searchContainer.classList.add('gap');
     acctContainer.classList.add('gap');
-    header.append(logoContainer, searchContainer, acctContainer);
-    header.classList.add('flex-row');
+    header.append(logoContainer, acctContainer);
     return header;
   }
 
   const _initializeNav = () => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
-    nav.classList.add('flex-column');
-    nav.classList.add('gap2');
 
     const control = document.createElement('div');
     control.setAttribute('id', 'nav-control');
@@ -93,7 +89,7 @@ const initializePage = (() => {
 
     filterProjects.append(home, today, week, upcoming);
     filterProjects.classList.add('flex-column');
-    filterProjects.classList.add('gap2');
+    filterProjects.classList.add('gap');
 
     const userProjects = document.createElement('div');
     userProjects.setAttribute('id', 'projects');
@@ -119,15 +115,20 @@ const initializePage = (() => {
     const contentTitle = _createHeading('Home', 3);
     setKeyValue(contentTitle, { id: 'content-title' });
     const contentHeader = _createContainer(contentTitle);
-    const sortEmpty1 = _createHeading('', 4);
+
+    const sortEmpty = _createHeading('', 4);
+    const sortOne = _createContainer(sortEmpty);
+    sortOne.classList.add('sortHidden')
     const sortTitle = _createHeading('title', 4);
+    const sortTwo = _createContainer(sortTitle);
     const sortDate = _createHeading('date', 4);
-    const sortEmpty2 = _createHeading('', 4);
-    const sortEmpty3 = _createHeading('', 4);
-    const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
+    const sortThree = _createContainer(sortDate);
+    const contentAttributes = document.createElement('div');
+    contentAttributes.append(sortOne, sortTwo, sortThree);
     setKeyValue(contentAttributes, { id: 'content-attributes' });
     contentAttributes.classList.add('grid');
-    contentAttributes.classList.add('width-100');
+    contentAttributes.classList.add('gap');
+
     const content = document.createElement('div');
     setKeyValue(content, { id: 'content' });
     content.classList.add('flex-column');
@@ -143,8 +144,6 @@ const initializePage = (() => {
     main.classList.add('gap');
     return main;
   }
-
-  document.body.classList.add('flex-column');
 
   _initializeHeader();
   _initializeNav();

@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,qBAAqB;;IAErB,yBAAyB;IACzB,qBAAqB;AACzB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;;;;;;IAMI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;;GAEG;;AAEH;IACI,sBAAsB;IACtB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,qCAAqC;IACrC,YAAY;IACZ,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,OAAO;IACP,8BAA8B;AAClC;;AAEA;IACI,mCAAmC;IACnC,WAAW;IACX,yBAAyB;AAC7B;;AAEA;IACI,8BAA8B;IAC9B,WAAW;IACX,aAAa;IACb,iCAAiC;IACjC,yBAAyB;AAC7B;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,6CAA6C;AACjD;;AAEA;IACI,eAAe;IACf,SAAS;AACb;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;qCAIiC;IACjC,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;;;;;IAOI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;AAChD;;AAEA;IACI,gBAAgB;IAChB,6CAA6C;AACjD;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;;AAEA;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,4BAA4B;IAC5B;;qBAEiB;IACjB,qBAAqB;IACrB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;;IAGI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,eAAe;IACf,4CAA4C;IAC5C,6CAA6C;AACjD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button {\n    width: 100%;\n} */\n\nbody {\n    background-color: #333;\n    min-height: 100vh;\n    width: 100%;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    height: 10vh;\n    width: 100%;\n    padding: 0 2rem;\n}\n\nsection {\n    width: 100%;\n    display: grid;\n    flex: 1;\n    grid-template-columns: 1fr 3fr;\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 100%;\n    padding: 1rem 2rem 0 2rem;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 100%;\n    display: grid;\n    grid-template-rows: auto auto 1fr;\n    padding: 2rem 2rem 0 2rem;\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.gap2 {\n    gap: 2rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;\n}\n\n.taskTitle {\n    height: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas: \n    \"priority title title title\"\n    \"description description description description\"\n    \"date date project project\"\n    \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n}\n\n.editTaskProject {\n    grid-area: project;\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {\n\n}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas: \n    \"name name\"\n    \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 25rem;\n    min-width: 20rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: 2rem;\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: block;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 80%;\n    /* display: grid; */\n    /* grid-template-rows: auto auto 1fr; */\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem 2rem 0 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button,\ninput,\nimg {\n    width: 100%;\n} */\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n.sortHidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: block;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"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","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 25rem;\n    min-width: 20rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: 2rem;\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: block;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 80%;\n    /* display: grid; */\n    /* grid-template-rows: auto auto 1fr; */\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem 2rem 0 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button,\ninput,\nimg {\n    width: 100%;\n} */\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n.sortHidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: block;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1088,6 +1088,7 @@ class Forms {
   static createTaskContainer(task) {
     const taskPreview = document.createElement('div');
     taskPreview.classList.add('taskPreview');
+    taskPreview.classList.add('flex-center');
     taskPreview.classList.add('width-100');
 
     taskPreview.append(this.createTask(task));
@@ -1112,14 +1113,22 @@ class Forms {
     setKeyValue(taskDate, { type: 'date', name: 'date', readonly: "readonly" });
     taskDate.classList.add('taskDate');
     if (dueDate) taskDate.value = dueDate;
-    const taskEdit = document.createElement('img');
-    taskEdit.classList.add('taskEdit');
-    setKeyValue(taskEdit, { src: 'edit.svg', name: 'edit', class: '' });
-    taskEdit.addEventListener('click', (event) => {
+
+    taskTitle.addEventListener('click', taskEdit);
+    taskDate.addEventListener('click', taskEdit);
+
+    function taskEdit(event) {
+      console.log(event);
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
-      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }, true));
-    });
+      container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
+
+      console.log(event.target);
+      if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
+      else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
+      else document.querySelector('.editTaskPriority').focus();
+    }
+
     const taskDelete = document.createElement('img');
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
     taskDelete.classList.add('taskDelete');
@@ -1132,7 +1141,7 @@ class Forms {
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
-    taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
+    taskDisplay.append(taskCheck, taskTitle, taskDate, taskDelete);
     return taskDisplay;
   }
 
@@ -1206,7 +1215,6 @@ class Forms {
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
     });
 
-    editTaskPriority.focus();
     editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, taskAccept, taskCancel);
     taskForm.append(editTask);
 
@@ -1215,10 +1223,11 @@ class Forms {
       event.preventDefault();
       const data = new FormData(event.target);
       const newTask = new _task__WEBPACK_IMPORTED_MODULE_3__["default"](Object.fromEntries(data));
+      // if(Storage.getList().containingTask(newTask.title)) { alert('Task exists, set another one'); return; }
 
       if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceTaskSave(newTask, taskNameReplaced);
       else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addTaskSave(newTask);
-      
+
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
@@ -1404,6 +1413,10 @@ class Interface {
     title.textContent = capitalized;
   }
 
+  static test() {
+  
+  }
+
   static loadALlProjects() {
     const userProjects = document.querySelector('#projects-user');
     userProjects.replaceChildren();
@@ -1412,9 +1425,6 @@ class Interface {
       userProjects.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].createProjectContainer(project));
     });
     // console.log(Storage.getList().getAllProjects());
-  }
-
-  static test() {
   }
 
   static addEventOtherButtons() {
@@ -1675,36 +1685,32 @@ const initializePage = (() => {
     const primaryIcon = _createIcon('1.png');
     const logoContainer = _createContainer(primaryIcon, appTitle);
 
-    const searchIcon = _createIcon('2.png');
+    /* const searchIcon = _createIcon('2.png');
     const input = document.createElement('input');
     setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
-    const searchContainer = _createContainer(searchIcon, input);
+    const searchContainer = _createContainer(searchIcon, input); */
 
     const local = _createBtn('local', 'control');
     local.addEventListener('click', () => {
       console.log(_storage__WEBPACK_IMPORTED_MODULE_0__["default"].showStorage());
     });
-    const clear = _createBtn('clear', 'special');
-    clear.addEventListener('click', () => {
-      _storage__WEBPACK_IMPORTED_MODULE_0__["default"].clearStorage();
-      _interface__WEBPACK_IMPORTED_MODULE_1__["default"].loadAllTasks();
-      _interface__WEBPACK_IMPORTED_MODULE_1__["default"].loadAllProjects();
+    const toggle = _createBtn('toggle', 'special');
+    toggle.classList.add('navToggle');
+    toggle.addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('media');
     });
-    const acctContainer = _createContainer(local, clear);
+    const acctContainer = _createContainer(local, toggle);
 
     logoContainer.classList.add('gap');
-    searchContainer.classList.add('gap');
+    // searchContainer.classList.add('gap');
     acctContainer.classList.add('gap');
-    header.append(logoContainer, searchContainer, acctContainer);
-    header.classList.add('flex-row');
+    header.append(logoContainer, acctContainer);
     return header;
   }
 
   const _initializeNav = () => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
-    nav.classList.add('flex-column');
-    nav.classList.add('gap2');
 
     const control = document.createElement('div');
     control.setAttribute('id', 'nav-control');
@@ -1720,7 +1726,7 @@ const initializePage = (() => {
 
     filterProjects.append(home, today, week, upcoming);
     filterProjects.classList.add('flex-column');
-    filterProjects.classList.add('gap2');
+    filterProjects.classList.add('gap');
 
     const userProjects = document.createElement('div');
     userProjects.setAttribute('id', 'projects');
@@ -1746,15 +1752,20 @@ const initializePage = (() => {
     const contentTitle = _createHeading('Home', 3);
     setKeyValue(contentTitle, { id: 'content-title' });
     const contentHeader = _createContainer(contentTitle);
-    const sortEmpty1 = _createHeading('', 4);
+
+    const sortEmpty = _createHeading('', 4);
+    const sortOne = _createContainer(sortEmpty);
+    sortOne.classList.add('sortHidden')
     const sortTitle = _createHeading('title', 4);
+    const sortTwo = _createContainer(sortTitle);
     const sortDate = _createHeading('date', 4);
-    const sortEmpty2 = _createHeading('', 4);
-    const sortEmpty3 = _createHeading('', 4);
-    const contentAttributes = _createContainer(sortEmpty1, sortTitle, sortDate, sortEmpty2, sortEmpty3);
+    const sortThree = _createContainer(sortDate);
+    const contentAttributes = document.createElement('div');
+    contentAttributes.append(sortOne, sortTwo, sortThree);
     setKeyValue(contentAttributes, { id: 'content-attributes' });
     contentAttributes.classList.add('grid');
-    contentAttributes.classList.add('width-100');
+    contentAttributes.classList.add('gap');
+
     const content = document.createElement('div');
     setKeyValue(content, { id: 'content' });
     content.classList.add('flex-column');
@@ -1770,8 +1781,6 @@ const initializePage = (() => {
     main.classList.add('gap');
     return main;
   }
-
-  document.body.classList.add('flex-column');
 
   _initializeHeader();
   _initializeNav();

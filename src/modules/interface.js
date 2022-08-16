@@ -60,6 +60,10 @@ export default class Interface {
     title.textContent = capitalized;
   }
 
+  static test() {
+  
+  }
+
   static loadALlProjects() {
     const userProjects = document.querySelector('#projects-user');
     userProjects.replaceChildren();
@@ -68,9 +72,6 @@ export default class Interface {
       userProjects.append(Forms.createProjectContainer(project));
     });
     // console.log(Storage.getList().getAllProjects());
-  }
-
-  static test() {
   }
 
   static addEventOtherButtons() {

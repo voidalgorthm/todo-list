@@ -20,7 +20,71 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--todo-darkest);
+    min-height: 5vh;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--todo-darkest);
+    min-height: 5vh;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section {
+    /* width: 100%; */
+    display: flex;
+    flex: 1;
+    min-height: calc(100% - 5vh - 5vh);
+}
+
+nav {
+    background-color: var(--todo-light);
+    width: 25rem;
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    transition: height 1s ease-in-out;
+}
+
+nav.media {
+    display: block;
+}
+
+main {
+    background-color: var(--fades);
+    width: 80%;
+    /* display: grid; */
+    /* grid-template-rows: auto auto 1fr; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 2rem 2rem 0 2rem;
 }
 
 h1,
@@ -56,50 +120,17 @@ p {
     font-size: 1.8rem;
 }
 
-/* button {
+/* button,
+input,
+img {
     width: 100%;
 } */
-
-body {
-    background-color: #333;
-    min-height: 100vh;
-    width: 100%;
-}
-
-header {
-    background-color: var(--todo-darkest);
-    height: 10vh;
-    width: 100%;
-    padding: 0 2rem;
-}
-
-section {
-    width: 100%;
-    display: grid;
-    flex: 1;
-    grid-template-columns: 1fr 3fr;
-}
-
-nav {
-    background-color: var(--todo-light);
-    width: 100%;
-    padding: 1rem 2rem 0 2rem;
-}
-
-main {
-    background-color: var(--fades);
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    padding: 2rem 2rem 0 2rem;
-}
 
 .flex-center,
 .flex-column,
 .flex-row {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 .flex-center {
@@ -132,17 +163,21 @@ main {
     gap: 1rem;
 }
 
-.gap2 {
-    gap: 2rem;
-}
-
 .width-100 {
     width: 100%;
 }
 
+.sortHidden {
+    visibility: hidden;
+}
+
 #content-attributes {
     height: 2rem;
-    grid-template-columns: 3rem 3fr 1fr 3rem 3rem;
+    grid-template-columns: 3rem 2fr 1fr;
+}
+
+#content-items {
+    width: 100%;
 }
 
 #task-add {
@@ -155,11 +190,12 @@ main {
 
 .taskDisplay {
     height: 2rem;
-    grid-template-columns: 3rem 3fr 1fr 2rem 2rem;
+    grid-template-columns: 3rem 2fr 1fr 3rem;
 }
 
-.taskTitle {
-    height: inherit;
+.taskTitle,
+.taskDate {
+    background-color: inherit;
     border: 0;
 }
 
@@ -167,11 +203,11 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 3rem 1fr 3rem 3rem;
-    grid-template-areas: 
-    "priority title title title"
-    "description description description description"
-    "date date project project"
-    "taccept taccept tcancel tcancel";
+    grid-template-areas:
+        "priority title title title"
+        "description description description description"
+        "date date project project"
+        "taccept taccept tcancel tcancel";
     border: var(--border);
     outline: var(--border);
     border-radius: var(--border-radius);
@@ -186,18 +222,21 @@ main {
 .cancel {
     padding: .5rem;
     border: none;
-    outline: none;
     resize: none;
 }
 
 .editTaskPriority {
     grid-area: priority;
     border-top-left-radius: var(--border-radius);
+    border-right: var(--border);
+    border-bottom: var(--border);
 }
 
 .editTaskTitle {
     grid-area: title;
     border-top-right-radius: var(--border-radius);
+    border-bottom: var(--border);
+    font-size: 1.6rem;
 }
 
 .editTaskDescription {
@@ -206,10 +245,13 @@ main {
 
 .editTaskDate {
     grid-area: date;
+    border-top: var(--border);
+    border-right: var(--border);
 }
 
 .editTaskProject {
     grid-area: project;
+    border-top: var(--border);
 }
 
 .taskAccept {
@@ -227,9 +269,7 @@ main {
     border-bottom-right-radius: var(--border-radius);
 }
 
-#projects-user {
-
-}
+#projects-user {}
 
 .projectDisplay {
     width: 100%;
@@ -241,9 +281,9 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
-    grid-template-areas: 
-    "name name"
-    "paccept pcancel";
+    grid-template-areas:
+        "name name"
+        "paccept pcancel";
     border: var(--border);
     outline: var(--border);
     border-radius: var(--border-radius);
@@ -277,4 +317,25 @@ main {
     border: 0;
     border-top: var(--border);
     border-bottom-right-radius: var(--border-radius);
+}
+
+@media (max-width: 650px) {
+    .nav-control {
+        display: block;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+
 }

@@ -8,6 +8,7 @@ export default class Forms {
   static createTaskContainer(task) {
     const taskPreview = document.createElement('div');
     taskPreview.classList.add('taskPreview');
+    taskPreview.classList.add('flex-center');
     taskPreview.classList.add('width-100');
 
     taskPreview.append(this.createTask(task));
@@ -32,14 +33,22 @@ export default class Forms {
     setKeyValue(taskDate, { type: 'date', name: 'date', readonly: "readonly" });
     taskDate.classList.add('taskDate');
     if (dueDate) taskDate.value = dueDate;
-    const taskEdit = document.createElement('img');
-    taskEdit.classList.add('taskEdit');
-    setKeyValue(taskEdit, { src: 'edit.svg', name: 'edit', class: '' });
-    taskEdit.addEventListener('click', (event) => {
+
+    taskTitle.addEventListener('click', taskEdit);
+    taskDate.addEventListener('click', taskEdit);
+
+    function taskEdit(event) {
+      console.log(event);
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
-      container.append(this.editTask({ title, projectConnected, description, priority, dueDate }, true));
-    });
+      container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
+
+      console.log(event.target);
+      if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
+      else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
+      else document.querySelector('.editTaskPriority').focus();
+    }
+
     const taskDelete = document.createElement('img');
     setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
     taskDelete.classList.add('taskDelete');
@@ -52,7 +61,7 @@ export default class Forms {
       Interface.loadAllTasks();
     });
 
-    taskDisplay.append(taskCheck, taskTitle, taskDate, taskEdit, taskDelete);
+    taskDisplay.append(taskCheck, taskTitle, taskDate, taskDelete);
     return taskDisplay;
   }
 
@@ -126,7 +135,6 @@ export default class Forms {
       Interface.loadAllTasks();
     });
 
-    editTaskPriority.focus();
     editTask.append(editTaskPriority, editTaskTitle, editTaskDescription, editTaskDate, editTaskProject, taskAccept, taskCancel);
     taskForm.append(editTask);
 
@@ -135,10 +143,11 @@ export default class Forms {
       event.preventDefault();
       const data = new FormData(event.target);
       const newTask = new Task(Object.fromEntries(data));
+      // if(Storage.getList().containingTask(newTask.title)) { alert('Task exists, set another one'); return; }
 
       if (editing) Storage.replaceTaskSave(newTask, taskNameReplaced);
       else Storage.addTaskSave(newTask);
-      
+
       Interface.loadALlProjects();
       Interface.setActiveButton(active.id);
       Interface.addEventButtons();
