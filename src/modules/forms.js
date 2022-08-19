@@ -8,8 +8,7 @@ export default class Forms {
   static createTaskContainer(task) {
     const taskPreview = document.createElement('div');
     taskPreview.classList.add('taskPreview');
-    taskPreview.classList.add('flex-center');
-    taskPreview.classList.add('width-100');
+    taskPreview.classList.add('w-100');
 
     taskPreview.append(this.createTask(task));
     return taskPreview;
@@ -19,7 +18,7 @@ export default class Forms {
     const taskDisplay = document.createElement('div');
     taskDisplay.classList.add('taskDisplay');
     taskDisplay.classList.add('grid');
-    taskDisplay.classList.add('width-100');
+    taskDisplay.classList.add('w-100');
     taskDisplay.classList.add('gap');
 
     const taskCheck = document.createElement('input');
@@ -47,9 +46,10 @@ export default class Forms {
       else document.querySelector('.editTaskPriority').focus();
     }
 
-    const taskDelete = document.createElement('img');
-    setKeyValue(taskDelete, { src: 'delete.svg', name: 'delete', class: '' });
+    const taskDelete = document.createElement('i');
+    taskDelete.setAttribute('name', 'taskDelete');
     taskDelete.classList.add('taskDelete');
+    taskDelete.classList.add('delete', 'fas', 'fa-calendar-xmark');
     taskDelete.addEventListener('click', () => {
       const active = document.querySelector('.active');
       Storage.deleteTaskSave(taskTitle.value);
@@ -66,7 +66,7 @@ export default class Forms {
   static editTask({ title, projectConnected = '', description = '', priority = 5, dueDate = 'No date' } = {}, editing = false) {
     const taskForm = document.createElement("form");
     setKeyValue(taskForm, { method: 'post', id: 'taskForm' });
-    taskForm.classList.add('width-100');
+    taskForm.classList.add('w-100');
 
     const editTask = document.createElement('div');
     editTask.setAttribute('id', 'editTask');
@@ -87,7 +87,8 @@ export default class Forms {
     setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
     const today = new Date().toISOString().split('T')[0];
-    if (dueDate) editTaskDate.setAttribute('min', today); editTaskDate.value = dueDate;
+    editTaskDate.setAttribute('min', today);
+    if (dueDate) editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
     setKeyValue(editTaskPriority, { name: 'priority' });
@@ -163,10 +164,11 @@ export default class Forms {
   }
 
   static createProjects(project) {
-    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed', 'fa-lg']);
+    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed']);
 
     projectDisplay.addEventListener('dblclick', (event) => {
-      const container = event.target.parentNode;
+      const container = event.target.parentNode.parentNode;
+      console.log(container);
       container.replaceChildren();
       container.append(this.editProject(project, true));
     })
@@ -176,7 +178,7 @@ export default class Forms {
   static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
     const projectForm = document.createElement("form");
     setKeyValue(projectForm, { method: 'post', id: 'projectForm' });
-    projectForm.classList.add('width-100');
+    projectForm.classList.add('w-100');
 
     const editProject = document.createElement('div');
     editProject.setAttribute('id', 'editProject');
@@ -184,7 +186,7 @@ export default class Forms {
 
     const editProjectName = document.createElement('input');
     setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '15', required: 'true' });
-    editProjectName.classList.add('width-100');
+    editProjectName.classList.add('w-100');
     editProjectName.classList.add('editProjectName');
     if (name) editProjectName.value = name;
     const projectNameReplaced = name;
@@ -251,7 +253,7 @@ function createBtn(id, number, type = 'projects', ...classes) {
   lbl.textContent = number;
   lbl.classList.add('projectNumbers');
   const del = document.createElement('i');
-  del.classList.add('fas', 'fa-folder-minus', 'fa-lg', 'projectDelete');
+  del.classList.add('delete', 'fas', 'fa-folder-minus');
   del.addEventListener('click', (event) => {
     event.stopPropagation(); 
     const active = document.querySelector('.preactive');

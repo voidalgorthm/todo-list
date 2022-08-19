@@ -6,7 +6,6 @@ export default class TodoList {
     this.tasks = [];
     this.projects = [];
     this.projects.push(new Project(''));
-    this.pMoves = [];
   }
 
   addTask(taskAdded) {

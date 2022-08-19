@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 :root {
     font-size: 62.5%;
 
@@ -8,8 +10,10 @@
 
     --fades: #f5f5f5;
     --fader: #e5e5e5;
-    /* --fade: #cbd5e1; */
+    --color: #fff;
+    --invalid: #dc2626;
 
+    --font: 'Open Sans', sans-serif;
     --border: 1px solid black;
     --border-radius: 2rem;
     --gap1x: 1rem;
@@ -31,13 +35,14 @@ html {
 body {
     min-height: 100vh;
     /* width: 100%; */
+    font-family: var(--font);
     display: flex;
     flex-direction: column;
 }
 
 header {
     background-color: var(--todo-darkest);
-    min-height: 5vh;
+    min-height: 10vh;
     width: 100%;
     display: flex;
     padding: 0 2rem;
@@ -59,7 +64,7 @@ section {
     /* width: 100%; */
     display: flex;
     flex: 1;
-    min-height: calc(100% - 5vh - 5vh);
+    min-height: calc(100% - 10vh - 5vh);
 }
 
 nav {
@@ -78,7 +83,7 @@ nav.media {
     display: flex;
 }
 
-.nav-control {
+#nav-control {
     display: none;
 }
 
@@ -88,24 +93,19 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
     cursor: default;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
 }
 
 h3 {
@@ -117,7 +117,19 @@ h4 {
 }
 
 h5 {
-    font-size: 1.4  rem;
+    font-size: 1.4 rem;
+}
+
+#icon,
+#title {
+    /* height: 4rem; */
+    font-size: 4rem;
+}
+
+#left-header,
+#right-header {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
 }
 
 button,
@@ -126,14 +138,13 @@ input {
     color: inherit;
     border: none;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1.4rem;
     cursor: pointer;
-    
 }
 
 input,
 textarea {
-    background-color: #FFF;
+    background-color: var(--color);
 }
 
 button.menu,
@@ -142,9 +153,8 @@ button.control {
     width: 100%;
     height: 3rem;
     display: grid;
-    grid-template-columns: 2rem 1fr 3rem 2rem;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     gap: var(--gap1x);
     border-radius: var(--border-radius);
     padding: .5rem 2rem;
@@ -152,52 +162,80 @@ button.control {
     overflow: hidden;
 }
 
-button.menu{
-    grid-template-columns: auto 1fr;
+button.menu {
+    grid-template-columns: 2rem 1fr;
     justify-items: left;
 }
 
+button.projects {
+    grid-template-columns: 2rem 1fr 3rem 2rem;
+}
+
+
 button.control {
+    height: 4rem;
     grid-template-columns: auto auto;
     place-items: center;
-    padding: .5rem 8rem;
+}
+
+button.special {
+    font-size: 3.5rem;
 }
 
 i {
     width: 100%;
 }
 
-#projects-filter {
-    width: 100%;
+#add-project {
+    padding: .5rem 8rem;
 }
 
-#projects-user {}
+#projects-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap1x);
+}
+
+#projects-user {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    gap: var(--gap1x);
+}
 
 button.menu:hover,
 button.projects:hover,
 button.control:hover,
 .taskDisplay:hover {
     background-color: var(--todo-dark);
+    color: var(--color);
 }
 
 .active {
     background-color: var(--todo-darkest);
-    color: #fff ;
+    color: var(--color);
+}
+
+.rotate {
+    transform: rotate(180deg);
+    /* transition-delay: 0.2s; */
 }
 
 .projectNumbers {
     background-color: var(--todo-lighter);
-    color: #000 ;
-    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    color: #000;
+    clip-path: circle(50% at 50% 50%);
     text-align: center;
 }
 
-.projectDelete {
+.delete {
     opacity: 0;
     transition: 0.2s linear;
 }
 
-.projectDelete:hover {
+.delete:hover {
     opacity: 0.9;
 }
 
@@ -208,6 +246,7 @@ button.control:hover,
     grid-template-areas:
         "name name"
         "paccept pcancel";
+    font-family: var(--font);
     border: var(--border);
     border-radius: var(--border-radius);
 }
@@ -241,37 +280,70 @@ button.control:hover,
     border-bottom-right-radius: var(--border-radius);
 }
 
-#content-attributes {
-    height: 2rem;
-    grid-template-columns: 3rem 2fr 1fr;
+.sort-attrib {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-title-container {
+    height: 5rem;
 }
 
 .hidden {
     visibility: hidden;
 }
 
+#content-attributes {
+    height: 3rem;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2rem 2fr 1fr 2rem;
+    gap: var(--gap1x);
+    padding: 0 1rem;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap1x);
+}
+
 #content-items {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#task-add {
-    /* width: 100%; */
-}
-
-.taskPreview {
-    /* height: 2rem; */
+#add-task {
+    padding: .5rem 25rem;
 }
 
 .taskDisplay {
-    height: 2rem;
-    grid-template-columns: 3rem 2fr 1fr 3rem;
-    font-size: 1.8rem;
+    height: 3rem;
+    grid-template-columns: 2rem 2fr 1fr 2rem;
+    font-size: 1.6rem;
+    padding: 0 2rem 0 1rem;
+    border-radius: var(--border-radius);
 }
 
 .taskTitle,
 .taskDate {
     background-color: inherit;
     border: 0;
+}
+
+.taskDate {
+    width: 10rem;
 }
 
 .editTask {
@@ -294,7 +366,7 @@ button.control:hover,
 .editTaskProject,
 .taskAccept,
 .taskCancel {
-    padding: .5rem;
+    padding: .5rem 1rem;
     border: none;
     resize: none;
 }
@@ -343,15 +415,17 @@ button.control:hover,
     border-bottom-right-radius: var(--border-radius);
 }
 
+.projectAccept,
+.taskAccept {
+    background-color: var(--todo-light);
+}
+
+.projectCancel,
+.taskCancel {
+    background-color: var(--invalid);
+}
+
 @media (max-width: 650px) {
-    .nav-control {
-        display: flex;
-    }
-
-    .projectDelete {
-    opacity: 1;
-    }
-
     section {
         flex-direction: column;
     }
@@ -365,6 +439,17 @@ button.control:hover,
         width: 100%;
     }
 
+    #nav-control {
+        display: flex;
+    }
+
+    #add-task {
+        padding: .5rem 10rem;
+    }
+
+    .delete {
+        opacity: 1;
+    }
 
 }
 
@@ -409,6 +494,6 @@ button.control:hover,
     gap: var(--gap2x);
 }
 
-.width-100 {
+.w-100 {
     width: 100%;
 }
