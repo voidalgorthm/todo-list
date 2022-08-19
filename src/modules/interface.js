@@ -8,12 +8,23 @@ export default class Interface {
 
   static loadAll() {
     initializePage;
-    Interface.test();
+    // Interface.test();
     Interface.loadALlProjects();
     Interface.setActiveButton('home');
     Interface.loadAllTasks();
     Interface.addEventButtons();
     Interface.addEventOtherButtons();
+  }
+
+  static setActiveButton(id) {
+    const sideButtons = document.querySelectorAll('.menu, .projects');
+    sideButtons.forEach(button => {
+      if (button.classList.contains('active')) button.classList.add('preactive');
+      else button.classList.remove('preactive');
+
+      if (button.id === id) button.classList.add('active');
+      else button.classList.remove('active');
+    });
   }
 
   static loadAllTasks() {
@@ -45,23 +56,14 @@ export default class Interface {
     });
   }
 
-  static setActiveButton(id) {
-    const sideButtons = document.querySelectorAll('.menu, .projects');
-    sideButtons.forEach(button => {
-      if (button.id === id) button.classList.add('active');
-      else button.classList.remove('active');
-    });
-  }
-
   static loadTitle(label) {
     const title = document.querySelector('#content-title');
-
     const capitalized = capitalize(label);
     title.textContent = capitalized;
   }
 
   static test() {
-  
+
   }
 
   static loadALlProjects() {
@@ -76,18 +78,18 @@ export default class Interface {
 
   static addEventOtherButtons() {
     const contentItems = document.querySelector('#content-items');
-    const userProjectsContents = document.querySelector('#projects-user');
+    const userProjects = document.querySelector('#projects-user');
 
-    const addTask = document.querySelector('#task-add');
+    const addTask = document.querySelector('#add-task');
     addTask.addEventListener('click', () => {
       const blankTask = new Task();
       contentItems.append(Forms.editTask(blankTask));
     });
 
-    const addProject = document.querySelector('#project-add');
+    const addProject = document.querySelector('#add-project');
     addProject.addEventListener('click', () => {
       const blankProject = new Project();
-      userProjectsContents.append(Forms.editProject(blankProject));
+      userProjects.append(Forms.editProject(blankProject));
     });
   }
 }

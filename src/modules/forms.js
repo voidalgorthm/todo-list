@@ -38,12 +38,10 @@ export default class Forms {
     taskDate.addEventListener('click', taskEdit);
 
     function taskEdit(event) {
-      console.log(event);
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
       container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
 
-      console.log(event.target);
       if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
       else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
       else document.querySelector('.editTaskPriority').focus();
@@ -89,8 +87,7 @@ export default class Forms {
     setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
     const today = new Date().toISOString().split('T')[0];
-    editTaskDate.setAttribute('min', today);
-    if (dueDate) editTaskDate.value = dueDate;
+    if (dueDate) editTaskDate.setAttribute('min', today); editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
     setKeyValue(editTaskPriority, { name: 'priority' });
@@ -160,29 +157,16 @@ export default class Forms {
   static createProjectContainer(project) {
     const projectPreview = document.createElement('div');
     projectPreview.classList.add('projectPreview');
-    projectPreview.classList.add('width-100');
 
     projectPreview.append(this.createProjects(project));
     return projectPreview;
   }
 
   static createProjects(project) {
-    const projectDisplay = document.createElement('div');
-    projectDisplay.classList.add('projectDisplay');
-    projectDisplay.classList.add('grid');
-    projectDisplay.classList.add('gap');
+    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed', 'fa-lg']);
 
-    const projectNumbers = document.createElement('label');
-    projectNumbers.textContent = `${project.projectTasks.length}`;
-    const projectSelect = document.createElement('button');
-    projectSelect.setAttribute('id', `project-${project.name}`);
-    projectSelect.classList.add('projects');
-
-    projectSelect.textContent = `${project.name}`;
-
-    projectDisplay.append(projectNumbers, projectSelect);
     projectDisplay.addEventListener('dblclick', (event) => {
-      const container = event.target.parentNode.parentNode;
+      const container = event.target.parentNode;
       container.replaceChildren();
       container.append(this.editProject(project, true));
     })
@@ -199,7 +183,7 @@ export default class Forms {
     editProject.classList.add('editProject');
 
     const editProjectName = document.createElement('input');
-    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '35', required: 'true' });
+    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '15', required: 'true' });
     editProjectName.classList.add('width-100');
     editProjectName.classList.add('editProjectName');
     if (name) editProjectName.value = name;
@@ -251,4 +235,37 @@ export default class Forms {
 
 }
 
+function createBtn(id, number, type = 'projects', ...classes) {
+  const button = document.createElement('button');
+  setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
+  button.classList.add(`${type}`);
+  const icon = document.createElement('i');
+  classes.forEach(cls => {
+    Object.values(cls).forEach(value => icon.classList.add(value) );
+  });
+  const content = capitalize(id.name);
+  const title = document.createElement('h3');
+  title.textContent = content;
+  const lbl = document.createElement('label');
+  setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
+  lbl.textContent = number;
+  lbl.classList.add('projectNumbers');
+  const del = document.createElement('i');
+  del.classList.add('fas', 'fa-folder-minus', 'fa-lg', 'projectDelete');
+  del.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    const active = document.querySelector('.preactive');
+    const target = event.target.parentNode;
+    Storage.deleteProjectSave(target.id);
+    Interface.loadALlProjects();
+    Interface.setActiveButton(active.id);
+    Interface.loadTitle(active.id);
+    Interface.loadAllTasks();
+    Interface.loadALlProjects();
+    Interface.addEventButtons();
+  });
+  button.append(icon, title, lbl, del);
+  return button;
+}
+function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }

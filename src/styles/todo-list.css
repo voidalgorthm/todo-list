@@ -12,6 +12,8 @@
 
     --border: 1px solid black;
     --border-radius: 2rem;
+    --gap1x: 1rem;
+    --gap2x: 2rem;
 }
 
 *,
@@ -62,29 +64,31 @@ section {
 
 nav {
     background-color: var(--todo-light);
-    width: 25rem;
-    min-width: 20rem;
+    width: 35%;
+    min-width: 25rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--gap2x);
     padding: 2rem;
     transition: height 1s ease-in-out;
 }
 
 nav.media {
-    display: block;
+    display: flex;
+}
+
+.nav-control {
+    display: none;
 }
 
 main {
     background-color: var(--fades);
-    width: 80%;
-    /* display: grid; */
-    /* grid-template-rows: auto auto 1fr; */
+    width: 65%;
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem;
 }
 
 h1,
@@ -101,7 +105,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 h3 {
@@ -113,67 +117,137 @@ h4 {
 }
 
 h5 {
-    font-size: 1.6rem;
+    font-size: 1.4  rem;
 }
 
-p {
-    font-size: 1.8rem;
+button,
+input {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    
 }
 
-/* button,
 input,
-img {
+textarea {
+    background-color: #FFF;
+}
+
+button.menu,
+button.projects,
+button.control {
     width: 100%;
-} */
-
-.flex-center,
-.flex-column,
-.flex-row {
-    display: flex;
-    align-items: center;
-}
-
-.flex-center {
-    justify-content: center;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.between {
-    justify-content: space-between;
-}
-
-.evenly {
-    justify-content: space-evenly;
-}
-
-.end {
-    justify-content: flex-end;
-}
-
-.grid {
+    height: 3rem;
     display: grid;
+    grid-template-columns: 2rem 1fr 3rem 2rem;
     align-items: center;
+    font-size: 1.6rem;
+    gap: var(--gap1x);
+    border-radius: var(--border-radius);
+    padding: .5rem 2rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+button.menu{
+    grid-template-columns: auto 1fr;
+    justify-items: left;
+}
+
+button.control {
+    grid-template-columns: auto auto;
+    place-items: center;
+    padding: .5rem 8rem;
+}
+
+i {
     width: 100%;
 }
 
-.gap {
-    gap: 1rem;
-}
-
-.width-100 {
+#projects-filter {
     width: 100%;
 }
 
-.sortHidden {
-    visibility: hidden;
+#projects-user {}
+
+button.menu:hover,
+button.projects:hover,
+button.control:hover,
+.taskDisplay:hover {
+    background-color: var(--todo-dark);
+}
+
+.active {
+    background-color: var(--todo-darkest);
+    color: #fff ;
+}
+
+.projectNumbers {
+    background-color: var(--todo-lighter);
+    color: #000 ;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    text-align: center;
+}
+
+.projectDelete {
+    opacity: 0;
+    transition: 0.2s linear;
+}
+
+.projectDelete:hover {
+    opacity: 0.9;
+}
+
+.editProject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "name name"
+        "paccept pcancel";
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.editProjectName,
+.projectAccept,
+.projectCancel {
+    padding: 1rem;
+    border: none;
+    resize: none;
+}
+
+.editProjectName {
+    grid-area: name;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.projectAccept {
+    grid-area: paccept;
+    border: 0;
+    border-top: var(--border);
+    border-right: var(--border);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.projectCancel {
+    grid-area: pcancel;
+    border: 0;
+    border-top: var(--border);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 #content-attributes {
     height: 2rem;
     grid-template-columns: 3rem 2fr 1fr;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 #content-items {
@@ -191,6 +265,7 @@ img {
 .taskDisplay {
     height: 2rem;
     grid-template-columns: 3rem 2fr 1fr 3rem;
+    font-size: 1.8rem;
 }
 
 .taskTitle,
@@ -209,7 +284,6 @@ img {
         "date date project project"
         "taccept taccept tcancel tcancel";
     border: var(--border);
-    outline: var(--border);
     border-radius: var(--border-radius);
 }
 
@@ -218,8 +292,8 @@ img {
 .editTaskDescription,
 .editTaskDate,
 .editTaskProject,
-.accept,
-.cancel {
+.taskAccept,
+.taskCancel {
     padding: .5rem;
     border: none;
     resize: none;
@@ -269,59 +343,13 @@ img {
     border-bottom-right-radius: var(--border-radius);
 }
 
-#projects-user {}
-
-.projectDisplay {
-    width: 100%;
-    height: 2rem;
-    grid-template-columns: 3rem 1fr;
-}
-
-.editProject {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "name name"
-        "paccept pcancel";
-    border: var(--border);
-    outline: var(--border);
-    border-radius: var(--border-radius);
-}
-
-.editProjectName,
-.projectAccept,
-.projectCancel {
-    padding: .5rem;
-    border: none;
-    outline: none;
-    resize: none;
-}
-
-.editProjectName {
-    grid-area: name;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
-
-.projectAccept {
-    grid-area: paccept;
-    border: 0;
-    border-top: var(--border);
-    border-right: var(--border);
-    border-bottom-left-radius: var(--border-radius);
-}
-
-.projectCancel {
-    grid-area: pcancel;
-    border: 0;
-    border-top: var(--border);
-    border-bottom-right-radius: var(--border-radius);
-}
-
 @media (max-width: 650px) {
     .nav-control {
-        display: block;
+        display: flex;
+    }
+
+    .projectDelete {
+    opacity: 1;
     }
 
     section {
@@ -338,4 +366,49 @@ img {
     }
 
 
+}
+
+.flex-center,
+.flex-column,
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    width: 100%;
+}
+
+.gap {
+    gap: var(--gap1x);
+}
+
+.gap2 {
+    gap: var(--gap2x);
+}
+
+.width-100 {
+    width: 100%;
 }

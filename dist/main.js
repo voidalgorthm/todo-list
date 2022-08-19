@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 25rem;\n    min-width: 20rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: 2rem;\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: block;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 80%;\n    /* display: grid; */\n    /* grid-template-rows: auto auto 1fr; */\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem 2rem 0 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button,\ninput,\nimg {\n    width: 100%;\n} */\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n.sortHidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: block;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"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","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 25rem;\n    min-width: 20rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: 2rem;\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: block;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 80%;\n    /* display: grid; */\n    /* grid-template-rows: auto auto 1fr; */\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem 2rem 0 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.6rem;\n}\n\np {\n    font-size: 1.8rem;\n}\n\n/* button,\ninput,\nimg {\n    width: 100%;\n} */\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: 1rem;\n}\n\n.width-100 {\n    width: 100%;\n}\n\n.sortHidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.accept,\n.cancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#projects-user {}\n\n.projectDisplay {\n    width: 100%;\n    height: 2rem;\n    grid-template-columns: 3rem 1fr;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    outline: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: .5rem;\n    border: none;\n    outline: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: block;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n.nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.8rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4  rem;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: inherit;\n    cursor: pointer;\n    \n}\n\ninput,\ntextarea {\n    background-color: #FFF;\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n    align-items: center;\n    font-size: 1.6rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu{\n    grid-template-columns: auto 1fr;\n    justify-items: left;\n}\n\nbutton.control {\n    grid-template-columns: auto auto;\n    place-items: center;\n    padding: .5rem 8rem;\n}\n\ni {\n    width: 100%;\n}\n\n#projects-filter {\n    width: 100%;\n}\n\n#projects-user {}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: #fff ;\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000 ;\n    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);\n    text-align: center;\n}\n\n.projectDelete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.projectDelete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n    font-size: 1.8rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: flex;\n    }\n\n    .projectDelete {\n    opacity: 1;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.width-100 {\n    width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"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","sourcesContent":[":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    /* --fade: #cbd5e1; */\n\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 5vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n.nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 2rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    cursor: default;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-size: 2.8rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4  rem;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: inherit;\n    cursor: pointer;\n    \n}\n\ninput,\ntextarea {\n    background-color: #FFF;\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n    align-items: center;\n    font-size: 1.6rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu{\n    grid-template-columns: auto 1fr;\n    justify-items: left;\n}\n\nbutton.control {\n    grid-template-columns: auto auto;\n    place-items: center;\n    padding: .5rem 8rem;\n}\n\ni {\n    width: 100%;\n}\n\n#projects-filter {\n    width: 100%;\n}\n\n#projects-user {}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: #fff ;\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000 ;\n    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);\n    text-align: center;\n}\n\n.projectDelete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.projectDelete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n#content-attributes {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-items {\n    width: 100%;\n}\n\n#task-add {\n    /* width: 100%; */\n}\n\n.taskPreview {\n    /* height: 2rem; */\n}\n\n.taskDisplay {\n    height: 2rem;\n    grid-template-columns: 3rem 2fr 1fr 3rem;\n    font-size: 1.8rem;\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n@media (max-width: 650px) {\n    .nav-control {\n        display: flex;\n    }\n\n    .projectDelete {\n    opacity: 1;\n    }\n\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.width-100 {\n    width: 100%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1118,12 +1118,10 @@ class Forms {
     taskDate.addEventListener('click', taskEdit);
 
     function taskEdit(event) {
-      console.log(event);
       const container = event.target.parentNode.parentNode;
       container.replaceChildren();
       container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
 
-      console.log(event.target);
       if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
       else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
       else document.querySelector('.editTaskPriority').focus();
@@ -1169,8 +1167,7 @@ class Forms {
     setKeyValue(editTaskDate, { name: 'dueDate', type: 'date' });
     editTaskDate.classList.add('editTaskDate');
     const today = new Date().toISOString().split('T')[0];
-    editTaskDate.setAttribute('min', today);
-    if (dueDate) editTaskDate.value = dueDate;
+    if (dueDate) editTaskDate.setAttribute('min', today); editTaskDate.value = dueDate;
 
     const editTaskPriority = document.createElement('select');
     setKeyValue(editTaskPriority, { name: 'priority' });
@@ -1240,29 +1237,16 @@ class Forms {
   static createProjectContainer(project) {
     const projectPreview = document.createElement('div');
     projectPreview.classList.add('projectPreview');
-    projectPreview.classList.add('width-100');
 
     projectPreview.append(this.createProjects(project));
     return projectPreview;
   }
 
   static createProjects(project) {
-    const projectDisplay = document.createElement('div');
-    projectDisplay.classList.add('projectDisplay');
-    projectDisplay.classList.add('grid');
-    projectDisplay.classList.add('gap');
+    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed', 'fa-lg']);
 
-    const projectNumbers = document.createElement('label');
-    projectNumbers.textContent = `${project.projectTasks.length}`;
-    const projectSelect = document.createElement('button');
-    projectSelect.setAttribute('id', `project-${project.name}`);
-    projectSelect.classList.add('projects');
-
-    projectSelect.textContent = `${project.name}`;
-
-    projectDisplay.append(projectNumbers, projectSelect);
     projectDisplay.addEventListener('dblclick', (event) => {
-      const container = event.target.parentNode.parentNode;
+      const container = event.target.parentNode;
       container.replaceChildren();
       container.append(this.editProject(project, true));
     })
@@ -1279,7 +1263,7 @@ class Forms {
     editProject.classList.add('editProject');
 
     const editProjectName = document.createElement('input');
-    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '35', required: 'true' });
+    setKeyValue(editProjectName, { name: 'name', type: 'text', placeholder: 'Project name: Chores', maxlength: '15', required: 'true' });
     editProjectName.classList.add('width-100');
     editProjectName.classList.add('editProjectName');
     if (name) editProjectName.value = name;
@@ -1331,6 +1315,39 @@ class Forms {
 
 }
 
+function createBtn(id, number, type = 'projects', ...classes) {
+  const button = document.createElement('button');
+  setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
+  button.classList.add(`${type}`);
+  const icon = document.createElement('i');
+  classes.forEach(cls => {
+    Object.values(cls).forEach(value => icon.classList.add(value) );
+  });
+  const content = capitalize(id.name);
+  const title = document.createElement('h3');
+  title.textContent = content;
+  const lbl = document.createElement('label');
+  setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
+  lbl.textContent = number;
+  lbl.classList.add('projectNumbers');
+  const del = document.createElement('i');
+  del.classList.add('fas', 'fa-folder-minus', 'fa-lg', 'projectDelete');
+  del.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    const active = document.querySelector('.preactive');
+    const target = event.target.parentNode;
+    _storage__WEBPACK_IMPORTED_MODULE_2__["default"].deleteProjectSave(target.id);
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadTitle(active.id);
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+  });
+  button.append(icon, title, lbl, del);
+  return button;
+}
+function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
 /***/ }),
@@ -1361,12 +1378,23 @@ class Interface {
 
   static loadAll() {
     _page__WEBPACK_IMPORTED_MODULE_0__["default"];
-    Interface.test();
+    // Interface.test();
     Interface.loadALlProjects();
     Interface.setActiveButton('home');
     Interface.loadAllTasks();
     Interface.addEventButtons();
     Interface.addEventOtherButtons();
+  }
+
+  static setActiveButton(id) {
+    const sideButtons = document.querySelectorAll('.menu, .projects');
+    sideButtons.forEach(button => {
+      if (button.classList.contains('active')) button.classList.add('preactive');
+      else button.classList.remove('preactive');
+
+      if (button.id === id) button.classList.add('active');
+      else button.classList.remove('active');
+    });
   }
 
   static loadAllTasks() {
@@ -1398,23 +1426,14 @@ class Interface {
     });
   }
 
-  static setActiveButton(id) {
-    const sideButtons = document.querySelectorAll('.menu, .projects');
-    sideButtons.forEach(button => {
-      if (button.id === id) button.classList.add('active');
-      else button.classList.remove('active');
-    });
-  }
-
   static loadTitle(label) {
     const title = document.querySelector('#content-title');
-
     const capitalized = capitalize(label);
     title.textContent = capitalized;
   }
 
   static test() {
-  
+
   }
 
   static loadALlProjects() {
@@ -1429,18 +1448,18 @@ class Interface {
 
   static addEventOtherButtons() {
     const contentItems = document.querySelector('#content-items');
-    const userProjectsContents = document.querySelector('#projects-user');
+    const userProjects = document.querySelector('#projects-user');
 
-    const addTask = document.querySelector('#task-add');
+    const addTask = document.querySelector('#add-task');
     addTask.addEventListener('click', () => {
       const blankTask = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]();
       contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editTask(blankTask));
     });
 
-    const addProject = document.querySelector('#project-add');
+    const addProject = document.querySelector('#add-project');
     addProject.addEventListener('click', () => {
       const blankProject = new _project__WEBPACK_IMPORTED_MODULE_2__["default"]();
-      userProjectsContents.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editProject(blankProject));
+      userProjects.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editProject(blankProject));
     });
   }
 }
@@ -1474,6 +1493,7 @@ class TodoList {
     this.tasks = [];
     this.projects = [];
     this.projects.push(new _project__WEBPACK_IMPORTED_MODULE_0__["default"](''));
+    this.pMoves = [];
   }
 
   addTask(taskAdded) {
@@ -1547,8 +1567,8 @@ class TodoList {
     this.projects.push(addedProject);
   }
 
-  deleteProject(deletedProject) {
-    const projectIndex = this.projects.findIndex((project) => project.getProjectName() === deletedProject);
+  deleteProject(deletedProjectName) {
+    const projectIndex = this.projects.findIndex((project) => project.name === deletedProjectName);
     this.projects.splice(projectIndex, 1);
   }
 
@@ -1605,7 +1625,7 @@ class TodoList {
       const today = new Date();
       const week = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__["default"])(new Date(today), 1);
       const taskDate = new Date(task.dueDate);
-      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, {start: today, end: week});
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, { start: today, end: week });
     })
   }
 
@@ -1614,7 +1634,7 @@ class TodoList {
       const today = new Date();
       const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(new Date(today), 1);
       const taskDate = new Date(task.dueDate);
-      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, {start: today, end: month});
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_3__["default"])(taskDate, { start: today, end: month });
     })
   }
 
@@ -1661,18 +1681,33 @@ const initializePage = (() => {
     return icon;
   }
 
-  const _createBtn = (label, type = 'control') => {
+  const _createBtn = (label, type = 'control', ...classes) => {
     const button = document.createElement('button');
     button.setAttribute('id', label);
-    const content = capitalize(label);
-    button.textContent = content;
     button.classList.add(`${type}`);
+    const icon = document.createElement('i');
+    classes.forEach(cls => {
+      Object.values(cls).forEach(value => icon.classList.add(value));
+    });
+    const content = capitalize(label);
+    const title = document.createElement('h4');
+    title.textContent = content;
+    button.append(icon, title);
     return button;
+  }
+
+  const _createLabel = (labeled) => {
+    const label = document.createElement('label');
+    setKeyValue(label, { id: `label-${labeled}`, for: `${labeled}` });
+    // label.classList.add('hidden');
+    // label.textContent = labeled;
+    return label;
   }
 
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
-    container.classList.add('flex-center');
+    if (elements.length === 1) container.classList.add('flex-center');
+    else container.classList.add('flex-row', 'between', 'gap');
     container.append(...elements);
     return container;
   }
@@ -1690,20 +1725,18 @@ const initializePage = (() => {
     setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
     const searchContainer = _createContainer(searchIcon, input); */
 
-    const local = _createBtn('local', 'control');
+    const local = _createBtn('local', 'special');
     local.addEventListener('click', () => {
       console.log(_storage__WEBPACK_IMPORTED_MODULE_0__["default"].showStorage());
     });
     const toggle = _createBtn('toggle', 'special');
-    toggle.classList.add('navToggle');
+    toggle.classList.add('nav-control');
     toggle.addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('media');
     });
     const acctContainer = _createContainer(local, toggle);
 
-    logoContainer.classList.add('gap');
     // searchContainer.classList.add('gap');
-    acctContainer.classList.add('gap');
     header.append(logoContainer, acctContainer);
     return header;
   }
@@ -1712,36 +1745,26 @@ const initializePage = (() => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
 
-    const control = document.createElement('div');
-    control.setAttribute('id', 'nav-control');
-    const collapseControl = _createIcon('3.png');
-    control.append(collapseControl);
-
     const filterProjects = document.createElement('div');
     filterProjects.setAttribute('id', 'projects-filter');
-    const home = _createBtn('home', 'menu');
-    const today = _createBtn('today', 'menu');
-    const week = _createBtn('week', 'menu');
-    const upcoming = _createBtn('upcoming', 'menu');
+
+    const home = _createBtn('home', 'menu', ['fas', 'fa-house', 'fa-lg']);
+    const today = _createBtn('today', 'menu', ['fas', 'fa-calendar-day', 'fa-lg']);
+    const week = _createBtn('week', 'menu', ['fas', 'fa-calendar-week', 'fa-lg']);
+    const upcoming = _createBtn('upcoming', 'menu', ['fas', 'fa-calendar-days', 'fa-lg']);
 
     filterProjects.append(home, today, week, upcoming);
     filterProjects.classList.add('flex-column');
     filterProjects.classList.add('gap');
-
-    const userProjects = document.createElement('div');
-    userProjects.setAttribute('id', 'projects');
-    userProjects.classList.add('grid');
-    userProjects.classList.add('gap');
 
     const userProjectsLabel = _createHeading('Projects', '2');
     const userProjectsContents = document.createElement('div');
     userProjectsContents.setAttribute('id', 'projects-user');
     userProjectsContents.classList.add('grid');
     userProjectsContents.classList.add('gap');
-    const addProject = _createBtn('project-add', 'button');
-    userProjects.append(userProjectsLabel, userProjectsContents, addProject);
+    const addProject = _createBtn('add-project', 'control', ['fa-solid', 'fa-folder-plus', 'fa-lg']);
 
-    nav.append(control, filterProjects, userProjects);
+    nav.append(filterProjects, userProjectsLabel, userProjectsContents, addProject);
 
     return nav;
   }
@@ -1755,7 +1778,7 @@ const initializePage = (() => {
 
     const sortEmpty = _createHeading('', 4);
     const sortOne = _createContainer(sortEmpty);
-    sortOne.classList.add('sortHidden')
+    sortOne.classList.add('hidden')
     const sortTitle = _createHeading('title', 4);
     const sortTwo = _createContainer(sortTitle);
     const sortDate = _createHeading('date', 4);
@@ -1774,7 +1797,7 @@ const initializePage = (() => {
     setKeyValue(contentItems, { id: 'content-items' });
     contentItems.classList.add('flex-column');
     contentItems.classList.add('gap');
-    const addTask = _createBtn('task-add', 'control');
+    const addTask = _createBtn('add-task', 'control');
     content.append(contentItems, addTask);
 
     main.append(contentHeader, contentAttributes, content);
@@ -1789,7 +1812,9 @@ const initializePage = (() => {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initializePage);
 
-function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
 /***/ }),

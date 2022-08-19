@@ -24,18 +24,33 @@ const initializePage = (() => {
     return icon;
   }
 
-  const _createBtn = (label, type = 'control') => {
+  const _createBtn = (label, type = 'control', ...classes) => {
     const button = document.createElement('button');
     button.setAttribute('id', label);
-    const content = capitalize(label);
-    button.textContent = content;
     button.classList.add(`${type}`);
+    const icon = document.createElement('i');
+    classes.forEach(cls => {
+      Object.values(cls).forEach(value => icon.classList.add(value));
+    });
+    const content = capitalize(label);
+    const title = document.createElement('h4');
+    title.textContent = content;
+    button.append(icon, title);
     return button;
+  }
+
+  const _createLabel = (labeled) => {
+    const label = document.createElement('label');
+    setKeyValue(label, { id: `label-${labeled}`, for: `${labeled}` });
+    // label.classList.add('hidden');
+    // label.textContent = labeled;
+    return label;
   }
 
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
-    container.classList.add('flex-center');
+    if (elements.length === 1) container.classList.add('flex-center');
+    else container.classList.add('flex-row', 'between', 'gap');
     container.append(...elements);
     return container;
   }
@@ -53,20 +68,18 @@ const initializePage = (() => {
     setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
     const searchContainer = _createContainer(searchIcon, input); */
 
-    const local = _createBtn('local', 'control');
+    const local = _createBtn('local', 'special');
     local.addEventListener('click', () => {
       console.log(Storage.showStorage());
     });
     const toggle = _createBtn('toggle', 'special');
-    toggle.classList.add('navToggle');
+    toggle.classList.add('nav-control');
     toggle.addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('media');
     });
     const acctContainer = _createContainer(local, toggle);
 
-    logoContainer.classList.add('gap');
     // searchContainer.classList.add('gap');
-    acctContainer.classList.add('gap');
     header.append(logoContainer, acctContainer);
     return header;
   }
@@ -75,36 +88,26 @@ const initializePage = (() => {
     const nav = document.querySelector('section').querySelector('nav');
     nav.setAttribute('id', 'nav');
 
-    const control = document.createElement('div');
-    control.setAttribute('id', 'nav-control');
-    const collapseControl = _createIcon('3.png');
-    control.append(collapseControl);
-
     const filterProjects = document.createElement('div');
     filterProjects.setAttribute('id', 'projects-filter');
-    const home = _createBtn('home', 'menu');
-    const today = _createBtn('today', 'menu');
-    const week = _createBtn('week', 'menu');
-    const upcoming = _createBtn('upcoming', 'menu');
+
+    const home = _createBtn('home', 'menu', ['fas', 'fa-house', 'fa-lg']);
+    const today = _createBtn('today', 'menu', ['fas', 'fa-calendar-day', 'fa-lg']);
+    const week = _createBtn('week', 'menu', ['fas', 'fa-calendar-week', 'fa-lg']);
+    const upcoming = _createBtn('upcoming', 'menu', ['fas', 'fa-calendar-days', 'fa-lg']);
 
     filterProjects.append(home, today, week, upcoming);
     filterProjects.classList.add('flex-column');
     filterProjects.classList.add('gap');
-
-    const userProjects = document.createElement('div');
-    userProjects.setAttribute('id', 'projects');
-    userProjects.classList.add('grid');
-    userProjects.classList.add('gap');
 
     const userProjectsLabel = _createHeading('Projects', '2');
     const userProjectsContents = document.createElement('div');
     userProjectsContents.setAttribute('id', 'projects-user');
     userProjectsContents.classList.add('grid');
     userProjectsContents.classList.add('gap');
-    const addProject = _createBtn('project-add', 'button');
-    userProjects.append(userProjectsLabel, userProjectsContents, addProject);
+    const addProject = _createBtn('add-project', 'control', ['fa-solid', 'fa-folder-plus', 'fa-lg']);
 
-    nav.append(control, filterProjects, userProjects);
+    nav.append(filterProjects, userProjectsLabel, userProjectsContents, addProject);
 
     return nav;
   }
@@ -118,7 +121,7 @@ const initializePage = (() => {
 
     const sortEmpty = _createHeading('', 4);
     const sortOne = _createContainer(sortEmpty);
-    sortOne.classList.add('sortHidden')
+    sortOne.classList.add('hidden')
     const sortTitle = _createHeading('title', 4);
     const sortTwo = _createContainer(sortTitle);
     const sortDate = _createHeading('date', 4);
@@ -137,7 +140,7 @@ const initializePage = (() => {
     setKeyValue(contentItems, { id: 'content-items' });
     contentItems.classList.add('flex-column');
     contentItems.classList.add('gap');
-    const addTask = _createBtn('task-add', 'control');
+    const addTask = _createBtn('add-task', 'control');
     content.append(contentItems, addTask);
 
     main.append(contentHeader, contentAttributes, content);
@@ -152,5 +155,7 @@ const initializePage = (() => {
 
 export default initializePage;
 
-function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }

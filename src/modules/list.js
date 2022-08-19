@@ -6,6 +6,7 @@ export default class TodoList {
     this.tasks = [];
     this.projects = [];
     this.projects.push(new Project(''));
+    this.pMoves = [];
   }
 
   addTask(taskAdded) {
@@ -79,8 +80,8 @@ export default class TodoList {
     this.projects.push(addedProject);
   }
 
-  deleteProject(deletedProject) {
-    const projectIndex = this.projects.findIndex((project) => project.getProjectName() === deletedProject);
+  deleteProject(deletedProjectName) {
+    const projectIndex = this.projects.findIndex((project) => project.name === deletedProjectName);
     this.projects.splice(projectIndex, 1);
   }
 
@@ -137,7 +138,7 @@ export default class TodoList {
       const today = new Date();
       const week = addWeeks(new Date(today), 1);
       const taskDate = new Date(task.dueDate);
-      return isWithinInterval(taskDate, {start: today, end: week});
+      return isWithinInterval(taskDate, { start: today, end: week });
     })
   }
 
@@ -146,7 +147,7 @@ export default class TodoList {
       const today = new Date();
       const month = addMonths(new Date(today), 1);
       const taskDate = new Date(task.dueDate);
-      return isWithinInterval(taskDate, {start: today, end: month});
+      return isWithinInterval(taskDate, { start: today, end: month });
     })
   }
 
