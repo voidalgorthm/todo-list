@@ -95,10 +95,8 @@ export default class TodoList {
   }
 
   updateProjectTasks(projectReplacement, projectReplaced) {
-    console.log(projectReplaced);
     projectReplaced.getProjectTasks().forEach(task => {
       const index = this.getTaskIndex(task.title);
-      console.log(index);
       task.setProjectConnected(projectReplacement.name);
       this.tasks.splice(index, 1, task);
     });

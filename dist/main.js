@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    --color: #fff;\n    --invalid: #dc2626;\n\n    --font: 'Open Sans', sans-serif;\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    font-family: var(--font);\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 10vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 10vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n#nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 1rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    cursor: default;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4 rem;\n}\n\n#icon,\n#title {\n    /* height: 4rem; */\n    font-size: 4rem;\n}\n\n#left-header,\n#right-header {\n    display: grid;\n    grid-template-columns: 5rem 1fr;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: 1.4rem;\n    cursor: pointer;\n}\n\ninput,\ntextarea {\n    background-color: var(--color);\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    align-items: center;\n    font-size: 2rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu {\n    grid-template-columns: 2rem 1fr;\n    justify-items: left;\n}\n\nbutton.projects {\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n}\n\n\nbutton.control {\n    height: 4rem;\n    grid-template-columns: auto auto;\n    place-items: center;\n}\n\nbutton.special {\n    font-size: 3.5rem;\n}\n\ni {\n    width: 100%;\n}\n\n#add-project {\n    padding: .5rem 8rem;\n}\n\n#projects-filter {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#projects-user {\n    width: 100%;\n    display: grid;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n    color: var(--color);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: var(--color);\n}\n\n.rotate {\n    transform: rotate(180deg);\n    /* transition-delay: 0.2s; */\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000;\n    clip-path: circle(50% at 50% 50%);\n    text-align: center;\n}\n\n.delete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.delete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    font-family: var(--font);\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.sort-attrib {\n    display: flex;\n    align-items: center;\n    justify-content: start;\n}\n\n.center {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#content-title-container {\n    height: 5rem;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 3rem;\n    width: 100%;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    gap: var(--gap1x);\n    padding: 0 1rem;\n}\n\n#content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#content-items {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#add-task {\n    padding: .5rem 25rem;\n}\n\n.taskDisplay {\n    height: 3rem;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    font-size: 1.6rem;\n    padding: 0 2rem 0 1rem;\n    border-radius: var(--border-radius);\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.taskDate {\n    width: 10rem;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem 1rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.projectAccept,\n.taskAccept {\n    background-color: var(--todo-light);\n}\n\n.projectCancel,\n.taskCancel {\n    background-color: var(--invalid);\n}\n\n@media (max-width: 650px) {\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n    #nav-control {\n        display: flex;\n    }\n\n    #add-task {\n        padding: .5rem 10rem;\n    }\n\n    .delete {\n        opacity: 1;\n    }\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.w-100 {\n    width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"AAEA;IACI,gBAAgB;;IAEhB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;IACrB,uBAAuB;;IAEvB,gBAAgB;IAChB,gBAAgB;IAChB,aAAa;IACb,kBAAkB;;IAElB,+BAA+B;IAC/B,yBAAyB;IACzB,qBAAqB;IACrB,aAAa;IACb,aAAa;AACjB;;AAEA;;;IAGI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,wBAAwB;IACxB,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,qCAAqC;IACrC,gBAAgB;IAChB,WAAW;IACX,aAAa;IACb,eAAe;IACf,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,qCAAqC;IACrC,eAAe;IACf,WAAW;IACX,aAAa;IACb,eAAe;IACf,mBAAmB;IACnB,8BAA8B;AAClC;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,OAAO;IACP,mCAAmC;AACvC;;AAEA;IACI,mCAAmC;IACnC,UAAU;IACV,gBAAgB;IAChB,aAAa;IACb,mBAAmB;IACnB,sBAAsB;IACtB,iBAAiB;IACjB,aAAa;IACb,iCAAiC;AACrC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,8BAA8B;IAC9B,UAAU;IACV,aAAa;IACb,OAAO;IACP,sBAAsB;IACtB,aAAa;AACjB;;AAEA;;;;;IAKI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;;IAEI,kBAAkB;IAClB,eAAe;AACnB;;AAEA;;IAEI,aAAa;IACb,+BAA+B;AACnC;;AAEA;;IAEI,yBAAyB;IACzB,cAAc;IACd,YAAY;IACZ,oBAAoB;IACpB,iBAAiB;IACjB,eAAe;AACnB;;AAEA;;IAEI,8BAA8B;AAClC;;AAEA;;;IAGI,WAAW;IACX,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,eAAe;IACf,iBAAiB;IACjB,mCAAmC;IACnC,mBAAmB;IACnB,gBAAgB;IAChB,gBAAgB;AACpB;;AAEA;IACI,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,yCAAyC;AAC7C;;;AAGA;IACI,YAAY;IACZ,gCAAgC;IAChC,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,mBAAmB;IACnB,iBAAiB;AACrB;;AAEA;;;;IAII,kCAAkC;IAClC,mBAAmB;AACvB;;AAEA;IACI,qCAAqC;IACrC,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;IACzB,4BAA4B;AAChC;;AAEA;IACI,qCAAqC;IACrC,WAAW;IACX,iCAAiC;IACjC,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,4BAA4B;IAC5B;;yBAEqB;IACrB,wBAAwB;IACxB,qBAAqB;IACrB,mCAAmC;AACvC;;AAEA;;;IAGI,aAAa;IACb,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,eAAe;IACf,4CAA4C;IAC5C,6CAA6C;AACjD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,aAAa;IACb,mBAAmB;IACnB,wCAAwC;IACxC,iBAAiB;IACjB,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,YAAY;IACZ,wCAAwC;IACxC,iBAAiB;IACjB,sBAAsB;IACtB,mCAAmC;AACvC;;AAEA;;IAEI,yBAAyB;IACzB,SAAS;AACb;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,sCAAsC;IACtC;;;;yCAIqC;IACrC,qBAAqB;IACrB,mCAAmC;AACvC;;AAEA;;;;;;;IAOI,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,4CAA4C;IAC5C,2BAA2B;IAC3B,4BAA4B;AAChC;;AAEA;IACI,gBAAgB;IAChB,6CAA6C;IAC7C,4BAA4B;IAC5B,iBAAiB;AACrB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;IACf,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,yBAAyB;AAC7B;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,2BAA2B;IAC3B,+CAA+C;AACnD;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,yBAAyB;IACzB,gDAAgD;AACpD;;AAEA;;IAEI,mCAAmC;AACvC;;AAEA;;IAEI,gCAAgC;AACpC;;AAEA;IACI;QACI,sBAAsB;IAC1B;;IAEA;QACI,WAAW;QACX,aAAa;IACjB;;IAEA;QACI,WAAW;IACf;;IAEA;QACI,aAAa;IACjB;;IAEA;QACI,oBAAoB;IACxB;;IAEA;QACI,UAAU;IACd;;AAEJ;;AAEA;;;IAGI,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,WAAW;AACf","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');\n\n:root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    --color: #fff;\n    --invalid: #dc2626;\n\n    --font: 'Open Sans', sans-serif;\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    font-family: var(--font);\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 10vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 10vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n#nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 1rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    cursor: default;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4 rem;\n}\n\n#icon,\n#title {\n    /* height: 4rem; */\n    font-size: 4rem;\n}\n\n#left-header,\n#right-header {\n    display: grid;\n    grid-template-columns: 5rem 1fr;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: 1.4rem;\n    cursor: pointer;\n}\n\ninput,\ntextarea {\n    background-color: var(--color);\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    align-items: center;\n    font-size: 2rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu {\n    grid-template-columns: 2rem 1fr;\n    justify-items: left;\n}\n\nbutton.projects {\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n}\n\n\nbutton.control {\n    height: 4rem;\n    grid-template-columns: auto auto;\n    place-items: center;\n}\n\nbutton.special {\n    font-size: 3.5rem;\n}\n\ni {\n    width: 100%;\n}\n\n#add-project {\n    padding: .5rem 8rem;\n}\n\n#projects-filter {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#projects-user {\n    width: 100%;\n    display: grid;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n    color: var(--color);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: var(--color);\n}\n\n.rotate {\n    transform: rotate(180deg);\n    /* transition-delay: 0.2s; */\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000;\n    clip-path: circle(50% at 50% 50%);\n    text-align: center;\n}\n\n.delete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.delete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    font-family: var(--font);\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.sort-attrib {\n    display: flex;\n    align-items: center;\n    justify-content: start;\n}\n\n.center {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#content-title-container {\n    height: 5rem;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 3rem;\n    width: 100%;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    gap: var(--gap1x);\n    padding: 0 1rem;\n}\n\n#content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#content-items {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#add-task {\n    padding: .5rem 25rem;\n}\n\n.taskDisplay {\n    height: 3rem;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    font-size: 1.6rem;\n    padding: 0 2rem 0 1rem;\n    border-radius: var(--border-radius);\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.taskDate {\n    width: 10rem;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem 1rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.6rem;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.projectAccept,\n.taskAccept {\n    background-color: var(--todo-light);\n}\n\n.projectCancel,\n.taskCancel {\n    background-color: var(--invalid);\n}\n\n@media (max-width: 650px) {\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n    #nav-control {\n        display: flex;\n    }\n\n    #add-task {\n        padding: .5rem 10rem;\n    }\n\n    .delete {\n        opacity: 1;\n    }\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.w-100 {\n    width: 100%;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    --color: #fff;\n    --invalid: #dc2626;\n\n    --font: 'Open Sans', sans-serif;\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    font-family: var(--font);\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 10vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 10vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n#nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 1rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    cursor: default;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4 rem;\n}\n\n#icon,\n#title {\n    /* height: 4rem; */\n    font-size: 4rem;\n}\n\n#left-header,\n#right-header {\n    display: grid;\n    grid-template-columns: 5rem 1fr;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: 1.4rem;\n    cursor: pointer;\n}\n\ninput,\ntextarea {\n    background-color: var(--color);\n}\n\ntextarea:required {\n    border: 2px solid var(--invalid);\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    align-items: center;\n    font-size: 2rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu {\n    grid-template-columns: 2rem 1fr;\n    justify-items: left;\n}\n\nbutton.projects {\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n}\n\n\nbutton.control {\n    height: 4rem;\n    grid-template-columns: auto auto;\n    place-items: center;\n}\n\nbutton.special {\n    font-size: 3.5rem;\n}\n\ni {\n    width: 100%;\n}\n\n#add-project {\n    padding: .5rem 8rem;\n}\n\n#projects-filter {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#projects-user {\n    width: 100%;\n    display: grid;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n    color: var(--color);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: var(--color);\n}\n\n.rotate {\n    transform: rotate(180deg);\n    /* transition-delay: 0.2s; */\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000;\n    clip-path: circle(50% at 50% 50%);\n    text-align: center;\n}\n\n.delete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.delete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    font-family: var(--font);\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.sort-attrib {\n    display: flex;\n    align-items: center;\n    justify-content: start;\n}\n\n.center {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#content-title-container {\n    height: 5rem;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 3rem;\n    width: 100%;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    gap: var(--gap1x);\n    padding: 0 1rem;\n}\n\n#content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#content-items {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#add-task {\n    padding: .5rem 25rem;\n}\n\ninput[type=\"checkbox\"] {\n    appearance: none;\n    background-color: var(--fades);\n    margin: 0;\n    font: inherit;\n    color: inherit;\n    width: 1.15em;\n    height: 1.15em;\n    border: 0.15em solid black;\n    border-radius: 0.15em;\n    display: grid;\n    place-content: center;\n}\n\ninput[type=\"checkbox\"]::before {\n    content: \"\";\n    width: 0.65em;\n    height: 0.65em;\n    transform: scale(0);\n    transition: 120ms transform ease-in-out;\n    box-shadow: inset 1em 1em var(--todo-lighter);\n}\n\ninput[type=\"checkbox\"]:checked::before {\n    transform: scale(1);\n    transform-origin: bottom left;\n    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);\n}\n\ninput[type=\"checkbox\"]:focus {\n    outline: max(2px, 0.15em) solid currentColor;\n    outline-offset: max(2px, 0.15em);\n}\n\n.strike {\n    text-decoration: line-through black;\n    opacity: 0.3;\n}\n\n.taskDisplay {\n    height: 3rem;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    font-size: 1.6rem;\n    padding: 0 2rem 0 1rem;\n    border-radius: var(--border-radius);\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.taskDate {\n    width: 10rem;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem 1rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.5rem;\n    overflow: hidden;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.projectAccept,\n.taskAccept {\n    background-color: var(--todo-light);\n}\n\n.projectCancel,\n.taskCancel {\n    background-color: var(--invalid);\n}\n\n\n@media (max-width: 650px) {\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n    #nav-control {\n        display: flex;\n    }\n\n    #add-task {\n        padding: .5rem 10rem;\n    }\n\n    .delete {\n        opacity: 1;\n    }\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.w-100 {\n    width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/styles/todo-list.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');\n\n:root {\n    font-size: 62.5%;\n\n    --todo-darkest: #14532d;\n    --todo-dark: #15803d;\n    --todo-light: #22c55e;\n    --todo-lighter: #4ade80;\n\n    --fades: #f5f5f5;\n    --fader: #e5e5e5;\n    --color: #fff;\n    --invalid: #dc2626;\n\n    --font: 'Open Sans', sans-serif;\n    --border: 1px solid black;\n    --border-radius: 2rem;\n    --gap1x: 1rem;\n    --gap2x: 2rem;\n}\n\n*,\n*::before,\n*::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    min-height: 100%;\n}\n\nbody {\n    min-height: 100vh;\n    /* width: 100%; */\n    font-family: var(--font);\n    display: flex;\n    flex-direction: column;\n}\n\nheader {\n    background-color: var(--todo-darkest);\n    min-height: 10vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nfooter {\n    background-color: var(--todo-darkest);\n    min-height: 5vh;\n    width: 100%;\n    display: flex;\n    padding: 0 2rem;\n    align-items: center;\n    justify-content: space-between;\n}\n\nsection {\n    /* width: 100%; */\n    display: flex;\n    flex: 1;\n    min-height: calc(100% - 10vh - 5vh);\n}\n\nnav {\n    background-color: var(--todo-light);\n    width: 35%;\n    min-width: 25rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    gap: var(--gap2x);\n    padding: 2rem;\n    transition: height 1s ease-in-out;\n}\n\nnav.media {\n    display: flex;\n}\n\n#nav-control {\n    display: none;\n}\n\nmain {\n    background-color: var(--fades);\n    width: 65%;\n    display: flex;\n    flex: 1;\n    flex-direction: column;\n    padding: 1rem;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    cursor: default;\n}\n\nh2 {\n    font-size: 2.5rem;\n}\n\nh3 {\n    font-size: 2rem;\n}\n\nh4 {\n    font-size: 1.8rem;\n}\n\nh5 {\n    font-size: 1.4 rem;\n}\n\n#icon,\n#title {\n    /* height: 4rem; */\n    font-size: 4rem;\n}\n\n#left-header,\n#right-header {\n    display: grid;\n    grid-template-columns: 5rem 1fr;\n}\n\nbutton,\ninput {\n    background-color: inherit;\n    color: inherit;\n    border: none;\n    font-family: inherit;\n    font-size: 1.4rem;\n    cursor: pointer;\n}\n\ninput,\ntextarea {\n    background-color: var(--color);\n}\n\ntextarea:required {\n    border: 2px solid var(--invalid);\n}\n\nbutton.menu,\nbutton.projects,\nbutton.control {\n    width: 100%;\n    height: 3rem;\n    display: grid;\n    align-items: center;\n    font-size: 2rem;\n    gap: var(--gap1x);\n    border-radius: var(--border-radius);\n    padding: .5rem 2rem;\n    text-align: left;\n    overflow: hidden;\n}\n\nbutton.menu {\n    grid-template-columns: 2rem 1fr;\n    justify-items: left;\n}\n\nbutton.projects {\n    grid-template-columns: 2rem 1fr 3rem 2rem;\n}\n\n\nbutton.control {\n    height: 4rem;\n    grid-template-columns: auto auto;\n    place-items: center;\n}\n\nbutton.special {\n    font-size: 3.5rem;\n}\n\ni {\n    width: 100%;\n}\n\n#add-project {\n    padding: .5rem 8rem;\n}\n\n#projects-filter {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#projects-user {\n    width: 100%;\n    display: grid;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\nbutton.menu:hover,\nbutton.projects:hover,\nbutton.control:hover,\n.taskDisplay:hover {\n    background-color: var(--todo-dark);\n    color: var(--color);\n}\n\n.active {\n    background-color: var(--todo-darkest);\n    color: var(--color);\n}\n\n.rotate {\n    transform: rotate(180deg);\n    /* transition-delay: 0.2s; */\n}\n\n.projectNumbers {\n    background-color: var(--todo-lighter);\n    color: #000;\n    clip-path: circle(50% at 50% 50%);\n    text-align: center;\n}\n\n.delete {\n    opacity: 0;\n    transition: 0.2s linear;\n}\n\n.delete:hover {\n    opacity: 0.9;\n}\n\n.editProject {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: auto 1fr;\n    grid-template-areas:\n        \"name name\"\n        \"paccept pcancel\";\n    font-family: var(--font);\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editProjectName,\n.projectAccept,\n.projectCancel {\n    padding: 1rem;\n    border: none;\n    resize: none;\n}\n\n.editProjectName {\n    grid-area: name;\n    border-top-left-radius: var(--border-radius);\n    border-top-right-radius: var(--border-radius);\n}\n\n.projectAccept {\n    grid-area: paccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.projectCancel {\n    grid-area: pcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.sort-attrib {\n    display: flex;\n    align-items: center;\n    justify-content: start;\n}\n\n.center {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#content-title-container {\n    height: 5rem;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n#content-attributes {\n    height: 3rem;\n    width: 100%;\n    display: grid;\n    align-items: center;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    gap: var(--gap1x);\n    padding: 0 1rem;\n}\n\n#content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: var(--gap1x);\n}\n\n#content-items {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#add-task {\n    padding: .5rem 25rem;\n}\n\ninput[type=\"checkbox\"] {\n    appearance: none;\n    background-color: var(--fades);\n    margin: 0;\n    font: inherit;\n    color: inherit;\n    width: 1.15em;\n    height: 1.15em;\n    border: 0.15em solid black;\n    border-radius: 0.15em;\n    display: grid;\n    place-content: center;\n}\n\ninput[type=\"checkbox\"]::before {\n    content: \"\";\n    width: 0.65em;\n    height: 0.65em;\n    transform: scale(0);\n    transition: 120ms transform ease-in-out;\n    box-shadow: inset 1em 1em var(--todo-lighter);\n}\n\ninput[type=\"checkbox\"]:checked::before {\n    transform: scale(1);\n    transform-origin: bottom left;\n    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);\n}\n\ninput[type=\"checkbox\"]:focus {\n    outline: max(2px, 0.15em) solid currentColor;\n    outline-offset: max(2px, 0.15em);\n}\n\n.strike {\n    text-decoration: line-through black;\n    opacity: 0.3;\n}\n\n.taskDisplay {\n    height: 3rem;\n    grid-template-columns: 2rem 2fr 1fr 2rem;\n    font-size: 1.6rem;\n    padding: 0 2rem 0 1rem;\n    border-radius: var(--border-radius);\n}\n\n.taskTitle,\n.taskDate {\n    background-color: inherit;\n    border: 0;\n}\n\n.taskDate {\n    width: 10rem;\n}\n\n.editTask {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 3rem 1fr 3rem 3rem;\n    grid-template-areas:\n        \"priority title title title\"\n        \"description description description description\"\n        \"date date project project\"\n        \"taccept taccept tcancel tcancel\";\n    border: var(--border);\n    border-radius: var(--border-radius);\n}\n\n.editTaskPriority,\n.editTaskTitle,\n.editTaskDescription,\n.editTaskDate,\n.editTaskProject,\n.taskAccept,\n.taskCancel {\n    padding: .5rem 1rem;\n    border: none;\n    resize: none;\n}\n\n.editTaskPriority {\n    grid-area: priority;\n    border-top-left-radius: var(--border-radius);\n    border-right: var(--border);\n    border-bottom: var(--border);\n}\n\n.editTaskTitle {\n    grid-area: title;\n    border-top-right-radius: var(--border-radius);\n    border-bottom: var(--border);\n    font-size: 1.5rem;\n    overflow: hidden;\n}\n\n.editTaskDescription {\n    grid-area: description;\n}\n\n.editTaskDate {\n    grid-area: date;\n    border-top: var(--border);\n    border-right: var(--border);\n}\n\n.editTaskProject {\n    grid-area: project;\n    border-top: var(--border);\n}\n\n.taskAccept {\n    grid-area: taccept;\n    border: 0;\n    border-top: var(--border);\n    border-right: var(--border);\n    border-bottom-left-radius: var(--border-radius);\n}\n\n.taskCancel {\n    grid-area: tcancel;\n    border: 0;\n    border-top: var(--border);\n    border-bottom-right-radius: var(--border-radius);\n}\n\n.projectAccept,\n.taskAccept {\n    background-color: var(--todo-light);\n}\n\n.projectCancel,\n.taskCancel {\n    background-color: var(--invalid);\n}\n\n\n@media (max-width: 650px) {\n    section {\n        flex-direction: column;\n    }\n\n    nav {\n        width: 100%;\n        display: none;\n    }\n\n    main {\n        width: 100%;\n    }\n\n    #nav-control {\n        display: flex;\n    }\n\n    #add-task {\n        padding: .5rem 10rem;\n    }\n\n    .delete {\n        opacity: 1;\n    }\n\n}\n\n.flex-center,\n.flex-column,\n.flex-row {\n    display: flex;\n    align-items: center;\n}\n\n.flex-center {\n    justify-content: center;\n}\n\n.flex-column {\n    flex-direction: column;\n}\n\n.between {\n    justify-content: space-between;\n}\n\n.evenly {\n    justify-content: space-evenly;\n}\n\n.end {\n    justify-content: flex-end;\n}\n\n.grid {\n    display: grid;\n    align-items: center;\n    width: 100%;\n}\n\n.gap {\n    gap: var(--gap1x);\n}\n\n.gap2 {\n    gap: var(--gap2x);\n}\n\n.w-100 {\n    width: 100%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1038,9 +1038,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Forms)
 /* harmony export */ });
 /* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interface */ "./src/modules/interface.js");
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
-/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
+/* harmony import */ var _validation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./validation */ "./src/modules/validation.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./task */ "./src/modules/task.js");
 
 
 
@@ -1067,6 +1068,15 @@ class Forms {
     const taskCheck = document.createElement('input');
     setKeyValue(taskCheck, { type: 'checkbox' });
     taskCheck.classList.add('taskCheck');
+    taskCheck.addEventListener('change', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      const container = event.target.parentNode;
+      const striker = container.querySelectorAll('input.taskTitle, input.taskDate');
+      striker.forEach(strike => {
+        event.target.checked ? strike.classList.add('strike') : strike.classList.remove('strike');
+      });
+    });
     const taskTitle = document.createElement('input');
     setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly" });
     taskTitle.classList.add('taskTitle');
@@ -1076,33 +1086,42 @@ class Forms {
     taskDate.classList.add('taskDate');
     if (dueDate) taskDate.value = dueDate;
 
-    taskTitle.addEventListener('click', taskEdit);
-    taskDate.addEventListener('click', taskEdit);
-
     function taskEdit(event) {
+      if (event.target.classList.contains('taskCheck')) return;
       const container = event.target.parentNode.parentNode;
+      const content = event.target.parentNode.parentNode.parentNode;
+      if (container.querySelector('input.taskCheck').checked) return;
+      if (content.querySelector('form')) return;
       container.replaceChildren();
       container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
 
-      if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
-      else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
-      else document.querySelector('.editTaskPriority').focus();
+      const cont = document.querySelector('form');
+      (event.target.classList.contains('taskTitle')) ? cont.querySelector('.editTaskTitle').focus() :
+        (event.target.classList.contains('taskDate')) ? cont.querySelector('.editTaskDate').focus() :
+          cont.querySelector('.editTaskPriority').focus();
     }
 
     const taskDelete = document.createElement('i');
     taskDelete.setAttribute('name', 'taskDelete');
     taskDelete.classList.add('taskDelete');
     taskDelete.classList.add('delete', 'fas', 'fa-calendar-xmark');
-    taskDelete.addEventListener('click', () => {
-      const active = document.querySelector('.active');
-      _storage__WEBPACK_IMPORTED_MODULE_2__["default"].deleteTaskSave(taskTitle.value);
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+    taskDelete.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const confirmation = _validation__WEBPACK_IMPORTED_MODULE_1__["default"].confirmDeleteTask();
+      if (confirmation) {
+        const active = document.querySelector('.active');
+        _storage__WEBPACK_IMPORTED_MODULE_3__["default"].deleteTaskSave(taskTitle.value);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      }
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskDelete);
+
+    taskDisplay.addEventListener('click', taskEdit);
+
     return taskDisplay;
   }
 
@@ -1116,10 +1135,10 @@ class Forms {
     editTask.classList.add('editTask');
 
     const editTaskTitle = document.createElement('textarea');
-    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook'});
     editTaskTitle.classList.add('editTaskTitle');
     if (title) editTaskTitle.value = title;
-    const taskNameReplaced = title;
+    const taskReplaced = title;
 
     const editTaskDescription = document.createElement('textarea');
     setKeyValue(editTaskDescription, { name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
@@ -1148,7 +1167,7 @@ class Forms {
 
     const editTaskProject = document.createElement('select');
     setKeyValue(editTaskProject, { name: 'projectConnected' });
-    _storage__WEBPACK_IMPORTED_MODULE_2__["default"].getList().getAllProjects().forEach(project => {
+    _storage__WEBPACK_IMPORTED_MODULE_3__["default"].getList().getAllProjects().forEach(project => {
       const option = document.createElement('option');
       option.setAttribute('value', `${project.name}`);
       option.textContent = `${project.name}`;
@@ -1170,7 +1189,7 @@ class Forms {
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
@@ -1180,21 +1199,26 @@ class Forms {
     taskForm.append(editTask);
 
     taskForm.addEventListener('submit', (event) => {
-      const active = document.querySelector('.active');
       event.preventDefault();
-      const data = new FormData(event.target);
-      const newTask = new _task__WEBPACK_IMPORTED_MODULE_3__["default"](Object.fromEntries(data));
-      // if(Storage.getList().containingTask(newTask.title)) { alert('Task exists, set another one'); return; }
 
-      if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceTaskSave(newTask, taskNameReplaced);
-      else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addTaskSave(newTask);
+      let validTitle = _validation__WEBPACK_IMPORTED_MODULE_1__["default"].checkEditTitle(), validDate = _validation__WEBPACK_IMPORTED_MODULE_1__["default"].checkEditDate();
+      let validForm = validTitle && validDate;
 
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      if (validForm) {
+        const active = document.querySelector('.active');
+        const data = new FormData(event.target);
+        const newTask = new _task__WEBPACK_IMPORTED_MODULE_4__["default"](Object.fromEntries(data));
+
+        (editing) ? _storage__WEBPACK_IMPORTED_MODULE_3__["default"].replaceTaskSave(newTask, taskReplaced) : _storage__WEBPACK_IMPORTED_MODULE_3__["default"].addTaskSave(newTask);
+
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+      }
     });
 
+    _validation__WEBPACK_IMPORTED_MODULE_1__["default"].validateFromInputs(taskForm);
     return taskForm;
   }
 
@@ -1207,15 +1231,52 @@ class Forms {
   }
 
   static createProjects(project) {
-    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed']);
+    const projectDisplay = Forms.createProjectsButton(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed']);
 
     projectDisplay.addEventListener('dblclick', (event) => {
+      const projects = event.target.parentNode.parentNode.parentNode;
+      if (projects.querySelector('form')) return;
       const container = event.target.parentNode.parentNode;
-      console.log(container);
       container.replaceChildren();
       container.append(this.editProject(project, true));
     })
     return projectDisplay;
+  }
+
+  static createProjectsButton(id, number, type = 'projects', ...classes) {
+    const button = document.createElement('button');
+    setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
+    button.classList.add(`${type}`);
+    const icon = document.createElement('i');
+    classes.forEach(cls => {
+      Object.values(cls).forEach(value => icon.classList.add(value));
+    });
+    const content = capitalize(id.name);
+    const title = document.createElement('h3');
+    title.textContent = content;
+    const lbl = document.createElement('label');
+    setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
+    lbl.textContent = number;
+    lbl.classList.add('projectNumbers');
+    const del = document.createElement('i');
+    del.classList.add('delete', 'fas', 'fa-folder-minus');
+    del.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const confirmation = _validation__WEBPACK_IMPORTED_MODULE_1__["default"].confirmDeleteProject();
+      if (confirmation) {
+        const active = document.querySelector('.preactive');
+        const target = event.target.parentNode;
+        _storage__WEBPACK_IMPORTED_MODULE_3__["default"].deleteProjectSave(target.id);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadTitle(active.id);
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
+        _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
+      }
+    });
+    button.append(icon, title, lbl, del);
+    return button;
   }
 
   static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
@@ -1247,7 +1308,7 @@ class Forms {
       container.append(this.createProjects({ name, projectTasks }));
 
       const identification = `project-${editProjectName.value}`;
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(identification);
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(editProjectName.value);
@@ -1262,13 +1323,12 @@ class Forms {
       if (editProjectName === '') return;
       const data = new FormData(event.target);
       const newName = data.get('name');
-      const newProject = new _project__WEBPACK_IMPORTED_MODULE_1__["default"](newName, projectTasks);
+      const newProject = new _project__WEBPACK_IMPORTED_MODULE_2__["default"](newName, projectTasks);
 
-      if (editing) _storage__WEBPACK_IMPORTED_MODULE_2__["default"].replaceProjectSave(newProject, projectNameReplaced);
-      else _storage__WEBPACK_IMPORTED_MODULE_2__["default"].addProjectSave(newProject);
+      (editing) ? _storage__WEBPACK_IMPORTED_MODULE_3__["default"].replaceProjectSave(newProject, projectNameReplaced) : _storage__WEBPACK_IMPORTED_MODULE_3__["default"].addProjectSave(newProject);
 
       const identification = `project-${editProjectName.value}`;
-      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
+      _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllProjects();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(identification);
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
       _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadTitle(editProjectName.value);
@@ -1280,38 +1340,7 @@ class Forms {
 
 }
 
-function createBtn(id, number, type = 'projects', ...classes) {
-  const button = document.createElement('button');
-  setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
-  button.classList.add(`${type}`);
-  const icon = document.createElement('i');
-  classes.forEach(cls => {
-    Object.values(cls).forEach(value => icon.classList.add(value) );
-  });
-  const content = capitalize(id.name);
-  const title = document.createElement('h3');
-  title.textContent = content;
-  const lbl = document.createElement('label');
-  setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
-  lbl.textContent = number;
-  lbl.classList.add('projectNumbers');
-  const del = document.createElement('i');
-  del.classList.add('delete', 'fas', 'fa-folder-minus');
-  del.addEventListener('click', (event) => {
-    event.stopPropagation(); 
-    const active = document.querySelector('.preactive');
-    const target = event.target.parentNode;
-    _storage__WEBPACK_IMPORTED_MODULE_2__["default"].deleteProjectSave(target.id);
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].setActiveButton(active.id);
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadTitle(active.id);
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadAllTasks();
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].loadALlProjects();
-    _interface__WEBPACK_IMPORTED_MODULE_0__["default"].addEventButtons();
-  });
-  button.append(icon, title, lbl, del);
-  return button;
-}
+
 function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
@@ -1343,7 +1372,7 @@ class Interface {
   static loadAll() {
     _page__WEBPACK_IMPORTED_MODULE_0__["default"];
     // Interface.test();
-    Interface.loadALlProjects();
+    Interface.loadAllProjects();
     Interface.setActiveButton('home');
     Interface.loadAllTasks();
     Interface.addEventButtons();
@@ -1353,11 +1382,13 @@ class Interface {
   static setActiveButton(id) {
     const sideButtons = document.querySelectorAll('.menu, .projects');
     sideButtons.forEach(button => {
-      if (button.classList.contains('active')) button.classList.add('preactive');
-      else button.classList.remove('preactive');
+      button.classList.contains('active')
+        ? button.classList.add('preactive')
+        : button.classList.remove('preactive');
 
-      if (button.id === id) button.classList.add('active');
-      else button.classList.remove('active');
+      button.id === id
+        ? button.classList.add('active')
+        : button.classList.remove('active');
     });
   }
 
@@ -1397,10 +1428,14 @@ class Interface {
   }
 
   static test() {
-
+    const task = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]({title: `tasker`});
+    console.log(task);
+    const taskete = {...task, title: `taskete`};
+    console.log(taskete);
+    console.log(task);
   }
 
-  static loadALlProjects() {
+  static loadAllProjects() {
     const userProjects = document.querySelector('#projects-user');
     userProjects.replaceChildren();
     _storage__WEBPACK_IMPORTED_MODULE_4__["default"].getList().getAllProjects().forEach(project => {
@@ -1418,6 +1453,8 @@ class Interface {
     addTask.addEventListener('click', () => {
       const blankTask = new _task__WEBPACK_IMPORTED_MODULE_1__["default"]();
       contentItems.append(_forms__WEBPACK_IMPORTED_MODULE_3__["default"].editTask(blankTask));
+      const form = document.querySelector('form');
+      form.querySelector('.editTaskPriority').focus();
     });
 
     const addProject = document.querySelector('#add-project');
@@ -1429,7 +1466,7 @@ class Interface {
 }
 
 function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
-function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
+// function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
 
 /***/ }),
 
@@ -1545,10 +1582,8 @@ class TodoList {
   }
 
   updateProjectTasks(projectReplacement, projectReplaced) {
-    console.log(projectReplaced);
     projectReplaced.getProjectTasks().forEach(task => {
       const index = this.getTaskIndex(task.title);
-      console.log(index);
       task.setProjectConnected(projectReplacement.name);
       this.tasks.splice(index, 1, task);
     });
@@ -1637,18 +1672,9 @@ const initializePage = (() => {
     const content = capitalize(label);
     const title = document.createElement('h3');
     title.textContent = content;
-    if (type === 'special') button.append(icon);
-    else button.append(icon, title);
+    (type === 'special') ? button.append(icon) : button.append(icon, title);
     return button;
   }
-
-  /* const _createLabel = (labeled) => {
-    const label = document.createElement('label');
-    setKeyValue(label, { id: `label-${labeled}`, for: `${labeled}` });
-    // label.classList.add('hidden');
-    // label.textContent = labeled;
-    return label;
-  } */
 
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
@@ -1669,25 +1695,15 @@ const initializePage = (() => {
     leftHeader.setAttribute('id', 'left-header');
     leftHeader.append(icon, title);
 
-    /* const searchIcon = _createIcon('2.png');
-    const input = document.createElement('input');
-    setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
-    const searchContainer = _createContainer(searchIcon, input); */
-
-    const local = _createBtn('local', 'special');
-    local.addEventListener('click', () => {
-      console.log(_storage__WEBPACK_IMPORTED_MODULE_0__["default"].showStorage());
-    });
     const toggle = _createBtn('nav-control', 'special', ['fas', 'fa-square-caret-down']);
     toggle.addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('media');
       document.querySelector('#nav-control').classList.toggle('rotate');
     });
     const rightHeader = document.createElement('div');
-    rightHeader.append(local, toggle);
+    rightHeader.append(toggle);
     rightHeader.setAttribute('id', 'right-header');
 
-    // searchContainer.classList.add('gap');
     header.append(leftHeader, rightHeader);
     return header;
   }
@@ -1972,6 +1988,75 @@ class Task {
   getDate() {
     return this.dueDate;
   }
+}
+
+/***/ }),
+
+/***/ "./src/modules/validation.js":
+/*!***********************************!*\
+  !*** ./src/modules/validation.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Validation)
+/* harmony export */ });
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ "./src/modules/storage.js");
+
+
+class Validation {
+
+  static confirmDeleteTask = () => {
+    return confirm('Are you sure you want to delete this task?');
+  }
+
+  static confirmDeleteProject = () => {
+    return confirm('Are you sure you want to delete this project?');
+  }
+
+  static validateFromInputs = (form) => {
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('focusout', (event) => {
+        if (event.target.classList.contains('editTaskTitle')) Validation.checkEditTitle();
+        else if (event.target.classList.contains('editTaskDate')) Validation.checkEditDate();
+      });
+    });
+  }
+
+  static isEmpty = value => value === '' ? true : false;
+  static isNotBetween = (length, min, max) => min > length || length < max ? false : true;
+  static isValid = (value, pattern) => pattern.test(value) ? true : false;
+
+  static checkEditTitle = () => {
+    const titleInput = document.querySelector('.editTaskTitle');
+    let valid = false;
+    const min = 1, max = 20;
+    const title = titleInput.value.trim();
+    const regex = /^[A-Za-z0-9\s]+[A-Za-z0-9\s]+$(\.0-9+)?/g;
+
+    if (this.isEmpty(title)) alert('Title cannot be blank.');
+    else if (this.isNotBetween(title.length, min, max)) alert(`Title must be between ${min} and ${max} characters.`);
+    else if (!this.isValid(title, regex)) alert(`Title must be in alphanumeric pattern.`);
+    else valid = true;
+
+    return valid;
+  };
+
+  static checkEditDate = () => {
+    const dateInput = document.querySelector('.editTaskDate');
+    let valid = false;
+    const date = dateInput.value.trim();
+    const regex = /^(19[0-9]{2}|2[0-9]{3})-(0[1-9]|1[012])-([123]0|[012][1-9]|31)$/;
+
+    if (!date) valid = true;
+    else if (!this.isValid(date, regex)) alert(`Date must be a valid that is between 01/01/1900 to 12/31/2099.`)
+    else valid = true;
+
+    return valid;
+  };
+
 }
 
 /***/ })

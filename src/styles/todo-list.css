@@ -147,6 +147,10 @@ textarea {
     background-color: var(--color);
 }
 
+textarea:required {
+    border: 2px solid var(--invalid);
+}
+
 button.menu,
 button.projects,
 button.control {
@@ -328,6 +332,45 @@ button.control:hover,
     padding: .5rem 25rem;
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--fades);
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid black;
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--todo-lighter);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+
+.strike {
+    text-decoration: line-through black;
+    opacity: 0.3;
+}
+
 .taskDisplay {
     height: 3rem;
     grid-template-columns: 2rem 2fr 1fr 2rem;
@@ -382,7 +425,8 @@ button.control:hover,
     grid-area: title;
     border-top-right-radius: var(--border-radius);
     border-bottom: var(--border);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    overflow: hidden;
 }
 
 .editTaskDescription {
@@ -424,6 +468,7 @@ button.control:hover,
 .taskCancel {
     background-color: var(--invalid);
 }
+
 
 @media (max-width: 650px) {
     section {

@@ -20,18 +20,9 @@ const initializePage = (() => {
     const content = capitalize(label);
     const title = document.createElement('h3');
     title.textContent = content;
-    if (type === 'special') button.append(icon);
-    else button.append(icon, title);
+    (type === 'special') ? button.append(icon) : button.append(icon, title);
     return button;
   }
-
-  /* const _createLabel = (labeled) => {
-    const label = document.createElement('label');
-    setKeyValue(label, { id: `label-${labeled}`, for: `${labeled}` });
-    // label.classList.add('hidden');
-    // label.textContent = labeled;
-    return label;
-  } */
 
   const _createContainer = (...elements) => {
     const container = document.createElement('div');
@@ -52,25 +43,15 @@ const initializePage = (() => {
     leftHeader.setAttribute('id', 'left-header');
     leftHeader.append(icon, title);
 
-    /* const searchIcon = _createIcon('2.png');
-    const input = document.createElement('input');
-    setKeyValue(input, { type: 'search', id: 'search', name: 'search' });
-    const searchContainer = _createContainer(searchIcon, input); */
-
-    const local = _createBtn('local', 'special');
-    local.addEventListener('click', () => {
-      console.log(Storage.showStorage());
-    });
     const toggle = _createBtn('nav-control', 'special', ['fas', 'fa-square-caret-down']);
     toggle.addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('media');
       document.querySelector('#nav-control').classList.toggle('rotate');
     });
     const rightHeader = document.createElement('div');
-    rightHeader.append(local, toggle);
+    rightHeader.append(toggle);
     rightHeader.setAttribute('id', 'right-header');
 
-    // searchContainer.classList.add('gap');
     header.append(leftHeader, rightHeader);
     return header;
   }

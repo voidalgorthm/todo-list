@@ -1,5 +1,5 @@
-import { format } from 'date-fns';
 import Interface from './interface';
+import Validation from './validation';
 import Project from './project';
 import Storage from './storage';
 import Task from './task';
@@ -24,6 +24,15 @@ export default class Forms {
     const taskCheck = document.createElement('input');
     setKeyValue(taskCheck, { type: 'checkbox' });
     taskCheck.classList.add('taskCheck');
+    taskCheck.addEventListener('change', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      const container = event.target.parentNode;
+      const striker = container.querySelectorAll('input.taskTitle, input.taskDate');
+      striker.forEach(strike => {
+        event.target.checked ? strike.classList.add('strike') : strike.classList.remove('strike');
+      });
+    });
     const taskTitle = document.createElement('input');
     setKeyValue(taskTitle, { type: 'text', name: 'title', readonly: "readonly" });
     taskTitle.classList.add('taskTitle');
@@ -33,33 +42,42 @@ export default class Forms {
     taskDate.classList.add('taskDate');
     if (dueDate) taskDate.value = dueDate;
 
-    taskTitle.addEventListener('click', taskEdit);
-    taskDate.addEventListener('click', taskEdit);
-
     function taskEdit(event) {
+      if (event.target.classList.contains('taskCheck')) return;
       const container = event.target.parentNode.parentNode;
+      const content = event.target.parentNode.parentNode.parentNode;
+      if (container.querySelector('input.taskCheck').checked) return;
+      if (content.querySelector('form')) return;
       container.replaceChildren();
       container.append(Forms.editTask({ title, projectConnected, description, priority, dueDate }, true));
 
-      if (event.target === 'input.taskTitle') document.querySelector('.editTaskTitle').focus();
-      else if (event.target === 'input.taskDate') document.querySelector('.editTaskDate').focus();
-      else document.querySelector('.editTaskPriority').focus();
+      const cont = document.querySelector('form');
+      (event.target.classList.contains('taskTitle')) ? cont.querySelector('.editTaskTitle').focus() :
+        (event.target.classList.contains('taskDate')) ? cont.querySelector('.editTaskDate').focus() :
+          cont.querySelector('.editTaskPriority').focus();
     }
 
     const taskDelete = document.createElement('i');
     taskDelete.setAttribute('name', 'taskDelete');
     taskDelete.classList.add('taskDelete');
     taskDelete.classList.add('delete', 'fas', 'fa-calendar-xmark');
-    taskDelete.addEventListener('click', () => {
-      const active = document.querySelector('.active');
-      Storage.deleteTaskSave(taskTitle.value);
-      Interface.loadALlProjects();
-      Interface.setActiveButton(active.id);
-      Interface.addEventButtons();
-      Interface.loadAllTasks();
+    taskDelete.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const confirmation = Validation.confirmDeleteTask();
+      if (confirmation) {
+        const active = document.querySelector('.active');
+        Storage.deleteTaskSave(taskTitle.value);
+        Interface.loadAllProjects();
+        Interface.setActiveButton(active.id);
+        Interface.addEventButtons();
+        Interface.loadAllTasks();
+      }
     });
 
     taskDisplay.append(taskCheck, taskTitle, taskDate, taskDelete);
+
+    taskDisplay.addEventListener('click', taskEdit);
+
     return taskDisplay;
   }
 
@@ -73,10 +91,10 @@ export default class Forms {
     editTask.classList.add('editTask');
 
     const editTaskTitle = document.createElement('textarea');
-    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook', maxlength: '35', required: 'true' });
+    setKeyValue(editTaskTitle, { name: 'title', placeholder: 'Title: Cook'});
     editTaskTitle.classList.add('editTaskTitle');
     if (title) editTaskTitle.value = title;
-    const taskNameReplaced = title;
+    const taskReplaced = title;
 
     const editTaskDescription = document.createElement('textarea');
     setKeyValue(editTaskDescription, { name: 'description', placeholder: 'Description: e.g. Cook for dinner' });
@@ -127,7 +145,7 @@ export default class Forms {
       container.replaceChildren();
       container.append(this.createTask({ title, projectConnected, description, priority, dueDate }));
 
-      Interface.loadALlProjects();
+      Interface.loadAllProjects();
       Interface.setActiveButton(active.id);
       Interface.addEventButtons();
       Interface.loadAllTasks();
@@ -137,21 +155,26 @@ export default class Forms {
     taskForm.append(editTask);
 
     taskForm.addEventListener('submit', (event) => {
-      const active = document.querySelector('.active');
       event.preventDefault();
-      const data = new FormData(event.target);
-      const newTask = new Task(Object.fromEntries(data));
-      // if(Storage.getList().containingTask(newTask.title)) { alert('Task exists, set another one'); return; }
 
-      if (editing) Storage.replaceTaskSave(newTask, taskNameReplaced);
-      else Storage.addTaskSave(newTask);
+      let validTitle = Validation.checkEditTitle(), validDate = Validation.checkEditDate();
+      let validForm = validTitle && validDate;
 
-      Interface.loadALlProjects();
-      Interface.setActiveButton(active.id);
-      Interface.addEventButtons();
-      Interface.loadAllTasks();
+      if (validForm) {
+        const active = document.querySelector('.active');
+        const data = new FormData(event.target);
+        const newTask = new Task(Object.fromEntries(data));
+
+        (editing) ? Storage.replaceTaskSave(newTask, taskReplaced) : Storage.addTaskSave(newTask);
+
+        Interface.loadAllProjects();
+        Interface.setActiveButton(active.id);
+        Interface.addEventButtons();
+        Interface.loadAllTasks();
+      }
     });
 
+    Validation.validateFromInputs(taskForm);
     return taskForm;
   }
 
@@ -164,15 +187,52 @@ export default class Forms {
   }
 
   static createProjects(project) {
-    const projectDisplay = createBtn(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed']);
+    const projectDisplay = Forms.createProjectsButton(project, project.projectTasks.length, 'projects', ['fas', 'fa-folder-closed']);
 
     projectDisplay.addEventListener('dblclick', (event) => {
+      const projects = event.target.parentNode.parentNode.parentNode;
+      if (projects.querySelector('form')) return;
       const container = event.target.parentNode.parentNode;
-      console.log(container);
       container.replaceChildren();
       container.append(this.editProject(project, true));
     })
     return projectDisplay;
+  }
+
+  static createProjectsButton(id, number, type = 'projects', ...classes) {
+    const button = document.createElement('button');
+    setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
+    button.classList.add(`${type}`);
+    const icon = document.createElement('i');
+    classes.forEach(cls => {
+      Object.values(cls).forEach(value => icon.classList.add(value));
+    });
+    const content = capitalize(id.name);
+    const title = document.createElement('h3');
+    title.textContent = content;
+    const lbl = document.createElement('label');
+    setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
+    lbl.textContent = number;
+    lbl.classList.add('projectNumbers');
+    const del = document.createElement('i');
+    del.classList.add('delete', 'fas', 'fa-folder-minus');
+    del.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const confirmation = Validation.confirmDeleteProject();
+      if (confirmation) {
+        const active = document.querySelector('.preactive');
+        const target = event.target.parentNode;
+        Storage.deleteProjectSave(target.id);
+        Interface.loadAllProjects();
+        Interface.setActiveButton(active.id);
+        Interface.loadTitle(active.id);
+        Interface.loadAllTasks();
+        Interface.loadAllProjects();
+        Interface.addEventButtons();
+      }
+    });
+    button.append(icon, title, lbl, del);
+    return button;
   }
 
   static editProject({ name = '', projectTasks = [] } = {}, editing = false) {
@@ -204,7 +264,7 @@ export default class Forms {
       container.append(this.createProjects({ name, projectTasks }));
 
       const identification = `project-${editProjectName.value}`;
-      Interface.loadALlProjects();
+      Interface.loadAllProjects();
       Interface.setActiveButton(identification);
       Interface.addEventButtons();
       Interface.setActiveButton(editProjectName.value);
@@ -221,11 +281,10 @@ export default class Forms {
       const newName = data.get('name');
       const newProject = new Project(newName, projectTasks);
 
-      if (editing) Storage.replaceProjectSave(newProject, projectNameReplaced);
-      else Storage.addProjectSave(newProject);
+      (editing) ? Storage.replaceProjectSave(newProject, projectNameReplaced) : Storage.addProjectSave(newProject);
 
       const identification = `project-${editProjectName.value}`;
-      Interface.loadALlProjects();
+      Interface.loadAllProjects();
       Interface.setActiveButton(identification);
       Interface.addEventButtons();
       Interface.loadTitle(editProjectName.value);
@@ -237,37 +296,6 @@ export default class Forms {
 
 }
 
-function createBtn(id, number, type = 'projects', ...classes) {
-  const button = document.createElement('button');
-  setKeyValue(button, { id: `project-${id.name}`, name: `project-${id.name}` })
-  button.classList.add(`${type}`);
-  const icon = document.createElement('i');
-  classes.forEach(cls => {
-    Object.values(cls).forEach(value => icon.classList.add(value) );
-  });
-  const content = capitalize(id.name);
-  const title = document.createElement('h3');
-  title.textContent = content;
-  const lbl = document.createElement('label');
-  setKeyValue(lbl, { id: `label-${id.name}`, for: `project-${id.name}` });
-  lbl.textContent = number;
-  lbl.classList.add('projectNumbers');
-  const del = document.createElement('i');
-  del.classList.add('delete', 'fas', 'fa-folder-minus');
-  del.addEventListener('click', (event) => {
-    event.stopPropagation(); 
-    const active = document.querySelector('.preactive');
-    const target = event.target.parentNode;
-    Storage.deleteProjectSave(target.id);
-    Interface.loadALlProjects();
-    Interface.setActiveButton(active.id);
-    Interface.loadTitle(active.id);
-    Interface.loadAllTasks();
-    Interface.loadALlProjects();
-    Interface.addEventButtons();
-  });
-  button.append(icon, title, lbl, del);
-  return button;
-}
+
 function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 function setKeyValue(elem, attrs) { Object.entries(attrs).forEach(([key, value]) => elem.setAttribute(key, value)); }
